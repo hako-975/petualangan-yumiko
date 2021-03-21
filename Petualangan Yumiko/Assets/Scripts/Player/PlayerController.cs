@@ -6,11 +6,23 @@ public class PlayerController : MonoBehaviour
 {
     CharacterController controller;
     Transform cam;
-    Vector3 velocity;
-    Animator animator;
+
+    [HideInInspector]
+    public Vector3 velocity;
+
+    [HideInInspector]
+    public Animator animator;
+
+    [HideInInspector]
+    public Joystick joystick;
     
-    [SerializeField]
+    [HideInInspector]
+    public JoyButton joyButton;
+
     bool isGrounded;
+    bool isClimbing;
+
+    LastLadderScript lastLadder;
 
     Transform groundCheck;
 
@@ -24,9 +36,6 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask groundMask;
 
-    protected Joystick joystick;
-    protected JoyButton joyButton;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -37,11 +46,14 @@ public class PlayerController : MonoBehaviour
         joystick = FindObjectOfType<Joystick>();
         joyButton = FindObjectOfType<JoyButton>();
         animator = GetComponentInChildren<Animator>();
+        lastLadder = FindObjectOfType<LastLadderScript>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        isClimbing = animator.GetBool("IsClimbing");
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         animator.SetBool("IsGrounded", isGrounded);
 
@@ -52,6 +64,12 @@ public class PlayerController : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw("Horizontal") + joystick.Horizontal;
         float vertical = Input.GetAxisRaw("Vertical") + joystick.Vertical;
+
+        if (lastLadder.lastLadder)
+        {
+            horizontal *= 0f;
+            vertical *= 0f;
+        }
 
         Vector3 move = new Vector3(horizontal, 0f, vertical).normalized;
 
@@ -70,7 +88,7 @@ public class PlayerController : MonoBehaviour
         bool isRunning = hasHorizontalInput || hasVerticalInput;
         animator.SetBool("IsRunning", isRunning);
 
-        if (Input.GetButtonDown("Jump") || joyButton.pressed && isGrounded)
+        if ((Input.GetButtonDown("Jump") && isGrounded && !isClimbing) || (joyButton.pressed && isGrounded && !isClimbing))
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }

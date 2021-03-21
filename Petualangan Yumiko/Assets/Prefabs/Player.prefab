@@ -1168,7 +1168,7 @@ MonoBehaviour:
   groundDistance: 0.25
   jumpHeight: 2
   turnSmoothTime: 0.1
-  movementSpeed: 4
+  movementSpeed: 5
   groundMask:
     serializedVersion: 2
     m_Bits: 64
