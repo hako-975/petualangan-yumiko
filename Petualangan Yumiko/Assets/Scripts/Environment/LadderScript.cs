@@ -4,50 +4,114 @@ using UnityEngine;
 
 public class LadderScript : MonoBehaviour
 {
+    public GameObject ladderButton;
+    public GameObject exitLadderButton;
+    public GameObject jumpButton;
+
     PlayerController player;
+
+    [HideInInspector]
+    public bool isEntered;
+    
+    public float speedClimb = 0.01f;
+
+    public float lengthLadder = 8f;
+
+    float maxPosition;
+    float minPosition;
 
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
     }
 
-    private void Update()
+    void Update()
     {
-        float vertical = Input.GetAxisRaw("Vertical") + player.joystick.Vertical;
-
         if (player.animator.GetBool("IsClimbing"))
         {
-            bool hasVerticalInput = !Mathf.Approximately(vertical, 0f);
-            if (hasVerticalInput)
-            {
-                player.animator.speed = 1f;
-                player.velocity = Vector3.up * 2f;
-            }
-            else
-            {
-                player.animator.speed = 0f;
-            }
+            jumpButton.SetActive(false);
         }
-        else if (player.animator.GetBool("IsClimbing") == false)
+        else
+        {
+            jumpButton.SetActive(true);
+        }
+
+        maxPosition = transform.position.y + lengthLadder;
+        minPosition = transform.position.y;
+
+        if (isEntered)
+        {
+            player.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            player.animator.speed = 0f;
+        }
+        else
         {
             player.animator.speed = 1f;
         }
-    
-    }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        float vertical = Input.GetAxisRaw("Vertical") + player.joystick.Vertical;
+
+        if (isEntered && vertical > 0f && player.transform.position.y < maxPosition)
         {
-            player.animator.SetBool("IsClimbing", true);
+            player.transform.position += Vector3.up * speedClimb;
+            player.animator.SetFloat("Speed", 1f);
+            player.animator.speed = 1f;
+        }
+
+        if (isEntered && vertical < 0f && player.transform.position.y > minPosition)
+        {
+            player.transform.position += Vector3.down * speedClimb;
+            player.animator.SetFloat("Speed", -1f);
+            player.animator.speed = 1f;
         }
     }
 
-    void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+       if (other.gameObject.CompareTag("Player") && player.animator.GetBool("IsClimbing") == false)
         {
-            player.animator.SetBool("IsClimbing", false);
+            exitLadderButton.SetActive(false);
+            ladderButton.SetActive(true);
         }
+
+        if (other.gameObject.CompareTag("Player") && player.animator.GetBool("IsClimbing") == true)
+        {
+            exitLadderButton.SetActive(true);
+            ladderButton.SetActive(false);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player") && player.animator.GetBool("IsClimbing") == false)
+        {
+            exitLadderButton.SetActive(false);
+            ladderButton.SetActive(false);
+        }
+
+        if (other.gameObject.CompareTag("Player") && player.animator.GetBool("IsClimbing") == true)
+        {
+            exitLadderButton.SetActive(true);
+            ladderButton.SetActive(false);
+        }
+    }
+
+    public void OnLadderButtonClick()
+    {
+        player.GetComponent<CharacterController>().enabled = false;
+        player.animator.SetBool("IsRunning", false);
+        player.animator.SetBool("IsClimbing", true);
+        ladderButton.SetActive(false);
+        isEntered = true;
+        exitLadderButton.SetActive(true);
+    }
+
+    public void OnExitLadderButtonClick()
+    {
+        player.GetComponent<CharacterController>().enabled = true;
+        player.animator.SetBool("IsClimbing", false);
+        ladderButton.SetActive(false);
+        exitLadderButton.SetActive(false);
+        isEntered = false;
     }
 }

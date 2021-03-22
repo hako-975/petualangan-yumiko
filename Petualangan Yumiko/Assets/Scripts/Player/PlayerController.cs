@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    CharacterController controller;
     Transform cam;
+
+    [HideInInspector]
+    public CharacterController controller;
 
     [HideInInspector]
     public Vector3 velocity;
@@ -13,16 +15,8 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public Animator animator;
 
-    [HideInInspector]
-    public Joystick joystick;
-    
-    [HideInInspector]
-    public JoyButton joyButton;
-
     bool isGrounded;
     bool isClimbing;
-
-    LastLadderScript lastLadder;
 
     Transform groundCheck;
 
@@ -34,6 +28,9 @@ public class PlayerController : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     public float movementSpeed = 4f;
 
+    public Joystick joystick;
+    public JoyButton jumpButton;
+
     public LayerMask groundMask;
 
     // Start is called before the first frame update
@@ -43,19 +40,16 @@ public class PlayerController : MonoBehaviour
         groundCheck = GameObject.FindGameObjectWithTag("GroundCheck").transform;
         cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
 
-        joystick = FindObjectOfType<Joystick>();
-        joyButton = FindObjectOfType<JoyButton>();
         animator = GetComponentInChildren<Animator>();
-        lastLadder = FindObjectOfType<LastLadderScript>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        isClimbing = animator.GetBool("IsClimbing");
+        
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        animator.SetBool("IsGrounded", isGrounded);
+        
 
         if (isGrounded && velocity.y < 0)
         {
@@ -64,12 +58,6 @@ public class PlayerController : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw("Horizontal") + joystick.Horizontal;
         float vertical = Input.GetAxisRaw("Vertical") + joystick.Vertical;
-
-        if (lastLadder.lastLadder)
-        {
-            horizontal *= 0f;
-            vertical *= 0f;
-        }
 
         Vector3 move = new Vector3(horizontal, 0f, vertical).normalized;
 
@@ -86,9 +74,14 @@ public class PlayerController : MonoBehaviour
         bool hasHorizontalInput = !Mathf.Approximately(horizontal, 0f);
         bool hasVerticalInput = !Mathf.Approximately(vertical, 0f);
         bool isRunning = hasHorizontalInput || hasVerticalInput;
+        
+        // Animator
         animator.SetBool("IsRunning", isRunning);
+        animator.SetBool("IsGrounded", isGrounded);
+        isClimbing = animator.GetBool("IsClimbing");
 
-        if ((Input.GetButtonDown("Jump") && isGrounded && !isClimbing) || (joyButton.pressed && isGrounded && !isClimbing))
+
+        if ((Input.GetButtonDown("Jump") && isGrounded && !isClimbing) || (jumpButton.pressed && isGrounded && !isClimbing))
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
