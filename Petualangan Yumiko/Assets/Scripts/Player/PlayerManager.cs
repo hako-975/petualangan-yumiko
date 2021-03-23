@@ -9,9 +9,28 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     #endregion
 
-    public GameObject player;
+    public PlayerController player;
+
+    public int GetLevelAt()
+    {
+        return PlayerPrefs.GetInt("levelAt");
+    }
+
+    public int SetLevelAt(int level)
+    {
+        PlayerPrefs.SetInt("LevelAt", level);
+        return GetLevelAt();
+    }
 }

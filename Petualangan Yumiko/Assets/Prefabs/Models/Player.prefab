@@ -1196,9 +1196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7972503121ea1b45af061b169b387da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
+  currentTransformY: 0
   gravity: -29.43
   groundDistance: 0.6
   jumpHeight: 2
@@ -1209,7 +1209,6 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  currentTransformY: 0
 --- !u!114 &4586622853490391542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1228,7 +1227,6 @@ MonoBehaviour:
   currentHealth: 0
   delayInvisible: 3
   healthBar: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!1 &2611775230920099627
 GameObject:
   m_ObjectHideFlags: 0

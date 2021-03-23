@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    Transform cam;
+    CharacterController controller;
 
-    [HideInInspector]
-    public CharacterController controller;
+    Transform cam;
+    Transform groundCheck;
+
+    float turnSmoothVelocity;
+
+    bool isGrounded;
+    bool isClimbing;
 
     [HideInInspector]
     public Vector3 velocity;
@@ -15,12 +20,8 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public Animator animator;
 
-    bool isGrounded;
-    bool isClimbing;
-
-    Transform groundCheck;
-
-    float turnSmoothVelocity;
+    [HideInInspector]
+    public float currentTransformY;
 
     public float gravity = -9.81f;
     public float groundDistance = 0.25f;
@@ -33,18 +34,14 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask groundMask;
 
-    [HideInInspector]
-    public float currentTransformY;
-
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();
 
         groundCheck = GameObject.FindGameObjectWithTag("GroundCheck").transform;
         cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
-
-        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame

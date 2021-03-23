@@ -16,7 +16,7 @@ public class InvisibleEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerStats.instance.isDied || PlayerStats.instance.animator.GetBool("IsHit") == true)
+        if (PlayerStats.instance.isDied || PlayerManager.instance.player.animator.GetBool("IsHit") == true)
         {
             body.enabled = true;
         }
@@ -30,8 +30,8 @@ public class InvisibleEffect : MonoBehaviour
         {
             body.enabled = false;
         }
-       
     }
+
     IEnumerator DelayInvisible(float delay)
     {
         beingHandled = true;

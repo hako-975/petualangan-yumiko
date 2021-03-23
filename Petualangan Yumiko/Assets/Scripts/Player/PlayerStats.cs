@@ -13,6 +13,10 @@ public class PlayerStats : MonoBehaviour
     }
     #endregion
 
+    PlayerController player;
+
+    bool beingHandled = false;
+
     [HideInInspector]
     public bool isInvisible = false;
 
@@ -26,31 +30,19 @@ public class PlayerStats : MonoBehaviour
 
     public HealthBar healthBar;
 
-    [HideInInspector]
-    public Animator animator;
-
-    PlayerController player;
-
-    bool beingHandled = false;
-
-
-
     private void Start()
     {
         currentHealth = maxHealth;
 
-        animator = GetComponentInChildren<Animator>();
-        player = GetComponent<PlayerController>();
-     
+        player = PlayerManager.instance.player;
         healthBar.SetMaxHealth(maxHealth);
     }
-    
 
     void Update()
     {
         if (isInvisible)
         {
-            animator.SetBool("IsHit", false);
+            player.animator.SetBool("IsHit", false);
 
             if (!beingHandled)
             {
@@ -58,7 +50,7 @@ public class PlayerStats : MonoBehaviour
             }
         }
 
-        if (animator.GetBool("IsDied"))
+        if (player.animator.GetBool("IsDied"))
         {
             player.transform.rotation = Quaternion.Euler(0f, player.currentTransformY, 0f);
         }
@@ -66,7 +58,7 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        animator.SetBool("IsHit", true);
+        player.animator.SetBool("IsHit", true);
 
         isInvisible = true;
 
@@ -83,7 +75,7 @@ public class PlayerStats : MonoBehaviour
     public void Died()
     {
         player.GetComponent<CharacterController>().enabled = false;
-        animator.SetBool("IsDied", true);
+        player.animator.SetBool("IsDied", true);
         isDied = true;
     }
 

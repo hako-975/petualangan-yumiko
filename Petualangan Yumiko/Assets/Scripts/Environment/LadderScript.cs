@@ -8,21 +8,21 @@ public class LadderScript : MonoBehaviour
     public GameObject exitLadderButton;
     public GameObject jumpButton;
 
-    PlayerController player;
 
     [HideInInspector]
     public bool isEntered;
     
     public float speedClimb = 2f;
-
     public float lengthLadder = 8f;
 
     float maxPosition;
     float minPosition;
 
+    PlayerController player;
+
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
+        player = PlayerManager.instance.player;
     }
 
     void Update()
