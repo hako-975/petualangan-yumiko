@@ -33,10 +33,14 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask groundMask;
 
+    [HideInInspector]
+    public float currentTransformY;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
         groundCheck = GameObject.FindGameObjectWithTag("GroundCheck").transform;
         cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
 
@@ -46,10 +50,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        if (controller.transform.position.y < -100f)
+        {
+            controller.enabled = false;
+            controller.transform.position = new Vector3(0f, 0.5f, 0f);
+            controller.enabled = true;
+            PlayerStats.instance.TakeDamage(1);
+        }
+
+        if (PlayerStats.instance.isDied == false)
+        {
+            currentTransformY = GetComponent<Transform>().transform.eulerAngles.y;
+        }
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        
 
         if (isGrounded && velocity.y < 0)
         {

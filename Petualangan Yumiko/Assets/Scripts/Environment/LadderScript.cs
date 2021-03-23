@@ -13,7 +13,7 @@ public class LadderScript : MonoBehaviour
     [HideInInspector]
     public bool isEntered;
     
-    public float speedClimb = 0.01f;
+    public float speedClimb = 2f;
 
     public float lengthLadder = 8f;
 
@@ -53,14 +53,14 @@ public class LadderScript : MonoBehaviour
 
         if (isEntered && vertical > 0f && player.transform.position.y < maxPosition)
         {
-            player.transform.position += Vector3.up * speedClimb;
+            player.transform.position += Vector3.up * (speedClimb / 100f);
             player.animator.SetFloat("Speed", 1f);
             player.animator.speed = 1f;
         }
 
         if (isEntered && vertical < 0f && player.transform.position.y > minPosition)
         {
-            player.transform.position += Vector3.down * speedClimb;
+            player.transform.position += Vector3.down * (speedClimb / 100f);
             player.animator.SetFloat("Speed", -1f);
             player.animator.speed = 1f;
         }
@@ -98,7 +98,10 @@ public class LadderScript : MonoBehaviour
 
     public void OnLadderButtonClick()
     {
+        #pragma warning disable 30842
         player.GetComponent<CharacterController>().enabled = false;
+        #pragma warning disable 30842
+
         player.animator.SetBool("IsRunning", false);
         player.animator.SetBool("IsClimbing", true);
         ladderButton.SetActive(false);
@@ -108,6 +111,7 @@ public class LadderScript : MonoBehaviour
 
     public void OnExitLadderButtonClick()
     {
+        player.velocity.y = 1f;
         player.GetComponent<CharacterController>().enabled = true;
         player.animator.SetBool("IsClimbing", false);
         ladderButton.SetActive(false);
