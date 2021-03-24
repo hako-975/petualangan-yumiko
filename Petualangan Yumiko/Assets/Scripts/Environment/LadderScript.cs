@@ -7,6 +7,7 @@ public class LadderScript : MonoBehaviour
     public GameObject ladderButton;
     public GameObject exitLadderButton;
     public GameObject jumpButton;
+    public GameObject jumpButtonPressed;
 
 
     [HideInInspector]
@@ -22,17 +23,19 @@ public class LadderScript : MonoBehaviour
 
     void Start()
     {
-        player = PlayerManager.instance.player;
+        player = FindObjectOfType<PlayerController>();
     }
 
     void Update()
     {
         if (player.animator.GetBool("IsClimbing"))
         {
+            jumpButtonPressed.SetActive(false);
             jumpButton.SetActive(false);
         }
         else
         {
+            jumpButtonPressed.SetActive(true);
             jumpButton.SetActive(true);
         }
 

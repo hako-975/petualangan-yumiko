@@ -12,12 +12,18 @@ public class EnemyController : MonoBehaviour
     Animator animator;
     Vector3 firstPosition;
 
+    PlayerStats playerStats;
+    PlayerController player;
+
     // Start is called before the first frame update
     void Start()
     {
         firstPosition = transform.position;
 
-        target = PlayerManager.instance.player.transform;
+        playerStats = FindObjectOfType<PlayerStats>();
+        player = FindObjectOfType<PlayerController>();
+
+        target = player.transform;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
@@ -41,7 +47,7 @@ public class EnemyController : MonoBehaviour
             agent.SetDestination(firstPosition);
         }
 
-        if (PlayerStats.instance.isDied)
+        if (playerStats.isDied)
         {
             agent.SetDestination(firstPosition);
         }
@@ -49,10 +55,10 @@ public class EnemyController : MonoBehaviour
         if (distance <= agent.stoppingDistance)
         {
             animator.SetBool("IsAttack", true);
-            if ((PlayerStats.instance.isInvisible == false) && animator.GetBool("IsAttack") && (PlayerStats.instance.isDied == false))
+            if ((playerStats.isInvisible == false) && animator.GetBool("IsAttack") && (playerStats.isDied == false))
             {
-                PlayerStats.instance.TakeDamage(1);
-                PlayerStats.instance.isInvisible = true;
+                playerStats.TakeDamage(1);
+                playerStats.isInvisible = true;
             }
         }
 

@@ -7,6 +7,7 @@ public class FinishPoint : MonoBehaviour
 {
     [HideInInspector]
     public int nextSceneLoad;
+
     void Start()
     {
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
@@ -16,10 +17,10 @@ public class FinishPoint : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (nextSceneLoad > PlayerManager.instance.GetLevelAt())
+            if (nextSceneLoad > PlayerPrefsManager.instance.GetLevelAt())
             {
                 // jika level sebelumnya tidak lebih dari scene yang sudah pernah, simpan data level baru
-                PlayerManager.instance.SetLevelAt(nextSceneLoad);
+                PlayerPrefsManager.instance.SetLevelAt(nextSceneLoad);
             }
 
             SceneManager.LoadScene(nextSceneLoad);

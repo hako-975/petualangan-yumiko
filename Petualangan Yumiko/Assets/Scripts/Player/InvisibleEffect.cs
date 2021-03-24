@@ -7,16 +7,21 @@ public class InvisibleEffect : MonoBehaviour
     SkinnedMeshRenderer body;
     bool beingHandled = false;
 
+    PlayerStats playerStats;
+    PlayerController player;
+
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<SkinnedMeshRenderer>();
+        playerStats = FindObjectOfType<PlayerStats>();
+        player = FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PlayerStats.instance.isDied || PlayerManager.instance.player.animator.GetBool("IsHit") == true)
+        if (playerStats.isDied || player.animator.GetBool("IsHit") == true)
         {
             body.enabled = true;
         }
@@ -26,7 +31,7 @@ public class InvisibleEffect : MonoBehaviour
             StartCoroutine(DelayInvisible(0.1f));
         }
 
-        if (PlayerStats.instance.isInvisible && PlayerStats.instance.isDied == false)
+        if (playerStats.isInvisible && playerStats.isDied == false)
         {
             body.enabled = false;
         }

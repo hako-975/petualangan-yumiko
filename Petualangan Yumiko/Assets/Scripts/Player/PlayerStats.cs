@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    #region Singleton
-    public static PlayerStats instance;
-
-    private void Awake()
-    {
-        instance = this;
-    }
-    #endregion
-
     PlayerController player;
 
     bool beingHandled = false;
@@ -34,8 +25,9 @@ public class PlayerStats : MonoBehaviour
     {
         currentHealth = maxHealth;
 
-        player = PlayerManager.instance.player;
         healthBar.SetMaxHealth(maxHealth);
+
+        player = GetComponent<PlayerController>();
     }
 
     void Update()

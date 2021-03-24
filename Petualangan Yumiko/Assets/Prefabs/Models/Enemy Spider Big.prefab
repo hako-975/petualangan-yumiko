@@ -306,7 +306,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.5
-  m_BaseOffset: -0.05
+  m_BaseOffset: -0.01
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!54 &502982129903998095
@@ -336,8 +336,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.55, z: 0.75}
-  m_Center: {x: 0, y: 0.35, z: -0.15}
+  m_Size: {x: 1.3932838, y: 0.5, z: 1.3617172}
+  m_Center: {x: 0.0049726963, y: 0.35000002, z: -0.053279877}
 --- !u!114 &502982129903998093
 MonoBehaviour:
   m_ObjectHideFlags: 0

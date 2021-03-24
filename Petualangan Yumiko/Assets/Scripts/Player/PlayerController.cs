@@ -34,11 +34,14 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask groundMask;
 
+    PlayerStats playerStats;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        playerStats = GetComponent<PlayerStats>();
 
         groundCheck = GameObject.FindGameObjectWithTag("GroundCheck").transform;
         cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
@@ -47,15 +50,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (controller.transform.position.y < -100f)
+        if (controller.transform.position.y < -200f)
         {
             controller.enabled = false;
             controller.transform.position = new Vector3(0f, 0.5f, 0f);
             controller.enabled = true;
-            PlayerStats.instance.TakeDamage(1);
+            playerStats.TakeDamage(1);
         }
 
-        if (PlayerStats.instance.isDied == false)
+        if (playerStats.isDied == false)
         {
             currentTransformY = GetComponent<Transform>().transform.eulerAngles.y;
         }
@@ -92,7 +95,7 @@ public class PlayerController : MonoBehaviour
         isClimbing = animator.GetBool("IsClimbing");
 
 
-        if ((Input.GetButtonDown("Jump") && isGrounded && !isClimbing) || (jumpButton.pressed && isGrounded && !isClimbing))
+        if ((Input.GetKeyDown("space") || jumpButton.pressed) && isGrounded && !isClimbing)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
