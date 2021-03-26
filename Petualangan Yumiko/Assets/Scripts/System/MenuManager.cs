@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-
     public void Paused()
     {
         Time.timeScale = 0;
@@ -20,19 +19,19 @@ public class MenuManager : MonoBehaviour
     {
         Time.timeScale = 1;
         Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+        PlayerPrefsManager.instance.SetNextScene(scene.name);
     }
 
     public void SelectLevel()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Select Level");
+        PlayerPrefsManager.instance.SetNextScene("Select Level");
     }
 
     public void MainMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Main Menu");
+        PlayerPrefsManager.instance.SetNextScene("Main Menu");
     }
 
     public void Quit()

@@ -7,21 +7,21 @@ using UnityEngine.SceneManagement;
 public class LevelAt : MonoBehaviour
 {
     public Button startGame;
-    public Button resumeGame;
+    public Button continueGame;
 
     void Start()
     {
         if (PlayerPrefsManager.instance.GetLevelAt() == 0)
         {
             startGame.gameObject.SetActive(true);
-            resumeGame.gameObject.SetActive(false);
+            continueGame.gameObject.SetActive(false);
             startGame.onClick.AddListener(LevelAtScene);
         }
         else
         {
             startGame.gameObject.SetActive(false);
-            resumeGame.gameObject.SetActive(true);
-            resumeGame.onClick.AddListener(LevelAtScene);
+            continueGame.gameObject.SetActive(true);
+            continueGame.onClick.AddListener(LevelAtScene);
         }
     }
 
@@ -29,11 +29,11 @@ public class LevelAt : MonoBehaviour
     {
         if (PlayerPrefsManager.instance.GetLevelAt() == 0)
         {
-            SceneManager.LoadScene("Level 1");
+            PlayerPrefsManager.instance.SetNextScene("Level 1");
         }
         else
         {
-            SceneManager.LoadScene(PlayerPrefsManager.instance.GetLevelAt());
+            PlayerPrefsManager.instance.SetNextScene("Level" + " " + PlayerPrefsManager.instance.GetLevelAt().ToString());
         }
     }
 }

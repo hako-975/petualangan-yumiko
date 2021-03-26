@@ -16,18 +16,38 @@ public class PlayerStats : MonoBehaviour
 
     public int maxHealth = 4;
     public int currentHealth;
+   
+    public int currentLife;
 
     public float delayInvisible = 3f;
 
     public HealthBar healthBar;
 
-    private void Start()
+    public LifeBar lifeBar;
+
+    public MenuManager menuManager;
+
+    void Start()
     {
+        if (PlayerPrefsManager.instance.GetFirstPlaying() == 0)
+        {
+            currentLife = PlayerPrefsManager.instance.SetLife(3);
+            PlayerPrefsManager.instance.SetFirstPlaying(1);
+        }
+        else
+        {
+            currentLife = PlayerPrefsManager.instance.GetLife();
+        }
+
         currentHealth = maxHealth;
 
         healthBar.SetMaxHealth(maxHealth);
 
+        lifeBar.SetTextLife(currentLife);
+
         player = GetComponent<PlayerController>();
+
+        menuManager = FindObjectOfType<MenuManager>();
     }
 
     void Update()
@@ -69,6 +89,23 @@ public class PlayerStats : MonoBehaviour
         player.GetComponent<CharacterController>().enabled = false;
         player.animator.SetBool("IsDied", true);
         isDied = true;
+        DecreaseLife();
+    }
+
+    public void DecreaseLife()
+    {
+        // check current life if zero
+        if (currentLife <= 0)
+        {
+            // load scene game over, to main menu
+            PlayerPrefsManager.instance.SetLife(3);
+            menuManager.MainMenu();
+        }
+        else
+        {
+            PlayerPrefsManager.instance.DecreaseLife();
+            menuManager.Restart();
+        }
     }
 
     IEnumerator DelayInvisible(float delay)

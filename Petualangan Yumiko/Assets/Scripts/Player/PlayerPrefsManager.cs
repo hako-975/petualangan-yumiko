@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerPrefsManager : MonoBehaviour
 {
@@ -13,9 +14,38 @@ public class PlayerPrefsManager : MonoBehaviour
     }
     #endregion
 
+    public int SetFirstPlaying(int boolean)
+    {
+        PlayerPrefs.SetInt("FirstPlaying", boolean);
+        return boolean;
+    }
+
+    public int GetFirstPlaying()
+    {
+        return PlayerPrefs.GetInt("FirstPlaying");
+    }
+
+    public int GetLife()
+    {
+        return PlayerPrefs.GetInt("Life");
+    }    
+
+    public int SetLife(int life)
+    {
+        PlayerPrefs.SetInt("Life", life);
+        return GetLife();
+    }
+
+    public int DecreaseLife()
+    {
+        int currentLife = GetLife() - 1;
+        PlayerPrefs.SetInt("Life", currentLife);
+        return GetLife();
+    }
+
     public int GetLevelAt()
     {
-        return PlayerPrefs.GetInt("levelAt");
+        return PlayerPrefs.GetInt("LevelAt");
     }
 
     public int SetLevelAt(int level)
@@ -55,6 +85,17 @@ public class PlayerPrefsManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("QualityIndex", qualityIndex);
         return GetQuality();
+    }
+
+    public string GetNextScene()
+    {
+        return PlayerPrefs.GetString("NextScene");
+    }
+
+    public void SetNextScene(string nextScene)
+    {
+        PlayerPrefs.SetString("NextScene", nextScene);
+        SceneManager.LoadScene("Loading");
     }
 
     public void DeleteKey(string key)

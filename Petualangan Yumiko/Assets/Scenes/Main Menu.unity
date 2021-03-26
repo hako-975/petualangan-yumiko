@@ -612,7 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startGame: {fileID: 1077529671}
-  resumeGame: {fileID: 1212229838}
+  continueGame: {fileID: 1212229838}
 --- !u!4 &308286972
 Transform:
   m_ObjectHideFlags: 0
@@ -2939,7 +2939,7 @@ GameObject:
   - component: {fileID: 1212229839}
   - component: {fileID: 1212229838}
   m_Layer: 5
-  m_Name: Button Resume Game
+  m_Name: Button Continue Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4689,7 +4689,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Resume Game
+  m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75803fb83e6826f44b4f1af1e7ed5b92, type: 2}
   m_sharedMaterial: {fileID: -194790265763036643, guid: 75803fb83e6826f44b4f1af1e7ed5b92, type: 2}
