@@ -33,7 +33,7 @@ public class LevelAt : MonoBehaviour
         }
         else
         {
-            PlayerPrefsManager.instance.SetNextScene("Level" + " " + PlayerPrefsManager.instance.GetLevelAt().ToString());
+            PlayerPrefsManager.instance.SetNextScene("Level" + " " + PlayerPrefsManager.instance.GetLevelAt());
         }
     }
 }

@@ -10,20 +10,22 @@ public class FinishPoint : MonoBehaviour
 
     void Start()
     {
-        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
+        // -1 sesuai urutan pada build index, level saat ini 1 dan build index nya 3 dan next level adalah level 2
+        nextSceneLoad = SceneManager.GetActiveScene().buildIndex - 1;
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (nextSceneLoad > PlayerPrefsManager.instance.GetLevelAt())
+            int levelAt = PlayerPrefsManager.instance.GetLevelAt();
+
+            if (nextSceneLoad > levelAt)
             {
-                // jika level sebelumnya tidak lebih dari scene yang sudah pernah, simpan data level baru
                 PlayerPrefsManager.instance.SetLevelAt(nextSceneLoad);
             }
 
-            SceneManager.LoadScene(nextSceneLoad);
+            PlayerPrefsManager.instance.SetNextScene("Level" + " " + nextSceneLoad);
         }
     }
 }

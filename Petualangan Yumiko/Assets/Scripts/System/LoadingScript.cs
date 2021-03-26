@@ -10,14 +10,13 @@ public class LoadingScript : MonoBehaviour
 
     void Start()
     {
-        if (PlayerPrefsManager.instance.GetNextScene() == "")
+
+        if (string.IsNullOrEmpty(PlayerPrefsManager.instance.GetNextScene()))
         {
             PlayerPrefsManager.instance.SetNextScene("Main Menu");
         }
-        else
-        {
-            StartCoroutine(LoadAsync(PlayerPrefsManager.instance.GetNextScene()));
-        }
+     
+        StartCoroutine(LoadAsync(PlayerPrefsManager.instance.GetNextScene()));
     }
 
     IEnumerator LoadAsync(string nextScene)
