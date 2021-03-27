@@ -5,9 +5,9 @@ using Cinemachine;
 
 public class CinemachineCoreGetInputTouchAxis : MonoBehaviour
 {
-    public float TouchSensitivity_x = 10f;
-    public float TouchSensitivity_y = 10f;
-    public TouchField touchField;
+    public float touchSensitivity = 10f;
+    
+    TouchField touchField;
 
     // Use this for initialization
     void Start()
@@ -22,11 +22,11 @@ public class CinemachineCoreGetInputTouchAxis : MonoBehaviour
         {
 
             case "Touch X":
-                return touchField.TouchDist.x / TouchSensitivity_x;
+                return touchField.TouchDist.x / touchSensitivity;
 
 
             case "Touch Y":
-                return touchField.TouchDist.y / TouchSensitivity_y;
+                return touchField.TouchDist.y / touchSensitivity;
 
 
             default:

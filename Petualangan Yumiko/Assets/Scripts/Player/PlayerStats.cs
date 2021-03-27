@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class PlayerStats : MonoBehaviour
     public LifeBar lifeBar;
 
     public MenuManager menuManager;
+
+    public GameObject gameOverPanel;
 
     void Start()
     {
@@ -89,17 +92,20 @@ public class PlayerStats : MonoBehaviour
         player.GetComponent<CharacterController>().enabled = false;
         player.animator.SetBool("IsDied", true);
         isDied = true;
-        DecreaseLife();
+        StartCoroutine(DecreaseLife());
     }
 
-    public void DecreaseLife()
+    IEnumerator DecreaseLife()
     {
+        yield return new WaitForSeconds(5f);
         // check current life if zero
         if (currentLife <= 0)
         {
-            // load scene game over, to main menu
+            // game over panel
+            gameOverPanel.SetActive(true);
+
+            // if watch ads set life to 3 else to 1
             PlayerPrefsManager.instance.SetLife(3);
-            menuManager.MainMenu();
         }
         else
         {

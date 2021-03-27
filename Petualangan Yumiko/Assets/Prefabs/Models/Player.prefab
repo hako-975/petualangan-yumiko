@@ -1225,8 +1225,12 @@ MonoBehaviour:
   isDied: 0
   maxHealth: 4
   currentHealth: 0
+  currentLife: 0
   delayInvisible: 3
   healthBar: {fileID: 0}
+  lifeBar: {fileID: 0}
+  menuManager: {fileID: 0}
+  gameOverPanel: {fileID: 0}
 --- !u!1 &2611775230920099627
 GameObject:
   m_ObjectHideFlags: 0

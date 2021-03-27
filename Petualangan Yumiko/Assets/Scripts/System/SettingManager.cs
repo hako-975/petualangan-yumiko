@@ -10,11 +10,19 @@ public class SettingManager : MonoBehaviour
     public AudioMixer mixerSFX;
     public AudioMixer mixerMusic;
 
+    CinemachineCoreGetInputTouchAxis touchSensitivity;
+
     // GameObject
     public Slider sliderSFX;
     public Slider sliderMusic;
+    public Slider sliderSensitivity;
 
     public TMP_Dropdown dropdownQuality;
+
+    private void Start()
+    {
+        touchSensitivity = FindObjectOfType<CinemachineCoreGetInputTouchAxis>();
+    }
 
     public void SetSFX(float volumeSFX)
     {
@@ -28,6 +36,12 @@ public class SettingManager : MonoBehaviour
         PlayerPrefsManager.instance.SetMusic(volumeMusic);
     }
 
+    public void SetSensitivity(float sensitivity)
+    {
+        touchSensitivity.touchSensitivity = sensitivity;
+        PlayerPrefsManager.instance.SetSensitivity(sensitivity);
+    }
+
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
@@ -38,6 +52,7 @@ public class SettingManager : MonoBehaviour
     {
         PlayerPrefsManager.instance.DeleteKey("SFX");
         PlayerPrefsManager.instance.DeleteKey("Music");
+        PlayerPrefsManager.instance.DeleteKey("Sensitivity");
         PlayerPrefsManager.instance.DeleteKey("QualityIndex");
     }
 
@@ -45,6 +60,7 @@ public class SettingManager : MonoBehaviour
     {
         sliderSFX.value = PlayerPrefsManager.instance.GetSFX();
         sliderMusic.value = PlayerPrefsManager.instance.GetMusic();
+        sliderSensitivity.value = PlayerPrefsManager.instance.GetSensitivity();
         dropdownQuality.value = PlayerPrefsManager.instance.GetQuality();
     }
 }

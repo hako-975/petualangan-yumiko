@@ -76,6 +76,17 @@ public class PlayerPrefsManager : MonoBehaviour
         return GetMusic();
     }
 
+    public float GetSensitivity()
+    {
+        return PlayerPrefs.GetFloat("Sensitivity");
+    }
+
+    public float SetSensitivity(float sensitivity)
+    {
+        PlayerPrefs.SetFloat("Sensitivity", sensitivity);
+        return GetSensitivity();
+    }
+
     public int GetQuality()
     {
         return PlayerPrefs.GetInt("QualityIndex");

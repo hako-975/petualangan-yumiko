@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LadderScript : MonoBehaviour
 {
-    public GameObject ladderButton;
-    public GameObject exitLadderButton;
+    public Button ladderButton;
+    public Button exitLadderButton;
+
     public GameObject jumpButton;
     public GameObject jumpButtonPressed;
 
@@ -13,7 +15,7 @@ public class LadderScript : MonoBehaviour
     [HideInInspector]
     public bool isEntered;
     
-    public float speedClimb = 2f;
+    public float speedClimb = 8f;
     public float lengthLadder = 8f;
 
     float maxPosition;
@@ -28,6 +30,10 @@ public class LadderScript : MonoBehaviour
 
     void Update()
     {
+        ladderButton.onClick.AddListener(OnLadderButtonClick);
+        exitLadderButton.onClick.AddListener(OnExitLadderButtonClick);
+        
+
         if (player.animator.GetBool("IsClimbing"))
         {
             jumpButtonPressed.SetActive(false);
@@ -73,14 +79,14 @@ public class LadderScript : MonoBehaviour
     {
        if (other.gameObject.CompareTag("Player") && player.animator.GetBool("IsClimbing") == false)
         {
-            exitLadderButton.SetActive(false);
-            ladderButton.SetActive(true);
+            exitLadderButton.gameObject.SetActive(false);
+            ladderButton.gameObject.SetActive(true);
         }
 
         if (other.gameObject.CompareTag("Player") && player.animator.GetBool("IsClimbing") == true)
         {
-            exitLadderButton.SetActive(true);
-            ladderButton.SetActive(false);
+            exitLadderButton.gameObject.SetActive(true);
+            ladderButton.gameObject.SetActive(false);
         }
     }
 
@@ -88,28 +94,26 @@ public class LadderScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && player.animator.GetBool("IsClimbing") == false)
         {
-            exitLadderButton.SetActive(false);
-            ladderButton.SetActive(false);
+            exitLadderButton.gameObject.SetActive(false);
+            ladderButton.gameObject.SetActive(false);
         }
 
         if (other.gameObject.CompareTag("Player") && player.animator.GetBool("IsClimbing") == true)
         {
-            exitLadderButton.SetActive(true);
-            ladderButton.SetActive(false);
+            exitLadderButton.gameObject.SetActive(true);
+            ladderButton.gameObject.SetActive(false);
         }
     }
 
     public void OnLadderButtonClick()
     {
-        #pragma warning disable 30842
         player.GetComponent<CharacterController>().enabled = false;
-        #pragma warning disable 30842
 
         player.animator.SetBool("IsRunning", false);
         player.animator.SetBool("IsClimbing", true);
-        ladderButton.SetActive(false);
+        ladderButton.gameObject.SetActive(false);
         isEntered = true;
-        exitLadderButton.SetActive(true);
+        exitLadderButton.gameObject.SetActive(true);
     }
 
     public void OnExitLadderButtonClick()
@@ -117,8 +121,8 @@ public class LadderScript : MonoBehaviour
         player.velocity.y = 1f;
         player.GetComponent<CharacterController>().enabled = true;
         player.animator.SetBool("IsClimbing", false);
-        ladderButton.SetActive(false);
-        exitLadderButton.SetActive(false);
+        ladderButton.gameObject.SetActive(false);
+        exitLadderButton.gameObject.SetActive(false);
         isEntered = false;
     }
 }
