@@ -51,9 +51,16 @@ public class SettingManager : MonoBehaviour
     public void SetDefaultSetting()
     {
         PlayerPrefsManager.instance.DeleteKey("SFX");
+        PlayerPrefsManager.instance.SetSFX(0f); // default
+
         PlayerPrefsManager.instance.DeleteKey("Music");
+        PlayerPrefsManager.instance.SetMusic(0f); // default
+
         PlayerPrefsManager.instance.DeleteKey("Sensitivity");
+        PlayerPrefsManager.instance.SetSensitivity(10f);
+
         PlayerPrefsManager.instance.DeleteKey("QualityIndex");
+        PlayerPrefsManager.instance.SetQuality(1); // default medium quality
     }
 
     private void Update()
