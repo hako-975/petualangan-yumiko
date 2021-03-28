@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     bool isGrounded;
     bool isClimbing;
 
+    private float canJump = 0f;
+
     [HideInInspector]
     public Vector3 velocity;
 
@@ -95,9 +97,10 @@ public class PlayerController : MonoBehaviour
         isClimbing = animator.GetBool("IsClimbing");
 
 
-        if ((Input.GetKey(KeyCode.Space) || jumpButton.pressed) && isGrounded && !isClimbing)
+        if ((Input.GetKey(KeyCode.Space) || jumpButton.pressed) && isGrounded && !isClimbing && Time.time > canJump)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            canJump = Time.time + 1f;
         }
 
         velocity.y += gravity * Time.deltaTime;
