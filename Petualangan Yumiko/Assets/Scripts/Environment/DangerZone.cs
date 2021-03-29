@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DangerZone : MonoBehaviour
 {
-    Transform spawnPoint;
+    GameObject spawnPoint;
 
     PlayerStats playerStats;
 
@@ -17,7 +17,7 @@ public class DangerZone : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>();
         playerStats = FindObjectOfType<PlayerStats>();
-        spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint").transform;
+        spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
         thirdPersonCamera = FindObjectOfType<CinemachineFreeLook>();
     }
 

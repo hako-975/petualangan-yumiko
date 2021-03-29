@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Portal
+  m_Name: not active
   m_Shader: {fileID: -6465566751694194690, guid: f1f5b21f96391394b94ee4293604a230, type: 3}
   m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF
   m_LightmapFlags: 4
@@ -122,8 +122,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_60D157E: {r: 0.6745098, g: 0.07058822, b: 0.38345903, a: 0}
-    - Color_7EB9E3D3: {r: 0.3910866, g: 0.29383236, b: 0.8773585, a: 0}
+    - Color_60D157E: {r: 0.7264151, g: 0.090611115, b: 0.058250275, a: 0}
+    - Color_7EB9E3D3: {r: 1.6, g: 1.309804, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

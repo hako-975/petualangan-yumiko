@@ -14,15 +14,26 @@ public class PlayerPrefsManager : MonoBehaviour
     }
     #endregion
 
-    public int SetFirstPlaying(int boolean)
+    public int GetCurrentLevel()
     {
-        PlayerPrefs.SetInt("FirstPlaying", boolean);
-        return boolean;
+        return PlayerPrefs.GetInt("CurrentLevel");
     }
 
-    public int GetFirstPlaying()
+    public int SetCurrentLevel(int level)
     {
-        return PlayerPrefs.GetInt("FirstPlaying");
+        PlayerPrefs.SetInt("CurrentLevel", level);
+        return GetCurrentLevel();
+    }
+
+    public int GetFirstPlayingForLife()
+    {
+        return PlayerPrefs.GetInt("FirstPlayingForLife");
+    }
+
+    public int SetFirstPlayingForLife(int boolean)
+    {
+        PlayerPrefs.SetInt("FirstPlayingForLife", boolean);
+        return boolean;
     }
 
     public int GetLife()

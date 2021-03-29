@@ -6,8 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     CharacterController controller;
 
-    Transform cam;
-    Transform groundCheck;
+    GameObject cam;
+    GameObject groundCheck;
+    GameObject spawnPoint;
 
     float turnSmoothVelocity;
 
@@ -38,6 +39,8 @@ public class PlayerController : MonoBehaviour
 
     PlayerStats playerStats;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,8 +48,14 @@ public class PlayerController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         playerStats = GetComponent<PlayerStats>();
 
-        groundCheck = GameObject.FindGameObjectWithTag("GroundCheck").transform;
-        cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        groundCheck = GameObject.FindGameObjectWithTag("GroundCheck");
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
+        spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
+
+        // set character to spawn point
+        controller.enabled = false;
+        controller.transform.position = spawnPoint.transform.position;
+        controller.enabled = true;
     }
 
     // Update is called once per frame
@@ -55,8 +64,8 @@ public class PlayerController : MonoBehaviour
         if (controller.transform.position.y < -200f)
         {
             controller.enabled = false;
-            controller.transform.position = new Vector3(0f, 0.5f, 0f);
-            controller.enabled = true;
+            controller.transform.position = spawnPoint.transform.position;
+            controller.enabled = false;
             playerStats.TakeDamage(1);
         }
 
@@ -65,7 +74,7 @@ public class PlayerController : MonoBehaviour
             currentTransformY = GetComponent<Transform>().transform.eulerAngles.y;
         }
 
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        isGrounded = Physics.CheckSphere(groundCheck.transform.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
         {
@@ -79,7 +88,7 @@ public class PlayerController : MonoBehaviour
 
         if (move.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + cam.transform.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 

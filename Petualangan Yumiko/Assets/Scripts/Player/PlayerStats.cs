@@ -30,12 +30,16 @@ public class PlayerStats : MonoBehaviour
 
     public GameObject gameOverPanel;
 
+    SpawnPoint spawnPoint;
+
     void Start()
     {
-        if (PlayerPrefsManager.instance.GetFirstPlaying() == 0)
+        spawnPoint = FindObjectOfType<SpawnPoint>();
+
+        if (PlayerPrefsManager.instance.GetFirstPlayingForLife() == 0)
         {
             currentLife = PlayerPrefsManager.instance.SetLife(3);
-            PlayerPrefsManager.instance.SetFirstPlaying(1);
+            PlayerPrefsManager.instance.SetFirstPlayingForLife(1);
         }
         else
         {
@@ -104,8 +108,24 @@ public class PlayerStats : MonoBehaviour
             // game over panel
             gameOverPanel.SetActive(true);
 
-            // if watch ads set life to 3 else to 1
+            // if watch ads set life to 3 and not reset spawn point else to 1 and reset spawn point
+            // if (watchads == true)
+            // {
+
+            // set life 3
             PlayerPrefsManager.instance.SetLife(3);
+
+            // }
+            // else
+            // {
+
+            // set life 1
+            // PlayerPrefsManager.instance.SetLife(1);
+
+            // reset spawn point
+            spawnPoint.transform.position = new Vector3(0f, 0.25f, 0f);
+
+            // }
         }
         else
         {
