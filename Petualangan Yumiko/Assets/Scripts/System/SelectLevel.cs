@@ -68,4 +68,9 @@ public class SelectLevel : MonoBehaviour
 		PlayerPrefsManager.instance.SetNextScene("Level 9");
 	}
 
+	public void Level_10()
+	{
+		PlayerPrefsManager.instance.SetNextScene("Level 10");
+	}
+
 }
