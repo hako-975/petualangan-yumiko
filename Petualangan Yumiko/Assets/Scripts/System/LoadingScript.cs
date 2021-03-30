@@ -10,12 +10,6 @@ public class LoadingScript : MonoBehaviour
 
     void Start()
     {
-
-        if (string.IsNullOrEmpty(PlayerPrefsManager.instance.GetNextScene()))
-        {
-            PlayerPrefsManager.instance.SetNextScene("Main Menu");
-        }
-     
         StartCoroutine(LoadAsync(PlayerPrefsManager.instance.GetNextScene()));
     }
 

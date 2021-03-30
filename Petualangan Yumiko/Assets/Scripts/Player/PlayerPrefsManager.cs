@@ -25,20 +25,9 @@ public class PlayerPrefsManager : MonoBehaviour
         return GetCurrentLevel();
     }
 
-    public int GetFirstPlayingForLife()
-    {
-        return PlayerPrefs.GetInt("FirstPlayingForLife");
-    }
-
-    public int SetFirstPlayingForLife(int boolean)
-    {
-        PlayerPrefs.SetInt("FirstPlayingForLife", boolean);
-        return boolean;
-    }
-
     public int GetLife()
     {
-        return PlayerPrefs.GetInt("Life");
+        return PlayerPrefs.GetInt("Life", 3);
     }    
 
     public int SetLife(int life)
@@ -67,7 +56,7 @@ public class PlayerPrefsManager : MonoBehaviour
 
     public float GetSFX()
     {
-        return PlayerPrefs.GetFloat("SFX");
+        return PlayerPrefs.GetFloat("SFX", -5f);
     }
 
     public float SetSFX(float volumeSFX)
@@ -78,7 +67,7 @@ public class PlayerPrefsManager : MonoBehaviour
 
     public float GetMusic()
     {
-        return PlayerPrefs.GetFloat("Music");
+        return PlayerPrefs.GetFloat("Music", -5f);
     }
 
     public float SetMusic(float volumeMusic)
@@ -89,7 +78,7 @@ public class PlayerPrefsManager : MonoBehaviour
 
     public float GetSensitivity()
     {
-        return PlayerPrefs.GetFloat("Sensitivity");
+        return PlayerPrefs.GetFloat("Sensitivity", 20f);
     }
 
     public float SetSensitivity(float sensitivity)
@@ -100,7 +89,7 @@ public class PlayerPrefsManager : MonoBehaviour
 
     public int GetQuality()
     {
-        return PlayerPrefs.GetInt("QualityIndex");
+        return PlayerPrefs.GetInt("QualityIndex", 0);
     }
 
     public int SetQuality(int qualityIndex)
@@ -111,7 +100,7 @@ public class PlayerPrefsManager : MonoBehaviour
 
     public string GetNextScene()
     {
-        return PlayerPrefs.GetString("NextScene");
+        return PlayerPrefs.GetString("NextScene", "Main Menu");
     }
 
     public void SetNextScene(string nextScene)

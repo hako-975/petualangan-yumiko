@@ -19,18 +19,21 @@ public class MenuManager : MonoBehaviour
     {
         Time.timeScale = 1;
         Scene scene = SceneManager.GetActiveScene();
+        // for loading
         PlayerPrefsManager.instance.SetNextScene(scene.name);
     }
 
     public void SelectLevel()
     {
         Time.timeScale = 1;
+        // for loading
         PlayerPrefsManager.instance.SetNextScene("Select Level");
     }
 
     public void MainMenu()
     {
         Time.timeScale = 1;
+        // for loading
         PlayerPrefsManager.instance.SetNextScene("Main Menu");
     }
 

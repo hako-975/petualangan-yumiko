@@ -36,15 +36,7 @@ public class PlayerStats : MonoBehaviour
     {
         spawnPoint = FindObjectOfType<SpawnPoint>();
 
-        if (PlayerPrefsManager.instance.GetFirstPlayingForLife() == 0)
-        {
-            currentLife = PlayerPrefsManager.instance.SetLife(3);
-            PlayerPrefsManager.instance.SetFirstPlayingForLife(1);
-        }
-        else
-        {
-            currentLife = PlayerPrefsManager.instance.GetLife();
-        }
+        currentLife = PlayerPrefsManager.instance.GetLife();
 
         currentHealth = maxHealth;
 
