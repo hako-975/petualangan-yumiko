@@ -15,10 +15,18 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void Restart()
+    public void Restart(bool restart)
     {
+        if (restart)
+        {
+            // do not change PlayerPrefs.SetInt("CurrentLevel", 0);
+            // for button restart
+            PlayerPrefs.SetInt("CurrentLevel", 0);
+        }
+
         Time.timeScale = 1;
         Scene scene = SceneManager.GetActiveScene();
+
         // for loading
         PlayerPrefsManager.instance.SetNextScene(scene.name);
     }

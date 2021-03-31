@@ -52,10 +52,7 @@ public class PlayerController : MonoBehaviour
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
 
-        // set character to spawn point
-        controller.enabled = false;
-        controller.transform.position = spawnPoint.transform.position;
-        controller.enabled = true;
+        StartCoroutine(WaitPosition());
     }
 
     // Update is called once per frame
@@ -115,6 +112,15 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+    
+    IEnumerator WaitPosition()
+    {
+        yield return new WaitForFixedUpdate();
+        // set character to spawn point
+        controller.enabled = false;
+        controller.transform.position = spawnPoint.transform.position;
+        controller.enabled = true;
     }
 
 }

@@ -25,6 +25,7 @@ public class FinishPoint : MonoBehaviour
                 PlayerPrefsManager.instance.SetLevelAt(nextSceneLoad);
             }
 
+            PlayerPrefsManager.instance.SetCurrentLevel(0);
             PlayerPrefsManager.instance.SetNextScene("Level" + " " + nextSceneLoad);
         }
     }

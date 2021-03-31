@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 {
     PlayerController player;
+    SpawnPoint spawnPoint;
 
     bool beingHandled = false;
 
@@ -17,7 +18,6 @@ public class PlayerStats : MonoBehaviour
 
     public int maxHealth = 4;
     public int currentHealth;
-   
     public int currentLife;
 
     public float delayInvisible = 3f;
@@ -30,19 +30,13 @@ public class PlayerStats : MonoBehaviour
 
     public GameObject gameOverPanel;
 
-    SpawnPoint spawnPoint;
-
     void Start()
     {
         spawnPoint = FindObjectOfType<SpawnPoint>();
 
-        currentLife = PlayerPrefsManager.instance.GetLife();
-
         currentHealth = maxHealth;
 
         healthBar.SetMaxHealth(maxHealth);
-
-        lifeBar.SetTextLife(currentLife);
 
         player = GetComponent<PlayerController>();
 
@@ -51,6 +45,9 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
+        currentLife = PlayerPrefsManager.instance.GetLife();
+        lifeBar.SetTextLife(currentLife);
+
         if (isInvisible)
         {
             player.animator.SetBool("IsHit", false);
@@ -122,7 +119,9 @@ public class PlayerStats : MonoBehaviour
         else
         {
             PlayerPrefsManager.instance.DecreaseLife();
-            menuManager.Restart();
+            // true is restart
+            // false is die
+            menuManager.Restart(false);
         }
     }
 
