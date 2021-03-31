@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
     
     IEnumerator WaitPosition()
     {
-        yield return new WaitForFixedUpdate();
+        yield return new WaitForEndOfFrame();
         // set character to spawn point
         controller.enabled = false;
         controller.transform.position = spawnPoint.transform.position;
