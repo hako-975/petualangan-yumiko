@@ -10,6 +10,7 @@ public class EnteredBoss : MonoBehaviour
         bossSpider = FindObjectOfType<BossSpiderController>();
         bossSpider.gameObject.SetActive(false);
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))

@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class ExitBoss : MonoBehaviour
 {
-    BossSpiderController bossSpider;
-    private void Start()
-    {
-        bossSpider = FindObjectOfType<BossSpiderController>();
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            bossSpider.lookRadius = 0f;
+            FindObjectOfType<BossSpiderController>().lookRadius = 0f;
         }
     }
 }
