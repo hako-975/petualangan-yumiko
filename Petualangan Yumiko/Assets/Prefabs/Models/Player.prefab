@@ -1200,7 +1200,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   currentTransformY: 0
   gravity: -29.43
-  groundDistance: 0.6
+  groundDistance: 0.2
   jumpHeight: 2
   turnSmoothTime: 0.1
   movementSpeed: 7

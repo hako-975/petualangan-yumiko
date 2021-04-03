@@ -17,14 +17,13 @@ public class CheckPoint : MonoBehaviour
     {
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
 
-        // do not change PlayerPrefs.GetInt("CurrentLevel")
-        // check current scene - 2 karena build index level 4 adalah 6
-        currentLevel = SceneManager.GetActiveScene().buildIndex - 2;
+        // check current scene - 3 karena build index level 4 adalah 7
+        currentLevel = SceneManager.GetActiveScene().buildIndex - 3;
 
-        if (currentLevel != PlayerPrefs.GetInt("CurrentLevel"))
+        if (currentLevel != PlayerPrefsManager.instance.GetCurrentLevel())
         {
             spawnPoint.transform.position = new Vector3(0f, 0.25f, 0f);
-            PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+            PlayerPrefsManager.instance.SetCurrentLevel(currentLevel);
         }
     }
             

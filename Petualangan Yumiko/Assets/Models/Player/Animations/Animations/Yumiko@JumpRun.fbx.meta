@@ -12,6 +12,9 @@ ModelImporter:
   - first:
       74: -7676421231617131493
     second: JumpRun End
+  - first:
+      74: 1137259033432233297
+    second: JumpRun Start 2
   externalObjects: {}
   materials:
     materialImportMode: 2

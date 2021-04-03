@@ -16,11 +16,18 @@ public class LoadingScript : MonoBehaviour
     IEnumerator LoadAsync(string nextScene)
     {
         AsyncOperation sync = SceneManager.LoadSceneAsync(nextScene);
-        while (!sync.isDone)
+        if (sync == null)
         {
-            float progress = Mathf.Clamp01(sync.progress);
-            image.fillAmount -= progress;
-            yield return new WaitForEndOfFrame();   
-        }  
+            SceneManager.LoadScene("Coming Soon");
+        }
+        else
+        {
+            while (!sync.isDone)
+            {
+                float progress = Mathf.Clamp01(sync.progress);
+                image.fillAmount -= progress;
+                yield return new WaitForEndOfFrame();
+            }
+        }
     }
 }

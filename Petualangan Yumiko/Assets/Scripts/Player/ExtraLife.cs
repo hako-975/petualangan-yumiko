@@ -8,7 +8,7 @@ public class ExtraLife : MonoBehaviour
     void Update()
     {
         // for rotate
-        transform.Rotate(Vector3.up);
+        transform.Rotate(Vector3.up * 2f);
     }
 
     private void OnTriggerEnter(Collider other)

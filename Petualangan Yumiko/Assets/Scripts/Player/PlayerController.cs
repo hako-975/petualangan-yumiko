@@ -102,7 +102,6 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsGrounded", isGrounded);
         isClimbing = animator.GetBool("IsClimbing");
 
-
         if ((Input.GetKey(KeyCode.Space) || jumpButton.pressed) && isGrounded && !isClimbing && Time.time > canJump)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);

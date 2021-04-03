@@ -10,8 +10,8 @@ public class FinishPoint : MonoBehaviour
 
     void Start()
     {
-        // -1 sesuai urutan pada build index, level saat ini 1 dan build index nya 3 dan next level adalah level 2
-        nextSceneLoad = SceneManager.GetActiveScene().buildIndex - 1;
+        // -2 sesuai urutan pada build index, level saat ini 1 dan build index nya 4 dan next level adalah level 2
+        nextSceneLoad = SceneManager.GetActiveScene().buildIndex - 2;
     }
 
     void OnTriggerEnter(Collider other)
@@ -26,6 +26,7 @@ public class FinishPoint : MonoBehaviour
             }
 
             PlayerPrefsManager.instance.SetCurrentLevel(0);
+            
             PlayerPrefsManager.instance.SetNextScene("Level" + " " + nextSceneLoad);
         }
     }
