@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
+    int currentLevel;
+
     PlayerController player;
     SpawnPoint spawnPoint;
 
@@ -32,19 +35,32 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
+        player = GetComponent<PlayerController>();
+
         spawnPoint = FindObjectOfType<SpawnPoint>();
 
-        currentHealth = maxHealth;
+        // check current scene - 3 karena build index level 4 adalah 7
+        currentLevel = SceneManager.GetActiveScene().buildIndex - 3;
+
+        if (currentLevel != PlayerPrefsManager.instance.GetCurrentLevel())
+        {
+            currentHealth = maxHealth;
+        }
+        else
+        {
+            currentHealth = PlayerPrefsManager.instance.GetCurrentHealth();
+        }
 
         healthBar.SetMaxHealth(maxHealth);
-
-        player = GetComponent<PlayerController>();
 
         menuManager = FindObjectOfType<MenuManager>();
     }
 
     void Update()
     {
+        healthBar.SetHealth(currentHealth);
+        PlayerPrefsManager.instance.SetCurrentHealth(currentHealth);
+
         currentLife = PlayerPrefsManager.instance.GetLife();
         lifeBar.SetTextLife(currentLife);
 
@@ -119,6 +135,7 @@ public class PlayerStats : MonoBehaviour
         else
         {
             PlayerPrefsManager.instance.DecreaseLife();
+            currentHealth = PlayerPrefsManager.instance.SetCurrentHealth(4);
             // true is restart
             // false is die
             menuManager.Restart(false);

@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    int currentLevel;
+
     CharacterController controller;
 
     GameObject cam;
@@ -58,11 +61,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        StartCoroutine(WaitSetPosition());
+
         if (controller.transform.position.y < -200f)
         {
             controller.enabled = false;
             controller.transform.position = spawnPoint.transform.position;
-            controller.enabled = false;
+            controller.enabled = true;
             playerStats.TakeDamage(1);
         }
 
@@ -117,9 +122,31 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         // set character to spawn point
-        controller.enabled = false;
-        controller.transform.position = spawnPoint.transform.position;
-        controller.enabled = true;
+        
+        // check current scene - 3 karena build index level 4 adalah 7
+        currentLevel = SceneManager.GetActiveScene().buildIndex - 3;
+        
+        if (currentLevel != PlayerPrefsManager.instance.GetCurrentLevel())
+        {
+            controller.enabled = false;
+            controller.transform.position = spawnPoint.transform.position;
+            controller.enabled = true;
+            PlayerPrefsManager.instance.SetCurrentLevel(currentLevel);
+        }
+        else
+        {
+            controller.enabled = false;
+            controller.transform.position = new Vector3(PlayerPrefsManager.instance.GetPositionX(), PlayerPrefsManager.instance.GetPositionY(), PlayerPrefsManager.instance.GetPositionZ());
+            controller.enabled = true;
+        }
+    }
+
+    IEnumerator WaitSetPosition()
+    {
+        yield return new WaitForSeconds(3f);
+        PlayerPrefsManager.instance.SetPositionX(transform.position.x);
+        PlayerPrefsManager.instance.SetPositionY(transform.position.y);
+        PlayerPrefsManager.instance.SetPositionZ(transform.position.z);
     }
 
 }

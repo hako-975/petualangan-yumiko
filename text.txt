@@ -1,2 +1,2 @@
 hardcode
-finishpoint, checkpoint
+finishpoint, checkpoint, playercontroller, resetspawnpoint

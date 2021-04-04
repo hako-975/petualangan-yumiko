@@ -14,6 +14,50 @@ public class PlayerPrefsManager : MonoBehaviour
     }
     #endregion
 
+    public int GetCurrentHealth()
+    {
+        return PlayerPrefs.GetInt("CurrentHealth");
+    }
+
+    public int SetCurrentHealth(int currentHealth)
+    {
+        PlayerPrefs.SetInt("CurrentHealth", currentHealth);
+        return GetCurrentHealth();
+    }    
+
+    public float GetPositionX()
+    {
+        return PlayerPrefs.GetFloat("PositionX");
+    }
+
+    public float SetPositionX(float positionX)
+    {
+        PlayerPrefs.SetFloat("PositionX", positionX);
+        return GetPositionX();
+    }
+
+    public float GetPositionY()
+    {
+        return PlayerPrefs.GetFloat("PositionY");
+    }
+
+    public float SetPositionY(float positionY)
+    {
+        PlayerPrefs.SetFloat("PositionY", positionY);
+        return GetPositionY();
+    }
+
+    public float GetPositionZ()
+    {
+        return PlayerPrefs.GetFloat("PositionZ");
+    }
+
+    public float SetPositionZ(float positionZ)
+    {
+        PlayerPrefs.SetFloat("PositionZ", positionZ);
+        return GetPositionZ();
+    }
+
     public int GetCurrentLevel()
     {
         return PlayerPrefs.GetInt("CurrentLevel");

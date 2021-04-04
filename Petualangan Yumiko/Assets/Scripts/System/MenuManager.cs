@@ -19,9 +19,8 @@ public class MenuManager : MonoBehaviour
     {
         if (restart)
         {
-            // do not change PlayerPrefs.SetInt("CurrentLevel", 0);
             // for button restart
-            PlayerPrefs.SetInt("CurrentLevel", 0);
+            PlayerPrefsManager.instance.SetCurrentLevel(0);
         }
 
         Time.timeScale = 1;

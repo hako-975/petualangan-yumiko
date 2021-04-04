@@ -14,6 +14,10 @@ public class EnemyController : MonoBehaviour
 
     PlayerStats playerStats;
     PlayerController player;
+    bool beingHandled = false;
+    public float delayAttack = 0f;
+    public int damageAttack = 1;
+    public float stopAttackDistance = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -52,13 +56,15 @@ public class EnemyController : MonoBehaviour
             agent.SetDestination(firstPosition);
         }
 
-        if (distance <= agent.stoppingDistance)
+        if (distance <= agent.stoppingDistance + stopAttackDistance)
         {
             animator.SetBool("IsAttack", true);
             if ((playerStats.isInvisible == false) && animator.GetBool("IsAttack") && (playerStats.isDied == false))
             {
-                playerStats.TakeDamage(1);
-                playerStats.isInvisible = true;
+                if (!beingHandled)
+                {
+                    StartCoroutine(DelayAttack(delayAttack));
+                }
             }
         }
 
@@ -82,5 +88,17 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 
+
+    IEnumerator DelayAttack(float delay)
+    {
+        beingHandled = true;
+        yield return new WaitForSeconds(delay);
+        if (animator.GetBool("IsAttack"))
+        {
+            playerStats.TakeDamage(damageAttack);
+            playerStats.isInvisible = true;
+        }
+        beingHandled = false;
+    }
 
 }

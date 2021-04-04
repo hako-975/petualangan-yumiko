@@ -2845,11 +2845,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 641328782344550303, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000001711288
+      value: 0.000000017112876
       objectReference: {fileID: 0}
     - target: {fileID: 641328782344550303, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000001791354
+      value: -0.0000000017913536
       objectReference: {fileID: 0}
     - target: {fileID: 641328782519099883, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_Name
@@ -3322,7 +3322,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619926296}
-  m_LocalRotation: {x: 0.104109846, y: -0.000000034225764, z: 0.0000000035827075, w: 0.99456584}
+  m_LocalRotation: {x: 0.104109846, y: 0.00000003422576, z: -0.0000000035827072, w: 0.99456584}
   m_LocalPosition: {x: 0, y: 2, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4152,7 +4152,6 @@ GameObject:
   - component: {fileID: 747021723}
   - component: {fileID: 747021720}
   - component: {fileID: 747021721}
-  - component: {fileID: 747021722}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4190,18 +4189,6 @@ MonoBehaviour:
   sliderMusic: {fileID: 915431237}
   sliderSensitivity: {fileID: 1315201221}
   dropdownQuality: {fileID: 23527763}
---- !u!114 &747021722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747021719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cd80e07c7c68d343b57493f3f593ce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &747021723
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10218,15 +10218,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 641328783639647925, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.12218325
+      value: 0.12218327
       objectReference: {fileID: 0}
     - target: {fileID: 641328783639647925, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017077465
+      value: 0.000000017077465
       objectReference: {fileID: 0}
     - target: {fileID: 641328783639647925, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000021023316
+      value: -0.0000000021023319
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
@@ -11597,7 +11597,6 @@ GameObject:
   - component: {fileID: 1339910484}
   - component: {fileID: 1339910482}
   - component: {fileID: 1339910483}
-  - component: {fileID: 1339910486}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -11661,18 +11660,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1339910486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1339910481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cd80e07c7c68d343b57493f3f593ce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1343143572
 GameObject:
   m_ObjectHideFlags: 0
