@@ -88,7 +88,6 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 
-
     IEnumerator DelayAttack(float delay)
     {
         beingHandled = true;

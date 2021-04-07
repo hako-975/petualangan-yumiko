@@ -1623,7 +1623,7 @@ GameObject:
   - component: {fileID: 7471065498262241146}
   - component: {fileID: 7471065498262659923}
   - component: {fileID: 7471065498262659929}
-  - component: {fileID: 7471065498262659928}
+  - component: {fileID: 5320894225952593542}
   m_Layer: 0
   m_Name: Enemy Spider
   m_TagString: Untagged
@@ -1696,7 +1696,7 @@ NavMeshAgent:
   m_BaseOffset: -0.05
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7471065498262659928
+--- !u!114 &5320894225952593542
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1709,6 +1709,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 7
+  delayAttack: 0
+  damageAttack: 1
+  stopAttackDistance: 0
 --- !u!1 &7471065498262659932
 GameObject:
   m_ObjectHideFlags: 0

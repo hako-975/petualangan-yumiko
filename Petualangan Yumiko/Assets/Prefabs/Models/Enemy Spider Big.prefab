@@ -320,6 +320,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 12
+  delayAttack: 0
+  damageAttack: 1
+  stopAttackDistance: 0
 --- !u!1 &502982129918042781
 GameObject:
   m_ObjectHideFlags: 0

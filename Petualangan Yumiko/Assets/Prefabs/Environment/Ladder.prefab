@@ -583,7 +583,7 @@ MonoBehaviour:
   jumpButton: {fileID: 0}
   jumpButtonPressed: {fileID: 0}
   isEntered: 0
-  speedClimb: 10
+  speedClimb: 15
   lengthLadder: 9
 --- !u!1 &652901732907220916
 GameObject:

@@ -6,8 +6,12 @@ public class ExitBoss : MonoBehaviour
 {
     public GameObject uIBoss;
     public AudioSource backSound;
-    public GameObject gameMusic;
-
+    GameObject gameMusic;
+    private void Start()
+    {
+        gameMusic = GameObject.FindGameObjectWithTag("GameMusic");
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))

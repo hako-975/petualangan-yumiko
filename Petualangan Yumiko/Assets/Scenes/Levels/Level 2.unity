@@ -4097,6 +4097,7 @@ GameObject:
   - component: {fileID: 545419075}
   - component: {fileID: 545419073}
   - component: {fileID: 545419074}
+  - component: {fileID: 545419077}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4160,6 +4161,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &545419077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545419072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c643bf1cce5cd69489367a6a1f9a829f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newAudio: {fileID: 8300000, guid: a423c0fa7848d74429e80c78c64bc897, type: 3}
 --- !u!1001 &552030705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12389,14 +12403,14 @@ MonoBehaviour:
       - m_Target: {fileID: 545419073}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: Restart
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1885280103
 MonoBehaviour:

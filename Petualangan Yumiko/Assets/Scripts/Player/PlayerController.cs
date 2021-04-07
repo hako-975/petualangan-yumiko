@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        StartCoroutine(WaitSetPosition());
+        /*StartCoroutine(WaitSetPosition());*/
 
         if (controller.transform.position.y < -200f)
         {
@@ -125,28 +125,31 @@ public class PlayerController : MonoBehaviour
         
         // check current scene - 3 karena build index level 4 adalah 7
         currentLevel = SceneManager.GetActiveScene().buildIndex - 3;
-        
-        if (currentLevel != PlayerPrefsManager.instance.GetCurrentLevel())
+
+        if (currentLevel != PlayerPrefsManager.instance.GetCurrentLevel() || currentLevel == 0)
         {
-            controller.enabled = false;
-            controller.transform.position = spawnPoint.transform.position;
-            controller.enabled = true;
+            spawnPoint.transform.position = new Vector3(0f, 0.5f, 0f);
             PlayerPrefsManager.instance.SetCurrentLevel(currentLevel);
         }
-        else
+
+        controller.enabled = false;
+        controller.transform.position = spawnPoint.transform.position;
+        controller.enabled = true;
+        
+        /*else
         {
             controller.enabled = false;
             controller.transform.position = new Vector3(PlayerPrefsManager.instance.GetPositionX(), PlayerPrefsManager.instance.GetPositionY(), PlayerPrefsManager.instance.GetPositionZ());
             controller.enabled = true;
-        }
+        }*/
     }
 
-    IEnumerator WaitSetPosition()
+    /*IEnumerator WaitSetPosition()
     {
         yield return new WaitForSeconds(3f);
         PlayerPrefsManager.instance.SetPositionX(transform.position.x);
         PlayerPrefsManager.instance.SetPositionY(transform.position.y);
         PlayerPrefsManager.instance.SetPositionZ(transform.position.z);
-    }
+    }*/
 
 }

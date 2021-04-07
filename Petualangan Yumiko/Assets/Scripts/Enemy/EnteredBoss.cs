@@ -7,11 +7,12 @@ public class EnteredBoss : MonoBehaviour
     BossSpiderController bossSpider;
     public GameObject uIBoss;
     public AudioSource backSound;
-    public GameObject gameMusic;
+    GameObject gameMusic;
 
     private void Start()
     {
         bossSpider = FindObjectOfType<BossSpiderController>();
+        gameMusic = GameObject.FindGameObjectWithTag("GameMusic");
 
         bossSpider.gameObject.SetActive(false);
         uIBoss.gameObject.SetActive(false);
