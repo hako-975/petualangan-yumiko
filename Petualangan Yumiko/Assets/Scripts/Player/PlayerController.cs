@@ -135,21 +135,6 @@ public class PlayerController : MonoBehaviour
         controller.enabled = false;
         controller.transform.position = spawnPoint.transform.position;
         controller.enabled = true;
-        
-        /*else
-        {
-            controller.enabled = false;
-            controller.transform.position = new Vector3(PlayerPrefsManager.instance.GetPositionX(), PlayerPrefsManager.instance.GetPositionY(), PlayerPrefsManager.instance.GetPositionZ());
-            controller.enabled = true;
-        }*/
     }
-
-    /*IEnumerator WaitSetPosition()
-    {
-        yield return new WaitForSeconds(3f);
-        PlayerPrefsManager.instance.SetPositionX(transform.position.x);
-        PlayerPrefsManager.instance.SetPositionY(transform.position.y);
-        PlayerPrefsManager.instance.SetPositionZ(transform.position.z);
-    }*/
 
 }

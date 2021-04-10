@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LoadingScript : MonoBehaviour
 {
     public Image image;
-
+    
     void Start()
     {
         StartCoroutine(LoadAsync(PlayerPrefsManager.instance.GetNextScene()));

@@ -9,6 +9,8 @@ public class CheckPoint : MonoBehaviour
 
     GameObject spawnPoint;
 
+    PlayerStats playerStats;
+
     public GameObject activedCheckPoint;
 
     public GameObject notActiveCheckPoint;
@@ -16,6 +18,7 @@ public class CheckPoint : MonoBehaviour
     private void Start()
     {
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
+        playerStats = FindObjectOfType<PlayerStats>();
 
         // check current scene - 3 karena build index level 4 adalah 7
         currentLevel = SceneManager.GetActiveScene().buildIndex - 3;
@@ -34,6 +37,11 @@ public class CheckPoint : MonoBehaviour
             
             activedCheckPoint.gameObject.SetActive(true); 
             notActiveCheckPoint.gameObject.SetActive(false);
-    }
+
+            if (playerStats.currentHealth < 4)
+            {
+                playerStats.currentHealth += 1;
+            }
+        }
     }
 }

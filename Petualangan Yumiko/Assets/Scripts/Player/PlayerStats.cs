@@ -78,6 +78,11 @@ public class PlayerStats : MonoBehaviour
         {
             player.transform.rotation = Quaternion.Euler(0f, player.currentTransformY, 0f);
         }
+
+        if (currentHealth <= 0 && isDied == false)
+        {
+            Died();
+        }
     }
 
     public void TakeDamage(int damage)
@@ -89,11 +94,6 @@ public class PlayerStats : MonoBehaviour
         currentHealth -= damage;
         
         healthBar.SetHealth(currentHealth);
-        
-        if (currentHealth <= 0)
-        {
-            Died();
-        }
     }
 
     public void Died()

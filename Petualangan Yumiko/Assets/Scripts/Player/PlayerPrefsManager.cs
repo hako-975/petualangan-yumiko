@@ -14,6 +14,63 @@ public class PlayerPrefsManager : MonoBehaviour
     }
     #endregion
 
+
+    public float GetButtonSize()
+    {
+        return PlayerPrefs.GetFloat("ButtonSize", 200f);
+    }
+
+    public float SetButtonSize(float size)
+    {
+        PlayerPrefs.SetFloat("ButtonSize", size);
+        return GetButtonSize();
+    }
+
+    public float GetLadderButtonPositionX()
+    {
+        return PlayerPrefs.GetFloat("LadderButtonPositionX", 550f);
+    }
+
+    public float SetLadderButtonPositionX(float posX)
+    {
+        PlayerPrefs.SetFloat("LadderButtonPositionX", posX);
+        return GetLadderButtonPositionX();
+    }
+
+    public float GetLadderButtonPositionY()
+    {
+        return PlayerPrefs.GetFloat("LadderButtonPositionY", -250f);
+    }
+
+    public float SetLadderButtonPositionY(float posY)
+    {
+        PlayerPrefs.SetFloat("LadderButtonPositionY", posY);
+        return GetLadderButtonPositionY();
+    }
+
+    public float GetJumpButtonPositionX()
+    {
+        return PlayerPrefs.GetFloat("JumpButtonPositionX", -100f);
+    }
+
+    public float SetJumpButtonPositionX(float posX)
+    {
+        PlayerPrefs.SetFloat("JumpButtonPositionX", posX);
+        return GetJumpButtonPositionX();
+    }
+
+    public float GetJumpButtonPositionY()
+    {
+        return PlayerPrefs.GetFloat("JumpButtonPositionY", 100f);
+    }
+
+    public float SetJumpButtonPositionY(float posY)
+    {
+        PlayerPrefs.SetFloat("JumpButtonPositionY", posY);
+        return GetJumpButtonPositionY();
+    }
+
+
     public int GetCurrentHealth()
     {
         return PlayerPrefs.GetInt("CurrentHealth");
@@ -25,39 +82,7 @@ public class PlayerPrefsManager : MonoBehaviour
         return GetCurrentHealth();
     }    
 
-    public float GetPositionX()
-    {
-        return PlayerPrefs.GetFloat("PositionX");
-    }
-
-    public float SetPositionX(float positionX)
-    {
-        PlayerPrefs.SetFloat("PositionX", positionX);
-        return GetPositionX();
-    }
-
-    public float GetPositionY()
-    {
-        return PlayerPrefs.GetFloat("PositionY");
-    }
-
-    public float SetPositionY(float positionY)
-    {
-        PlayerPrefs.SetFloat("PositionY", positionY);
-        return GetPositionY();
-    }
-
-    public float GetPositionZ()
-    {
-        return PlayerPrefs.GetFloat("PositionZ");
-    }
-
-    public float SetPositionZ(float positionZ)
-    {
-        PlayerPrefs.SetFloat("PositionZ", positionZ);
-        return GetPositionZ();
-    }
-
+    
     public int GetCurrentLevel()
     {
         return PlayerPrefs.GetInt("CurrentLevel");

@@ -16,6 +16,7 @@ public class SettingManager : MonoBehaviour
     public Slider sliderSFX;
     public Slider sliderMusic;
     public Slider sliderSensitivity;
+    //public Slider sliderButtonSize;
 
     public TMP_Dropdown dropdownQuality;
 
@@ -42,6 +43,11 @@ public class SettingManager : MonoBehaviour
         PlayerPrefsManager.instance.SetSensitivity(sensitivity);
     }
 
+    /*public void SetButtonSize(float size)
+    {
+        PlayerPrefsManager.instance.SetButtonSize(size);
+    }*/
+
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
@@ -51,16 +57,19 @@ public class SettingManager : MonoBehaviour
     public void SetDefaultSetting()
     {
         PlayerPrefsManager.instance.DeleteKey("SFX");
-        PlayerPrefsManager.instance.SetSFX(-5f); // default
-
+        
         PlayerPrefsManager.instance.DeleteKey("Music");
-        PlayerPrefsManager.instance.SetMusic(-5f); // default
-
+        
         PlayerPrefsManager.instance.DeleteKey("Sensitivity");
-        PlayerPrefsManager.instance.SetSensitivity(20f); // default
+        PlayerPrefsManager.instance.DeleteKey("ButtonSize");
 
         PlayerPrefsManager.instance.DeleteKey("QualityIndex");
-        PlayerPrefsManager.instance.SetQuality(0); // default low quality
+
+        PlayerPrefsManager.instance.DeleteKey("LadderButtonPositionX");
+        PlayerPrefsManager.instance.DeleteKey("LadderButtonPositionY");
+        
+        PlayerPrefsManager.instance.DeleteKey("JumpButtonPositionX");
+        PlayerPrefsManager.instance.DeleteKey("JumpButtonPositionY");
     }
 
     private void Update()
@@ -68,6 +77,7 @@ public class SettingManager : MonoBehaviour
         sliderSFX.value = PlayerPrefsManager.instance.GetSFX();
         sliderMusic.value = PlayerPrefsManager.instance.GetMusic();
         sliderSensitivity.value = PlayerPrefsManager.instance.GetSensitivity();
+        //sliderButtonSize.value = PlayerPrefsManager.instance.GetButtonSize();
         dropdownQuality.value = PlayerPrefsManager.instance.GetQuality();
     }
 }
