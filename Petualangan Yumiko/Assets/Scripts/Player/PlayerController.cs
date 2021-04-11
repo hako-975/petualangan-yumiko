@@ -123,9 +123,8 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForEndOfFrame();
         // set character to spawn point
         
-        // check current scene - 3 karena build index level 4 adalah 7
-        currentLevel = SceneManager.GetActiveScene().buildIndex - 3;
-
+        // check current scene - 4 karena build index level 4 adalah 8
+        currentLevel = SceneManager.GetActiveScene().buildIndex - 4;
         if (currentLevel != PlayerPrefsManager.instance.GetCurrentLevel() || currentLevel == 0)
         {
             spawnPoint.transform.position = new Vector3(0f, 0.5f, 0f);

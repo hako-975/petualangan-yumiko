@@ -10,8 +10,8 @@ public class FinishPoint : MonoBehaviour
 
     void Start()
     {
-        // -2 sesuai urutan pada build index, level saat ini 1 dan build index nya 4 dan next level adalah level 2
-        nextSceneLoad = SceneManager.GetActiveScene().buildIndex - 2;
+        // -3 sesuai urutan pada build index, level saat ini 1 dan build index nya 5 dan next level adalah level 2
+        nextSceneLoad = SceneManager.GetActiveScene().buildIndex - 3;
     }
 
     void OnTriggerEnter(Collider other)

@@ -16,7 +16,6 @@ public class SettingManager : MonoBehaviour
     public Slider sliderSFX;
     public Slider sliderMusic;
     public Slider sliderSensitivity;
-    //public Slider sliderButtonSize;
 
     public TMP_Dropdown dropdownQuality;
 
@@ -43,11 +42,6 @@ public class SettingManager : MonoBehaviour
         PlayerPrefsManager.instance.SetSensitivity(sensitivity);
     }
 
-    /*public void SetButtonSize(float size)
-    {
-        PlayerPrefsManager.instance.SetButtonSize(size);
-    }*/
-
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
@@ -61,15 +55,8 @@ public class SettingManager : MonoBehaviour
         PlayerPrefsManager.instance.DeleteKey("Music");
         
         PlayerPrefsManager.instance.DeleteKey("Sensitivity");
-        PlayerPrefsManager.instance.DeleteKey("ButtonSize");
 
         PlayerPrefsManager.instance.DeleteKey("QualityIndex");
-
-        PlayerPrefsManager.instance.DeleteKey("LadderButtonPositionX");
-        PlayerPrefsManager.instance.DeleteKey("LadderButtonPositionY");
-        
-        PlayerPrefsManager.instance.DeleteKey("JumpButtonPositionX");
-        PlayerPrefsManager.instance.DeleteKey("JumpButtonPositionY");
     }
 
     private void Update()
@@ -77,7 +64,6 @@ public class SettingManager : MonoBehaviour
         sliderSFX.value = PlayerPrefsManager.instance.GetSFX();
         sliderMusic.value = PlayerPrefsManager.instance.GetMusic();
         sliderSensitivity.value = PlayerPrefsManager.instance.GetSensitivity();
-        //sliderButtonSize.value = PlayerPrefsManager.instance.GetButtonSize();
         dropdownQuality.value = PlayerPrefsManager.instance.GetQuality();
     }
 }
