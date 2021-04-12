@@ -14,63 +14,6 @@ public class PlayerPrefsManager : MonoBehaviour
     }
     #endregion
 
-
-    public float GetButtonSize()
-    {
-        return PlayerPrefs.GetFloat("ButtonSize", 200f);
-    }
-
-    public float SetButtonSize(float size)
-    {
-        PlayerPrefs.SetFloat("ButtonSize", size);
-        return GetButtonSize();
-    }
-
-    public float GetLadderButtonPositionX()
-    {
-        return PlayerPrefs.GetFloat("LadderButtonPositionX", 550f);
-    }
-
-    public float SetLadderButtonPositionX(float posX)
-    {
-        PlayerPrefs.SetFloat("LadderButtonPositionX", posX);
-        return GetLadderButtonPositionX();
-    }
-
-    public float GetLadderButtonPositionY()
-    {
-        return PlayerPrefs.GetFloat("LadderButtonPositionY", -250f);
-    }
-
-    public float SetLadderButtonPositionY(float posY)
-    {
-        PlayerPrefs.SetFloat("LadderButtonPositionY", posY);
-        return GetLadderButtonPositionY();
-    }
-
-    public float GetJumpButtonPositionX()
-    {
-        return PlayerPrefs.GetFloat("JumpButtonPositionX", -100f);
-    }
-
-    public float SetJumpButtonPositionX(float posX)
-    {
-        PlayerPrefs.SetFloat("JumpButtonPositionX", posX);
-        return GetJumpButtonPositionX();
-    }
-
-    public float GetJumpButtonPositionY()
-    {
-        return PlayerPrefs.GetFloat("JumpButtonPositionY", 100f);
-    }
-
-    public float SetJumpButtonPositionY(float posY)
-    {
-        PlayerPrefs.SetFloat("JumpButtonPositionY", posY);
-        return GetJumpButtonPositionY();
-    }
-
-
     public int GetCurrentHealth()
     {
         return PlayerPrefs.GetInt("CurrentHealth");
@@ -176,6 +119,17 @@ public class PlayerPrefsManager : MonoBehaviour
     {
         PlayerPrefs.SetString("NextScene", nextScene);
         SceneManager.LoadScene("Loading");
+    }
+
+    public int GetComingSoon()
+    {
+        return PlayerPrefs.GetInt("ComingSoon");
+    }
+
+    public int SetComingSoon(int booleanNumber)
+    {
+        PlayerPrefs.SetInt("ComingSoon", booleanNumber);
+        return GetComingSoon();
     }
 
     public void DeleteKey(string key)

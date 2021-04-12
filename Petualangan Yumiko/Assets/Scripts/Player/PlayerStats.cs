@@ -39,8 +39,8 @@ public class PlayerStats : MonoBehaviour
 
         spawnPoint = FindObjectOfType<SpawnPoint>();
 
-        // check current scene - 4 karena build index level 4 adalah 8
-        currentLevel = SceneManager.GetActiveScene().buildIndex - 4;
+        // check current scene - 3 karena build index level 4 adalah 7
+        currentLevel = SceneManager.GetActiveScene().buildIndex - 3;
 
         if (currentLevel != PlayerPrefsManager.instance.GetCurrentLevel())
         {

@@ -42,8 +42,6 @@ public class PlayerController : MonoBehaviour
 
     PlayerStats playerStats;
 
-    
-
     // Start is called before the first frame update
     void Start()
     {
@@ -123,12 +121,24 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForEndOfFrame();
         // set character to spawn point
         
-        // check current scene - 4 karena build index level 4 adalah 8
-        currentLevel = SceneManager.GetActiveScene().buildIndex - 4;
+        // check current scene - 3 karena build index level 4 adalah 7
+        currentLevel = SceneManager.GetActiveScene().buildIndex - 3;
         if (currentLevel != PlayerPrefsManager.instance.GetCurrentLevel() || currentLevel == 0)
         {
-            spawnPoint.transform.position = new Vector3(0f, 0.5f, 0f);
-            PlayerPrefsManager.instance.SetCurrentLevel(currentLevel);
+            if (PlayerPrefsManager.instance.GetComingSoon() > 0)
+            {
+                GetComponent<ChangeClothes>().enabled = true;
+                GetComponent<ChangeMusic>().enabled = true;
+                PlayerPrefsManager.instance.SetMusic(5f);
+                spawnPoint.transform.position = new Vector3(8000f, 8001f, 8000f);
+                PlayerPrefsManager.instance.SetComingSoon(0);
+                PlayerPrefsManager.instance.SetCurrentLevel(0);
+            }
+            else
+            {
+                spawnPoint.transform.position = new Vector3(0f, 0.5f, 0f);
+                PlayerPrefsManager.instance.SetCurrentLevel(currentLevel);
+            }
         }
 
         controller.enabled = false;

@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Select Level.unity
     guid: d023c1a7ba479eb40896d79eee1d495a
   - enabled: 1
-    path: Assets/Scenes/Levels/Do not Remove Scene.unity
-    guid: 7ffde7facfca2e24e90e3625d4dbc666
-  - enabled: 1
     path: Assets/Scenes/Levels/Coming Soon.unity
     guid: 933eeed2af6a8cd4c91898b994764c7c
   - enabled: 1
