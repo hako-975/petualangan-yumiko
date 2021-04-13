@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class BathubScript : MonoBehaviour
 {
-    PlayerController player;
     GameObject spawnPoint;
     public GameObject body2;
 
     private void Start()
     {
-        player = FindObjectOfType<PlayerController>();
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
     }
 

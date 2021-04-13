@@ -1,2 +1,2 @@
 hardcode
-finishpoint, checkpoint, playercontroller, playerstats
+finishpoint, checkpoint, playercontroller, playerstats, current level

@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
                 GetComponent<ChangeClothes>().enabled = true;
                 GetComponent<ChangeMusic>().enabled = true;
                 PlayerPrefsManager.instance.SetMusic(5f);
-                spawnPoint.transform.position = new Vector3(8000f, 8001f, 8000f);
+                spawnPoint.transform.position = Vector3.one * 2000f;
                 PlayerPrefsManager.instance.SetComingSoon(0);
                 PlayerPrefsManager.instance.SetCurrentLevel(0);
             }

@@ -101,7 +101,7 @@ public class PlayerPrefsManager : MonoBehaviour
 
     public int GetQuality()
     {
-        return PlayerPrefs.GetInt("QualityIndex", 0);
+        return PlayerPrefs.GetInt("QualityIndex", 1);
     }
 
     public int SetQuality(int qualityIndex)
