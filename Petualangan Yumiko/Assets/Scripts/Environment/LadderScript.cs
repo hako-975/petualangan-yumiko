@@ -60,14 +60,14 @@ public class LadderScript : MonoBehaviour
 
         float vertical = Input.GetAxisRaw("Vertical") + player.joystick.Vertical;
 
-        if (isEntered && vertical > 0f && player.transform.position.y < maxPosition)
+        if (isEntered && vertical > 0f && (player.transform.position.y < maxPosition))
         {
             player.transform.position += Vector3.up * (speedClimb / 100f);
             player.animator.SetFloat("Speed", 1f);
             player.animator.speed = 1f;
         }
 
-        if (isEntered && vertical < 0f && player.transform.position.y > minPosition)
+        if (isEntered && vertical < 0f && (player.transform.position.y > minPosition))
         {
             player.transform.position += Vector3.down * (speedClimb / 100f);
             player.animator.SetFloat("Speed", -1f);

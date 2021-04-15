@@ -16,7 +16,7 @@ public class PlayerPrefsManager : MonoBehaviour
 
     public int GetCurrentHealth()
     {
-        return PlayerPrefs.GetInt("CurrentHealth");
+        return PlayerPrefs.GetInt("CurrentHealth", 4);
     }
 
     public int SetCurrentHealth(int currentHealth)

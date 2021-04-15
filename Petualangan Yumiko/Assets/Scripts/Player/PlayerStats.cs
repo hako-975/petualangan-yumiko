@@ -39,18 +39,6 @@ public class PlayerStats : MonoBehaviour
 
         spawnPoint = FindObjectOfType<SpawnPoint>();
 
-        // check current scene - 3 karena build index level 4 adalah 7
-        currentLevel = SceneManager.GetActiveScene().buildIndex - 3;
-
-        if (currentLevel != PlayerPrefsManager.instance.GetCurrentLevel())
-        {
-            currentHealth = maxHealth;
-        }
-        else
-        {
-            currentHealth = PlayerPrefsManager.instance.GetCurrentHealth();
-        }
-
         healthBar.SetMaxHealth(maxHealth);
 
         menuManager = FindObjectOfType<MenuManager>();
@@ -58,8 +46,9 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
+        currentHealth = PlayerPrefsManager.instance.GetCurrentHealth();
+
         healthBar.SetHealth(currentHealth);
-        PlayerPrefsManager.instance.SetCurrentHealth(currentHealth);
 
         currentLife = PlayerPrefsManager.instance.GetLife();
         lifeBar.SetTextLife(currentLife);
@@ -90,10 +79,8 @@ public class PlayerStats : MonoBehaviour
         player.animator.SetBool("IsHit", true);
 
         isInvisible = true;
-
         currentHealth -= damage;
-        
-        healthBar.SetHealth(currentHealth);
+        PlayerPrefsManager.instance.SetCurrentHealth(currentHealth);
     }
 
     public void Died()
