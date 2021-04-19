@@ -13,7 +13,7 @@ public class PlayerPrefsManager : MonoBehaviour
         instance = this;
     }
     #endregion
-
+    
     public void RemoveExtraLifeBoolean()
     {
         for (int i = 1; i <= 100; i++)
@@ -42,7 +42,6 @@ public class PlayerPrefsManager : MonoBehaviour
         PlayerPrefs.SetInt("CurrentHealth", currentHealth);
         return GetCurrentHealth();
     }    
-
     
     public int GetCurrentLevel()
     {
@@ -82,6 +81,17 @@ public class PlayerPrefsManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("LevelAt", level);
         return GetLevelAt();
+    }
+
+    public float GetZoom()
+    {
+        return PlayerPrefs.GetFloat("Zoom", 50);
+    }
+
+    public float SetZoom(float zoom)
+    {
+        PlayerPrefs.SetFloat("Zoom", zoom);
+        return GetZoom();
     }
 
     public float GetSFX()

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using TMPro;
+using Cinemachine;
 
 public class SettingManager : MonoBehaviour
 {
@@ -16,11 +17,15 @@ public class SettingManager : MonoBehaviour
     public Slider sliderSFX;
     public Slider sliderMusic;
     public Slider sliderSensitivity;
+    public Slider sliderZoom;
 
     public TMP_Dropdown dropdownQuality;
 
+    CinemachineFreeLook cinemachineFreeLook;
+
     private void Start()
     {
+        cinemachineFreeLook = FindObjectOfType<CinemachineFreeLook>();
         touchSensitivity = FindObjectOfType<CinemachineCoreGetInputTouchAxis>();
     }
 
@@ -29,7 +34,7 @@ public class SettingManager : MonoBehaviour
         mixerSFX.SetFloat("SFX", volumeSFX);
         PlayerPrefsManager.instance.SetSFX(volumeSFX);
     }
-
+    
     public void SetMusic(float volumeMusic)
     {
         mixerMusic.SetFloat("Music", volumeMusic);
@@ -40,6 +45,12 @@ public class SettingManager : MonoBehaviour
     {
         touchSensitivity.touchSensitivity = sensitivity;
         PlayerPrefsManager.instance.SetSensitivity(sensitivity);
+    }
+    public void SetZoom(float zoom)
+    {
+        cinemachineFreeLook.m_CommonLens = true;
+        cinemachineFreeLook.m_Lens.FieldOfView = zoom;
+        PlayerPrefsManager.instance.SetZoom(zoom);
     }
 
     public void SetQuality(int qualityIndex)
@@ -56,6 +67,8 @@ public class SettingManager : MonoBehaviour
         
         PlayerPrefsManager.instance.DeleteKey("Sensitivity");
 
+        PlayerPrefsManager.instance.DeleteKey("Zoom");
+
         PlayerPrefsManager.instance.DeleteKey("QualityIndex");
     }
 
@@ -64,6 +77,7 @@ public class SettingManager : MonoBehaviour
         sliderSFX.value = PlayerPrefsManager.instance.GetSFX();
         sliderMusic.value = PlayerPrefsManager.instance.GetMusic();
         sliderSensitivity.value = PlayerPrefsManager.instance.GetSensitivity();
+        sliderZoom.value = PlayerPrefsManager.instance.GetZoom();
         dropdownQuality.value = PlayerPrefsManager.instance.GetQuality();
     }
 }
