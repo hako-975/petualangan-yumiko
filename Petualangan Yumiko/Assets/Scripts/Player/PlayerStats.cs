@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    int currentLevel;
-
     PlayerController player;
     SpawnPoint spawnPoint;
 

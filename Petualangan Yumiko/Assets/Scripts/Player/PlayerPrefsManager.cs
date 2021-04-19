@@ -14,6 +14,24 @@ public class PlayerPrefsManager : MonoBehaviour
     }
     #endregion
 
+    public void RemoveExtraLifeBoolean()
+    {
+        for (int i = 1; i <= 100; i++)
+        {
+            PlayerPrefs.DeleteKey("ExtraLifeToBoolean" + i);
+        }
+    }
+
+    public int GetExtraLifeToBoolean(int extraLifeTo)
+    {
+        return PlayerPrefs.GetInt("ExtraLifeToBoolean" + extraLifeTo, 0);
+    }
+
+    public void SetExtraLifeToBoolean(int extraLifeTo)
+    {
+        PlayerPrefs.SetInt("ExtraLifeToBoolean" + extraLifeTo, 1);
+    }
+
     public int GetCurrentHealth()
     {
         return PlayerPrefs.GetInt("CurrentHealth", 4);
@@ -101,7 +119,7 @@ public class PlayerPrefsManager : MonoBehaviour
 
     public int GetQuality()
     {
-        return PlayerPrefs.GetInt("QualityIndex", 1);
+        return PlayerPrefs.GetInt("QualityIndex", 0);
     }
 
     public int SetQuality(int qualityIndex)

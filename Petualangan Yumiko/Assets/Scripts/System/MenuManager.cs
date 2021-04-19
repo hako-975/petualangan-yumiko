@@ -41,6 +41,7 @@ public class MenuManager : MonoBehaviour
     {
         Time.timeScale = 1;
         // for loading
+        PlayerPrefsManager.instance.RemoveExtraLifeBoolean();
         PlayerPrefsManager.instance.SetNextScene("Main Menu");
     }
 

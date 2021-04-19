@@ -26,6 +26,9 @@ public class FinishPoint : MonoBehaviour
             }
 
             PlayerPrefsManager.instance.SetCurrentLevel(0);
+
+            // remove extra life boolean
+            PlayerPrefsManager.instance.RemoveExtraLifeBoolean();
             
             PlayerPrefsManager.instance.SetNextScene("Level" + " " + nextSceneLoad);
         }
