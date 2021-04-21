@@ -1200,7 +1200,7 @@ MonoBehaviour:
   lookRadius: 7
   delayAttack: 1
   damageAttack: 2
-  stopAttackDistance: 1.5
+  stopAttackDistance: 1
 --- !u!1 &6954435339104427876
 GameObject:
   m_ObjectHideFlags: 0

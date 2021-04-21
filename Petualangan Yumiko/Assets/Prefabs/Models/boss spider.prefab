@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 8764629640490343505}
   - component: {fileID: 8764629640500195901}
   - component: {fileID: -8622915351576914541}
-  - component: {fileID: 1286122665851288062}
+  - component: {fileID: 2281383587955570516}
   m_Layer: 0
   m_Name: boss spider
   m_TagString: Untagged
@@ -561,7 +561,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.65
   m_Speed: 7
-  m_Acceleration: 335
+  m_Acceleration: 300
   avoidancePriority: 50
   m_AngularSpeed: 300
   m_StoppingDistance: 25
@@ -572,7 +572,7 @@ NavMeshAgent:
   m_BaseOffset: -0.03
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1286122665851288062
+--- !u!114 &2281383587955570516
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -584,7 +584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94674e0e3b7423f4e96ab8309c29cf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 100
+  damageAttack: 2
+  lookRadius: 1000
 --- !u!1 &8764629640490696821
 GameObject:
   m_ObjectHideFlags: 0

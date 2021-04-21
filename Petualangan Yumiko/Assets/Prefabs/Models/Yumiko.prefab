@@ -1203,7 +1203,7 @@ MonoBehaviour:
   groundDistance: 0.2
   jumpHeight: 2
   turnSmoothTime: 0.1
-  movementSpeed: 7
+  movementSpeed: 6
   joystick: {fileID: 0}
   jumpButton: {fileID: 0}
   groundMask:

@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BossSpiderController : MonoBehaviour
+public class BossController : MonoBehaviour
 {
-    [HideInInspector]
+    public int healthPoint = 3;
+    public int damageAttack = 1;
     public float lookRadius = 1000f;
 
     bool beingHandled = false;
@@ -16,15 +17,23 @@ public class BossSpiderController : MonoBehaviour
 
     PlayerStats playerStats;
     PlayerController player;
+    HealthBarBoss healthBarBoss;
+
+    [HideInInspector]
+    public bool isDied = false;
+
+    BossController bossController;
 
     // Start is called before the first frame update
     void Start()
     {
         firstPosition = transform.position;
-
+        healthBarBoss = FindObjectOfType<HealthBarBoss>();
+        healthBarBoss.SetMaxHealth(healthPoint);
         playerStats = FindObjectOfType<PlayerStats>();
         player = FindObjectOfType<PlayerController>();
-
+        bossController = GetComponent<BossController>();
+        
         target = player.transform;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
@@ -33,6 +42,8 @@ public class BossSpiderController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        healthBarBoss.SetHealth(healthPoint);
+
         animator.SetBool("IsWalk", false);
         animator.SetBool("IsAttack", false);
 
@@ -61,12 +72,17 @@ public class BossSpiderController : MonoBehaviour
             {
                 if (!beingHandled)
                 {
-                    StartCoroutine(DelayAttack());
+                    StartCoroutine(DelayBoss());
                 }
 
-                playerStats.TakeDamage(1);
+                playerStats.TakeDamage(damageAttack);
                 playerStats.isInvisible = true;
             }
+        }
+
+        if (playerStats.isDied)
+        {
+            lookRadius = 0f;
         }
 
         if (agent.velocity.magnitude >= 0.1f)
@@ -74,6 +90,18 @@ public class BossSpiderController : MonoBehaviour
             animator.SetBool("IsWalk", true);
         }
 
+        if (isDied)
+        {
+            animator.SetBool("IsDied", true);
+            agent.enabled = false;
+            bossController.enabled = false;
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 
     void FaceTarget()
@@ -83,7 +111,25 @@ public class BossSpiderController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
-    IEnumerator DelayAttack()
+    public void TakeDamage(int damage)
+    {
+        healthPoint -= damage;
+        StartCoroutine(DelayBoss());
+        if (healthPoint <= 0)
+        {
+            IsDied();
+        }
+    }
+
+    public void IsDied()
+    {
+        animator.SetBool("IsDied", true);
+        lookRadius = 0f;
+        isDied = true;
+    }
+
+
+    IEnumerator DelayBoss()
     {
         beingHandled = true;
         lookRadius = 0f;

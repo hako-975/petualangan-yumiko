@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
     PlayerController player;
-    SpawnPoint spawnPoint;
+    GameObject spawnPoint;
 
     bool beingHandled = false;
 
@@ -35,7 +35,7 @@ public class PlayerStats : MonoBehaviour
     {
         player = GetComponent<PlayerController>();
 
-        spawnPoint = FindObjectOfType<SpawnPoint>();
+        spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
 
         healthBar.SetMaxHealth(maxHealth);
 
@@ -97,6 +97,8 @@ public class PlayerStats : MonoBehaviour
         {
             // game over panel
             gameOverPanel.SetActive(true);
+            // set current health 4
+            PlayerPrefsManager.instance.SetCurrentHealth(4);
 
             // if watch ads set life to 3 and not reset spawn point else to 1 and reset spawn point
             // if (watchads == true)
@@ -104,7 +106,6 @@ public class PlayerStats : MonoBehaviour
 
             // set life 3
             PlayerPrefsManager.instance.SetLife(3);
-
             // }
             // else
             // {

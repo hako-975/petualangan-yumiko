@@ -6,14 +6,12 @@ public class ChangeClothes : MonoBehaviour
 {
     public GameObject clothes1;
     public GameObject clothes2;
-    public GameObject healthBar;
     bool triggered = false;
     PlayerController player;
 
     private void Start()
     {
         player = GetComponent<PlayerController>();
-        healthBar.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
