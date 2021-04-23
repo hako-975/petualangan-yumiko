@@ -23,8 +23,13 @@ public class LadderScript : MonoBehaviour
 
     PlayerController player;
 
+    PlayerSFX playerSFX;
+
+    bool boolDelaySFX = false;
+
     void Start()
     {
+        playerSFX = FindObjectOfType<PlayerSFX>();
         player = FindObjectOfType<PlayerController>();
     }
 
@@ -51,6 +56,7 @@ public class LadderScript : MonoBehaviour
         if (isEntered)
         {
             player.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z - 0.35f);
             player.animator.speed = 0f;
         }
         else
@@ -62,6 +68,11 @@ public class LadderScript : MonoBehaviour
 
         if (isEntered && vertical > 0f && (player.transform.position.y < maxPosition))
         {
+            if (!boolDelaySFX)
+            {
+                StartCoroutine(DelaySFX(0.5f));
+            }
+
             player.transform.position += Vector3.up * (speedClimb / 100f);
             player.animator.SetFloat("Speed", 1f);
             player.animator.speed = 1f;
@@ -69,6 +80,10 @@ public class LadderScript : MonoBehaviour
 
         if (isEntered && vertical < 0f && (player.transform.position.y > minPosition))
         {
+            if (!boolDelaySFX)
+            {
+                StartCoroutine(DelaySFX(1f));
+            }
             player.transform.position += Vector3.down * (speedClimb / 100f);
             player.animator.SetFloat("Speed", -1f);
             player.animator.speed = 1f;
@@ -124,5 +139,14 @@ public class LadderScript : MonoBehaviour
         ladderButton.gameObject.SetActive(false);
         exitLadderButton.gameObject.SetActive(false);
         isEntered = false;
+    }
+
+    IEnumerator DelaySFX(float delay)
+    {
+        boolDelaySFX = true;
+        yield return new WaitForSeconds(delay);
+        playerSFX.audioLadder.Play();
+        playerSFX.audioLadder.volume = Random.Range(0.8f, 1f);
+        boolDelaySFX = false;
     }
 }

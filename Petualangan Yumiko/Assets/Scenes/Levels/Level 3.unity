@@ -1526,6 +1526,14 @@ PrefabInstance:
       propertyPath: jumpButtonPressed
       value: 
       objectReference: {fileID: 1258132337}
+    - target: {fileID: 652901732731827678, guid: c8443f84539a7344ab86d7e12ac5cabe, type: 3}
+      propertyPath: m_Size.z
+      value: 1.4725266
+      objectReference: {fileID: 0}
+    - target: {fileID: 652901732731827678, guid: c8443f84539a7344ab86d7e12ac5cabe, type: 3}
+      propertyPath: m_Center.z
+      value: -0.013736725
+      objectReference: {fileID: 0}
     - target: {fileID: 652901732731827679, guid: c8443f84539a7344ab86d7e12ac5cabe, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -10169,6 +10177,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1258132341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3821276720996275540, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
+  m_PrefabInstance: {fileID: 1258132326}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1259230562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13395,6 +13408,10 @@ PrefabInstance:
       propertyPath: lifeBar
       value: 
       objectReference: {fileID: 1258132335}
+    - target: {fileID: 4586622853490391542, guid: fe4502d58ff7c604b812db7daedb71b9, type: 3}
+      propertyPath: adsPanel
+      value: 
+      objectReference: {fileID: 1258132341}
     - target: {fileID: 4586622853490391542, guid: fe4502d58ff7c604b812db7daedb71b9, type: 3}
       propertyPath: healthBar
       value: 

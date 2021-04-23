@@ -17,6 +17,11 @@ public class SelectLevel : MonoBehaviour
 			levelButtons[i].interactable = false;
 		}
 
+        if (levelAt > levelButtons.Length)
+        {
+			levelAt -= 1;
+        }
+
 		for (int j = 0; j < levelAt; j++)
 		{
 			levelButtons[j].interactable = true;

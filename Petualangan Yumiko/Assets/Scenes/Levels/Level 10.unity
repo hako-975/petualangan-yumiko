@@ -711,6 +711,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 16525999226880467}
     - target: {fileID: 4586622853490391542, guid: fe4502d58ff7c604b812db7daedb71b9, type: 3}
+      propertyPath: adsPanel
+      value: 
+      objectReference: {fileID: 3005876253889992911}
+    - target: {fileID: 4586622853490391542, guid: fe4502d58ff7c604b812db7daedb71b9, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 16526001142763249}
@@ -1855,7 +1859,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801237517}
-  m_LocalRotation: {x: 0.104109846, y: -0.000000034225764, z: 0.0000000035827075, w: 0.99456584}
+  m_LocalRotation: {x: 0.104109846, y: 0.00000003422576, z: -0.0000000035827072, w: 0.99456584}
   m_LocalPosition: {x: 0, y: 2, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1871,11 +1875,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 641328782344550303, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000001711288
+      value: 0.000000017112876
       objectReference: {fileID: 0}
     - target: {fileID: 641328782344550303, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000001791354
+      value: -0.0000000017913536
       objectReference: {fileID: 0}
     - target: {fileID: 641328782519099883, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_Name
@@ -2428,10 +2432,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 25031111}
-    - target: {fileID: 3005876252097458287, guid: 8f3a1acaf2e020a4a8ab63ef5f9ceba6, type: 3}
-      propertyPath: gradient.ctime0
-      value: 26280
-      objectReference: {fileID: 0}
     - target: {fileID: 3005876252749316545, guid: 8f3a1acaf2e020a4a8ab63ef5f9ceba6, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2442,6 +2442,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3a1acaf2e020a4a8ab63ef5f9ceba6, type: 3}
+--- !u!1 &3005876253889992911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5518347297639727760, guid: 8f3a1acaf2e020a4a8ab63ef5f9ceba6, type: 3}
+  m_PrefabInstance: {fileID: 3005876253889992910}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7386002045173462835
 PrefabInstance:
   m_ObjectHideFlags: 0

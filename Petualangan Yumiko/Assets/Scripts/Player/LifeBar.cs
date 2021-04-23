@@ -7,6 +7,11 @@ public class LifeBar : MonoBehaviour
 {
     public TextMeshProUGUI textLife;
 
+    private void Update()
+    {
+        SetTextLife(PlayerPrefsManager.instance.GetLife());
+    }
+
     public void SetTextLife(int life)
     {
         textLife.text = life.ToString();

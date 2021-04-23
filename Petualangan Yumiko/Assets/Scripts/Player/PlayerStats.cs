@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
     PlayerController player;
-    GameObject spawnPoint;
+    [HideInInspector]
+    public GameObject spawnPoint;
 
     bool beingHandled = false;
 
@@ -17,19 +16,14 @@ public class PlayerStats : MonoBehaviour
     [HideInInspector]
     public bool isDied = false;
 
-    public int maxHealth = 4;
-    public int currentHealth;
-    public int currentLife;
-
     public float delayInvisible = 3f;
-
-    public HealthBar healthBar;
-
-    public LifeBar lifeBar;
 
     public MenuManager menuManager;
 
     public GameObject gameOverPanel;
+    
+    public GameObject adsPanel;
+
 
     void Start()
     {
@@ -37,20 +31,11 @@ public class PlayerStats : MonoBehaviour
 
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
 
-        healthBar.SetMaxHealth(maxHealth);
-
         menuManager = FindObjectOfType<MenuManager>();
     }
 
     void Update()
     {
-        currentHealth = PlayerPrefsManager.instance.GetCurrentHealth();
-
-        healthBar.SetHealth(currentHealth);
-
-        currentLife = PlayerPrefsManager.instance.GetLife();
-        lifeBar.SetTextLife(currentLife);
-
         if (isInvisible)
         {
             player.animator.SetBool("IsHit", false);
@@ -66,7 +51,7 @@ public class PlayerStats : MonoBehaviour
             player.transform.rotation = Quaternion.Euler(0f, player.currentTransformY, 0f);
         }
 
-        if (currentHealth <= 0 && isDied == false)
+        if (PlayerPrefsManager.instance.GetHealth() <= 0 && isDied == false)
         {
             Died();
         }
@@ -75,10 +60,10 @@ public class PlayerStats : MonoBehaviour
     public void TakeDamage(int damage)
     {
         player.animator.SetBool("IsHit", true);
-
         isInvisible = true;
+        int currentHealth = PlayerPrefsManager.instance.GetHealth();
         currentHealth -= damage;
-        PlayerPrefsManager.instance.SetCurrentHealth(currentHealth);
+        PlayerPrefsManager.instance.SetHealth(currentHealth);
     }
 
     public void Died()
@@ -93,35 +78,22 @@ public class PlayerStats : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         // check current life if zero
-        if (currentLife <= 0)
+        if (PlayerPrefsManager.instance.GetLife() <= 0)
         {
+            // set current health 4
+            PlayerPrefsManager.instance.SetHealth(4);
+
             // game over panel
             gameOverPanel.SetActive(true);
-            // set current health 4
-            PlayerPrefsManager.instance.SetCurrentHealth(4);
-
-            // if watch ads set life to 3 and not reset spawn point else to 1 and reset spawn point
-            // if (watchads == true)
-            // {
-
-            // set life 3
-            PlayerPrefsManager.instance.SetLife(3);
-            // }
-            // else
-            // {
-
-            // set life 1
-            // PlayerPrefsManager.instance.SetLife(1);
+            adsPanel.SetActive(true);
 
             // reset spawn point
-            spawnPoint.transform.position = new Vector3(0f, 0.25f, 0f);
-
-            // }
+            spawnPoint.transform.position = new Vector3(0f, 0.05f, 0f);
         }
         else
         {
             PlayerPrefsManager.instance.DecreaseLife();
-            currentHealth = PlayerPrefsManager.instance.SetCurrentHealth(4);
+            PlayerPrefsManager.instance.SetHealth(4);
             // true is restart
             // false is die
             menuManager.Restart(false);

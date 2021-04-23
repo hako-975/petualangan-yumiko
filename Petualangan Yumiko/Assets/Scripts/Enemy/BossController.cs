@@ -42,6 +42,12 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (playerStats.isDied)
+        {
+            lookRadius = 0f;
+            playerStats.spawnPoint.transform.position = new Vector3(0f, 0.05f, 0f);
+        }
+        
         healthBarBoss.SetHealth(healthPoint);
 
         animator.SetBool("IsWalk", false);
@@ -78,11 +84,6 @@ public class BossController : MonoBehaviour
                 playerStats.TakeDamage(damageAttack);
                 playerStats.isInvisible = true;
             }
-        }
-
-        if (playerStats.isDied)
-        {
-            lookRadius = 0f;
         }
 
         if (agent.velocity.magnitude >= 0.1f)

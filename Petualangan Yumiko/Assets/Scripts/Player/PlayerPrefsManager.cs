@@ -32,15 +32,15 @@ public class PlayerPrefsManager : MonoBehaviour
         PlayerPrefs.SetInt("ExtraLifeToBoolean" + extraLifeTo, 1);
     }
 
-    public int GetCurrentHealth()
+    public int GetHealth()
     {
-        return PlayerPrefs.GetInt("CurrentHealth", 4);
+        return PlayerPrefs.GetInt("Health", 4);
     }
 
-    public int SetCurrentHealth(int currentHealth)
+    public int SetHealth(int health)
     {
-        PlayerPrefs.SetInt("CurrentHealth", currentHealth);
-        return GetCurrentHealth();
+        PlayerPrefs.SetInt("Health", health);
+        return GetHealth();
     }    
     
     public int GetCurrentLevel()
@@ -107,7 +107,7 @@ public class PlayerPrefsManager : MonoBehaviour
 
     public float GetMusic()
     {
-        return PlayerPrefs.GetFloat("Music", -5f);
+        return PlayerPrefs.GetFloat("Music", -10f);
     }
 
     public float SetMusic(float volumeMusic)

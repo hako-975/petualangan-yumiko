@@ -16,7 +16,7 @@ public class HealthRecovery : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             // get current life
-            int currentHealth = PlayerPrefsManager.instance.GetCurrentHealth();
+            int currentHealth = PlayerPrefsManager.instance.GetHealth();
 
             if (currentHealth < 4)
             {
@@ -25,7 +25,7 @@ public class HealthRecovery : MonoBehaviour
 
                 // set life = get current life + 1
                 currentHealth += 1;
-                PlayerPrefsManager.instance.SetCurrentHealth(currentHealth);
+                PlayerPrefsManager.instance.SetHealth(currentHealth);
             }
         }
     }

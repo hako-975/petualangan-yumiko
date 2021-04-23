@@ -15,8 +15,11 @@ public class PlayerController : MonoBehaviour
 
     float turnSmoothVelocity;
 
-    bool isGrounded;
-    bool isClimbing;
+    [HideInInspector]
+    public bool isGrounded;
+
+    [HideInInspector]
+    public bool isClimbing;
 
     private float canJump = 0f;
 
@@ -39,6 +42,11 @@ public class PlayerController : MonoBehaviour
     public JoyButton jumpButton;
 
     public LayerMask groundMask;
+    
+    [HideInInspector]
+    public Vector3 move;
+
+    PlayerSFX playerSFX;
 
     PlayerStats playerStats;
 
@@ -48,6 +56,7 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         playerStats = GetComponent<PlayerStats>();
+        playerSFX = GetComponent<PlayerSFX>();
 
         groundCheck = GameObject.FindGameObjectWithTag("GroundCheck");
         cam = GameObject.FindGameObjectWithTag("MainCamera");
@@ -59,8 +68,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        /*StartCoroutine(WaitSetPosition());*/
-
         if (controller.transform.position.y < -200f)
         {
             controller.enabled = false;
@@ -84,7 +91,7 @@ public class PlayerController : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal") + joystick.Horizontal;
         float vertical = Input.GetAxisRaw("Vertical") + joystick.Vertical;
 
-        Vector3 move = new Vector3(horizontal, 0f, vertical).normalized;
+        move = new Vector3(horizontal, 0f, vertical).normalized;
 
         if (move.magnitude >= 0.1f)
         {
@@ -107,6 +114,7 @@ public class PlayerController : MonoBehaviour
 
         if ((Input.GetKey(KeyCode.Space) || jumpButton.pressed) && isGrounded && !isClimbing && Time.time > canJump)
         {
+            playerSFX.audioJump.Play();
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             canJump = Time.time + 1f;
         }
@@ -119,7 +127,6 @@ public class PlayerController : MonoBehaviour
     IEnumerator WaitPosition()
     {
         yield return new WaitForEndOfFrame();
-        // set character to spawn point
         
         // check current scene - 3 karena build index level 4 adalah 7
         currentLevel = SceneManager.GetActiveScene().buildIndex - 3;
@@ -136,7 +143,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                spawnPoint.transform.position = new Vector3(0f, 0.5f, 0f);
+                spawnPoint.transform.position = new Vector3(0f, 0.05f, 0f);
                 PlayerPrefsManager.instance.SetCurrentLevel(currentLevel);
             }
         }

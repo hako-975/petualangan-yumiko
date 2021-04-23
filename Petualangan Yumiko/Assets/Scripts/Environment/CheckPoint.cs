@@ -22,7 +22,7 @@ public class CheckPoint : MonoBehaviour
 
         if (currentLevel != PlayerPrefsManager.instance.GetCurrentLevel())
         {
-            spawnPoint.transform.position = new Vector3(0f, 0.5f, 0f);
+            spawnPoint.transform.position = new Vector3(0f, 0.05f, 0f);
         }
     }
             
