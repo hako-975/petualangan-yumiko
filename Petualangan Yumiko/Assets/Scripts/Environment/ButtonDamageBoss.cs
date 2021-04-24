@@ -12,8 +12,11 @@ public class ButtonDamageBoss : MonoBehaviour
 
     BossController bossController;
 
+    AudioSource audioButtonDamageBoss;
+
     private void Start()
     {
+        audioButtonDamageBoss = GetComponent<AudioSource>();
         transform.position = new Vector3(Random.Range(ground.transform.position.x - 4f, ground.transform.position.x + 4f), ground.transform.position.y, Random.Range(ground.transform.position.z - 4f, ground.transform.position.z + 4f));
         colliderTrigger = GetComponent<Collider>();
         bossController = FindObjectOfType<BossController>();
@@ -23,6 +26,7 @@ public class ButtonDamageBoss : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            audioButtonDamageBoss.Play();
             bossController.TakeDamage(1);
             redButton.transform.position = transform.position;
             colliderTrigger.isTrigger = false;

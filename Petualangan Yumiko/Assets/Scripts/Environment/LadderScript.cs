@@ -11,7 +11,8 @@ public class LadderScript : MonoBehaviour
     public GameObject jumpButton;
     public GameObject jumpButtonPressed;
 
-
+    AudioSource audioLadder;
+    
     [HideInInspector]
     public bool isEntered;
     
@@ -23,13 +24,11 @@ public class LadderScript : MonoBehaviour
 
     PlayerController player;
 
-    PlayerSFX playerSFX;
-
     bool boolDelaySFX = false;
 
     void Start()
     {
-        playerSFX = FindObjectOfType<PlayerSFX>();
+        audioLadder = GetComponent<AudioSource>();
         player = FindObjectOfType<PlayerController>();
     }
 
@@ -145,8 +144,8 @@ public class LadderScript : MonoBehaviour
     {
         boolDelaySFX = true;
         yield return new WaitForSeconds(delay);
-        playerSFX.audioLadder.Play();
-        playerSFX.audioLadder.volume = Random.Range(0.8f, 1f);
+        audioLadder.Play();
+        audioLadder.volume = Random.Range(0.8f, 1f);
         boolDelaySFX = false;
     }
 }

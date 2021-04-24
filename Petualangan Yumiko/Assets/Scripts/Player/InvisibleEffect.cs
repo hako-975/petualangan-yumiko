@@ -19,7 +19,7 @@ public class InvisibleEffect : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (playerStats.isDied || player.animator.GetBool("IsHit") == true)
         {

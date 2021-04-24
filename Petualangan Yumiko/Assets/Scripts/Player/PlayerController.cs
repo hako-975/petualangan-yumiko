@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
 
     private float canJump = 0f;
 
-    [HideInInspector]
     public Vector3 velocity;
 
     [HideInInspector]
@@ -50,6 +49,8 @@ public class PlayerController : MonoBehaviour
 
     PlayerStats playerStats;
 
+    bool fall = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +69,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (fall == false)
+        {
+            if (velocity.y < -40f)
+            {
+                playerSFX.audioFall.Play();
+                fall = true;
+            }
+        }
+
+        if (velocity.y >= -3f)
+        {
+            fall = false;
+        }
+
         if (controller.transform.position.y < -200f)
         {
             controller.enabled = false;
@@ -112,7 +127,12 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsGrounded", isGrounded);
         isClimbing = animator.GetBool("IsClimbing");
 
-        if ((Input.GetKey(KeyCode.Space) || jumpButton.pressed) && isGrounded && !isClimbing && Time.time > canJump)
+        if (isClimbing)
+        {
+            velocity.y = -2f;
+        }
+
+        if ((Input.GetKey(KeyCode.Space) || jumpButton.pressed) && isGrounded && !isClimbing && playerStats.isDied == false && Time.time > canJump)
         {
             playerSFX.audioJump.Play();
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);

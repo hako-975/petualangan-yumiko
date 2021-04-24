@@ -7,7 +7,9 @@ public class PlayerSFX : MonoBehaviour
     PlayerController player;
     public AudioSource audioRun;
     public AudioSource audioJump;
-    public AudioSource audioLadder;
+    public AudioSource audioFall;
+    public AudioSource audioDied;
+    public AudioSource audioGetHit;
 
     bool beingHandled = false;
     

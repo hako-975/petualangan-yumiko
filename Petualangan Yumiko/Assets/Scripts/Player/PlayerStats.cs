@@ -24,6 +24,7 @@ public class PlayerStats : MonoBehaviour
     
     public GameObject adsPanel;
 
+    PlayerSFX playerSFX;
 
     void Start()
     {
@@ -32,6 +33,19 @@ public class PlayerStats : MonoBehaviour
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
 
         menuManager = FindObjectOfType<MenuManager>();
+
+        playerSFX = GetComponent<PlayerSFX>();
+
+        if (PlayerPrefsManager.instance.GetHealth() <= 0)
+        {
+            PlayerPrefsManager.instance.SetHealth(4);
+            PlayerPrefsManager.instance.SetLife(PlayerPrefsManager.instance.GetLife() - 1);
+        }
+
+        if (PlayerPrefsManager.instance.GetLife() < 0)
+        {
+            PlayerPrefsManager.instance.SetLife(0);
+        }
     }
 
     void Update()
@@ -48,6 +62,7 @@ public class PlayerStats : MonoBehaviour
 
         if (player.animator.GetBool("IsDied"))
         {
+            player.GetComponent<CharacterController>().enabled = false;
             player.transform.rotation = Quaternion.Euler(0f, player.currentTransformY, 0f);
         }
 
@@ -64,6 +79,7 @@ public class PlayerStats : MonoBehaviour
         int currentHealth = PlayerPrefsManager.instance.GetHealth();
         currentHealth -= damage;
         PlayerPrefsManager.instance.SetHealth(currentHealth);
+        playerSFX.audioGetHit.Play();
     }
 
     public void Died()
@@ -71,6 +87,7 @@ public class PlayerStats : MonoBehaviour
         player.GetComponent<CharacterController>().enabled = false;
         player.animator.SetBool("IsDied", true);
         isDied = true;
+        StartCoroutine(DelaySFXDied());
         StartCoroutine(DecreaseLife());
     }
 
@@ -106,5 +123,11 @@ public class PlayerStats : MonoBehaviour
         yield return new WaitForSeconds(delay);
         isInvisible = false;
         beingHandled = false;
+    }
+
+    IEnumerator DelaySFXDied()
+    {
+        yield return new WaitForSeconds(1f);
+        playerSFX.audioDied.Play();
     }
 }

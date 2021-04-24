@@ -561,7 +561,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.65
   m_Speed: 7
-  m_Acceleration: 300
+  m_Acceleration: 375
   avoidancePriority: 50
   m_AngularSpeed: 300
   m_StoppingDistance: 25
@@ -584,8 +584,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94674e0e3b7423f4e96ab8309c29cf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoint: 3
   damageAttack: 2
   lookRadius: 1000
+  isDied: 0
 --- !u!1 &8764629640490696821
 GameObject:
   m_ObjectHideFlags: 0
