@@ -21,8 +21,8 @@ public class CheckPointBoss : MonoBehaviour
 
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
 
-        // check current scene - 3 karena build index level 4 adalah 7
-        currentLevel = SceneManager.GetActiveScene().buildIndex - 3;
+        // check current scene karena build index level 4 adalah 4
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
 
         if (currentLevel != PlayerPrefsManager.instance.GetCurrentLevel())
         {

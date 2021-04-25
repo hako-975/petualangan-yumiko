@@ -6,8 +6,10 @@ public class ChangePosition : MonoBehaviour
 {
     PlayerController player;
     public Vector3 newPosition;
+    PlayerSFX playerSFX;
     private void Start()
     {
+        playerSFX = FindObjectOfType<PlayerSFX>();
         player = FindObjectOfType<PlayerController>();
     }
 
@@ -17,6 +19,7 @@ public class ChangePosition : MonoBehaviour
         {
             player.GetComponent<CharacterController>().enabled = false;
             player.GetComponent<CharacterController>().transform.position = newPosition;
+            playerSFX.audioSpawn.Play();
             player.GetComponent<CharacterController>().enabled = true;
         }
     }

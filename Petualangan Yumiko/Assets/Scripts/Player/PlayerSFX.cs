@@ -10,6 +10,7 @@ public class PlayerSFX : MonoBehaviour
     public AudioSource audioFall;
     public AudioSource audioDied;
     public AudioSource audioGetHit;
+    public AudioSource audioSpawn;
 
     bool beingHandled = false;
     

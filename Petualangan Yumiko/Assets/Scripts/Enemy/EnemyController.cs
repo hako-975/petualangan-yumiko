@@ -19,6 +19,17 @@ public class EnemyController : MonoBehaviour
     public int damageAttack = 1;
     public float stopAttackDistance = 2f;
 
+    public AudioSource audioWalk;
+    public AudioSource audioAttack;
+
+    float delaySoundWalk = 0.15f;
+
+    bool stayAway = true;
+
+    bool handledWalk = false;
+
+    public bool isSpider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +49,14 @@ public class EnemyController : MonoBehaviour
         animator.SetBool("IsWalk", false);
         animator.SetBool("IsAttack", false);
 
+        if (isSpider)
+        {
+            delaySoundWalk = 0.15f;
+        }
+        else
+        {
+            delaySoundWalk = 0.3f;
+        }
 
         float distance = Vector3.Distance(target.position, transform.position);
 
@@ -45,10 +64,21 @@ public class EnemyController : MonoBehaviour
         {
             agent.SetDestination(target.position);
             FaceTarget();
+            stayAway = false;
         }
         else
         {
             agent.SetDestination(firstPosition);
+            stayAway = true;
+        }
+
+        if (stayAway == false)
+        {
+            audioWalk.volume = Random.Range(0.8f, 1f);
+        }
+        else
+        {
+            audioWalk.volume -= 0.01f;
         }
 
         if (playerStats.isDied)
@@ -58,7 +88,10 @@ public class EnemyController : MonoBehaviour
 
         if (distance <= agent.stoppingDistance + stopAttackDistance)
         {
+
+
             animator.SetBool("IsAttack", true);
+    
             if ((playerStats.isInvisible == false) && animator.GetBool("IsAttack") && (playerStats.isDied == false))
             {
                 if (!beingHandled)
@@ -70,6 +103,10 @@ public class EnemyController : MonoBehaviour
 
         if (agent.velocity.magnitude >= 0.1f)
         {
+            if (!handledWalk && animator.GetBool("IsAttack") == false)
+            {
+                StartCoroutine(DelaySoundWalk(delaySoundWalk));
+            }
             animator.SetBool("IsWalk", true);
         }
 
@@ -94,10 +131,21 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(delay);
         if (animator.GetBool("IsAttack"))
         {
+            audioAttack.Play();
+            audioAttack.volume = Random.Range(0.8f, 1f);
+
             playerStats.TakeDamage(damageAttack);
             playerStats.isInvisible = true;
         }
+
         beingHandled = false;
     }
 
+    IEnumerator DelaySoundWalk(float delay)
+    {
+        handledWalk = true;
+        yield return new WaitForSeconds(delay);
+        audioWalk.Play();
+        handledWalk = false;
+    }
 }

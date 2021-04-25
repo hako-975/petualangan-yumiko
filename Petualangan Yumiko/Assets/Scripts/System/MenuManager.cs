@@ -37,12 +37,18 @@ public class MenuManager : MonoBehaviour
         PlayerPrefsManager.instance.SetNextScene("Select Level");
     }
 
+    public void Gallery()
+    {
+        Time.timeScale = 1;
+        PlayerPrefsManager.instance.SetNextScene("Gallery");
+    }    
+
     public void MainMenu()
     {
         Time.timeScale = 1;
 
         // for loading
-        PlayerPrefsManager.instance.RemoveExtraLifeBoolean();
+        // PlayerPrefsManager.instance.RemoveExtraLifeBoolean();
         PlayerPrefsManager.instance.SetNextScene("Main Menu");
     }
 

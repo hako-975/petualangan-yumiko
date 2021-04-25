@@ -13,10 +13,13 @@ public class DangerZone : MonoBehaviour
 
     CinemachineFreeLook thirdPersonCamera;
 
+    PlayerSFX playerSFX;
+
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
         playerStats = FindObjectOfType<PlayerStats>();
+        playerSFX = FindObjectOfType<PlayerSFX>();
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
         thirdPersonCamera = FindObjectOfType<CinemachineFreeLook>();
     }
@@ -28,6 +31,7 @@ public class DangerZone : MonoBehaviour
             player.GetComponent<CharacterController>().enabled = false;
             player.GetComponent<CharacterController>().transform.position = spawnPoint.transform.position;
             player.GetComponent<CharacterController>().transform.rotation = Quaternion.identity;
+            playerSFX.audioSpawn.Play();
             player.GetComponent<CharacterController>().enabled = true;
             thirdPersonCamera.enabled = false;
             thirdPersonCamera.m_YAxis.Value = 0.5f;

@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     private float canJump = 0f;
 
+    [HideInInspector]
     public Vector3 velocity;
 
     [HideInInspector]
@@ -63,6 +64,8 @@ public class PlayerController : MonoBehaviour
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
 
+        playerSFX.audioSpawn.Play();
+
         StartCoroutine(WaitPosition());
     }
 
@@ -71,7 +74,7 @@ public class PlayerController : MonoBehaviour
     {
         if (fall == false)
         {
-            if (velocity.y < -40f)
+            if (velocity.y < -40f && playerStats.isDied == false)
             {
                 playerSFX.audioFall.Play();
                 fall = true;
@@ -148,8 +151,8 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         
-        // check current scene - 3 karena build index level 4 adalah 7
-        currentLevel = SceneManager.GetActiveScene().buildIndex - 3;
+        // check current scene karena build index level 4 adalah 4
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
         if (currentLevel != PlayerPrefsManager.instance.GetCurrentLevel() || currentLevel == 0)
         {
             if (PlayerPrefsManager.instance.GetComingSoon() > 0)

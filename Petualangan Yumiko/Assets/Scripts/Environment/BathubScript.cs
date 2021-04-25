@@ -21,7 +21,7 @@ public class BathubScript : MonoBehaviour
 
             if (body2.activeSelf)
             {
-                currentLevel = SceneManager.GetActiveScene().buildIndex - 3;
+                currentLevel = SceneManager.GetActiveScene().buildIndex;
                 if (currentLevel == 9)
                 {
                     PlayerPrefsManager.instance.SetCurrentLevel(9);
