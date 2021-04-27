@@ -25,6 +25,8 @@ public class RandomTrack : MonoBehaviour
 
     bool isFinish = false;
 
+    bool objFinish = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -78,7 +80,11 @@ public class RandomTrack : MonoBehaviour
         
         if (lengthArea > maxLengthTrack)
         {
-            Instantiate(finishTrack, new Vector3(0f, -5f, lengthArea + 20f), Quaternion.identity);
+            if (objFinish == false)
+            {
+                Instantiate(finishTrack, new Vector3(0f, -5f, lengthArea + 20f), Quaternion.identity);
+                objFinish = true;
+            }
         }
 
         if (!isFinish)

@@ -22,14 +22,14 @@ public class PlayerPrefsManager : MonoBehaviour
         }
     }
 
-    public int GetExtraLifeToBoolean(int extraLifeTo)
+    public int GetExtraLifeToBoolean(int extraLifeTo, int level)
     {
-        return PlayerPrefs.GetInt("ExtraLifeToBoolean" + extraLifeTo, 0);
+        return PlayerPrefs.GetInt("ExtraLifeToBoolean" + extraLifeTo + "Level" + level, 0);
     }
 
-    public void SetExtraLifeToBoolean(int extraLifeTo)
+    public void SetExtraLifeToBoolean(int extraLifeTo, int level)
     {
-        PlayerPrefs.SetInt("ExtraLifeToBoolean" + extraLifeTo, 1);
+        PlayerPrefs.SetInt("ExtraLifeToBoolean" + extraLifeTo + "Level" + level, 1);
     }
 
     public int GetHealth()

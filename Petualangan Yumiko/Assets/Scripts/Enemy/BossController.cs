@@ -24,6 +24,16 @@ public class BossController : MonoBehaviour
 
     BossController bossController;
 
+    float delaySoundWalk = 0.15f;
+
+    bool handledWalk;
+
+    public AudioSource audioWalk;
+    public AudioSource audioAttack;
+    public AudioSource audioGetHit;
+
+    bool stayAway = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +52,8 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        delaySoundWalk = 0.25f;
+
         if (playerStats.isDied)
         {
             lookRadius = 0f;
@@ -60,10 +72,21 @@ public class BossController : MonoBehaviour
         {
             agent.SetDestination(target.position);
             FaceTarget();
+            stayAway = false;
         }
         else
         {
             agent.SetDestination(firstPosition);
+            stayAway = false;
+        }
+
+        if (stayAway == false)
+        {
+            audioWalk.volume = Random.Range(0.8f, 1f);
+        }
+        else
+        {
+            audioWalk.volume -= 0.01f;
         }
 
         if (playerStats.isDied)
@@ -80,6 +103,10 @@ public class BossController : MonoBehaviour
                 {
                     StartCoroutine(DelayBoss());
                 }
+                
+                audioAttack.Play();
+                audioAttack.volume = Random.Range(0.8f, 1f);
+                audioAttack.pitch = Random.Range(0.8f, 1f);
 
                 playerStats.TakeDamage(damageAttack);
                 playerStats.isInvisible = true;
@@ -88,6 +115,11 @@ public class BossController : MonoBehaviour
 
         if (agent.velocity.magnitude >= 0.1f)
         {
+            if (!handledWalk && animator.GetBool("IsAttack") == false)
+            {
+                StartCoroutine(DelaySoundWalk(delaySoundWalk));
+            }
+
             animator.SetBool("IsWalk", true);
         }
 
@@ -114,6 +146,9 @@ public class BossController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        audioGetHit.Play();
+        audioGetHit.pitch = Random.Range(0.5f, 1f);
+
         healthPoint -= damage;
         StartCoroutine(DelayBoss());
         if (healthPoint <= 0)
@@ -137,5 +172,15 @@ public class BossController : MonoBehaviour
         yield return new WaitForSeconds(3f);
         lookRadius = 1000f;
         beingHandled = false;
+    }
+
+    IEnumerator DelaySoundWalk(float delay)
+    {
+        handledWalk = true;
+        yield return new WaitForSeconds(delay);
+        audioWalk.Play();
+        audioWalk.volume = Random.Range(0.8f, 1f);
+        audioWalk.pitch = Random.Range(0.8f, 1f);
+        handledWalk = false;
     }
 }

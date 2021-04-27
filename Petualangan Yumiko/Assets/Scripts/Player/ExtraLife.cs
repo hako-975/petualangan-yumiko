@@ -7,13 +7,23 @@ public class ExtraLife : MonoBehaviour
 {
     public int extraLifeTo;
 
+    int level;
+
+    AudioSource audioExtraLife;
+
+    private void Start()
+    {
+        audioExtraLife = GetComponent<AudioSource>();
+        level = SceneManager.GetActiveScene().buildIndex;
+    }
+
     // Update is called once per frame
     void Update()
     {
         // for rotate
         transform.Rotate(Vector3.up * 2f);
     
-        if (PlayerPrefsManager.instance.GetExtraLifeToBoolean(extraLifeTo) > 0)
+        if (PlayerPrefsManager.instance.GetExtraLifeToBoolean(extraLifeTo, level) > 0)
         {
             gameObject.SetActive(false);
         }
@@ -23,8 +33,10 @@ public class ExtraLife : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PlayerPrefsManager.instance.SetExtraLifeToBoolean(extraLifeTo);
+            audioExtraLife.Play();
+            audioExtraLife.volume = Random.Range(0.8f, 1f);
 
+            PlayerPrefsManager.instance.SetExtraLifeToBoolean(extraLifeTo, level);
             // destroy game object
             gameObject.SetActive(false);
 

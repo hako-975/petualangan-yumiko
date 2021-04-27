@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class HealthRecovery : MonoBehaviour
 {
+    AudioSource audioHealth;
+
+    private void Start()
+    {
+        audioHealth = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -20,6 +27,10 @@ public class HealthRecovery : MonoBehaviour
 
             if (currentHealth < 4)
             {
+                audioHealth.Play();
+                audioHealth.volume = Random.Range(0.8f, 1f);
+                audioHealth.pitch = Random.Range(0.8f, 1f);
+
                 // destroy game object
                 this.gameObject.SetActive(false);
 

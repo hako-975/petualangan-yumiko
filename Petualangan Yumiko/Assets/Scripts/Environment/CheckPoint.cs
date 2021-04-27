@@ -38,10 +38,10 @@ public class CheckPoint : MonoBehaviour
             if (activedCheckPoint.gameObject.activeSelf == false)
             {
                 audioCheckPointIn.Play();
+                spawnPoint.transform.position = this.transform.position;
             }
 
-            spawnPoint.transform.position = this.transform.position;
-            
+
             activedCheckPoint.gameObject.SetActive(true); 
             notActiveCheckPoint.gameObject.SetActive(false);
         }

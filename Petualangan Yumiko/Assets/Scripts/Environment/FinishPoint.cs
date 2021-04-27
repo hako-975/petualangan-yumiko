@@ -7,9 +7,13 @@ public class FinishPoint : MonoBehaviour
 {
     [HideInInspector]
     public int nextSceneLoad;
+    
+    AudioSource audioFinish;
 
     void Start()
     {
+        audioFinish = GetComponent<AudioSource>();
+
         // + 1 sesuai urutan pada build index, level saat ini 1 dan build index nya 1 dan next level adalah level 2
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
     }
@@ -18,19 +22,27 @@ public class FinishPoint : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            int levelAt = PlayerPrefsManager.instance.GetLevelAt();
-
-            if (nextSceneLoad > levelAt)
-            {
-                PlayerPrefsManager.instance.SetLevelAt(nextSceneLoad);
-            }
-
-            PlayerPrefsManager.instance.SetCurrentLevel(0);
-
-            // remove extra life boolean
-            PlayerPrefsManager.instance.RemoveExtraLifeBoolean();
-            
-            PlayerPrefsManager.instance.SetNextScene("Level" + " " + nextSceneLoad);
+            audioFinish.Play();
+            StartCoroutine(WaitDuration());
         }
+    }
+
+    IEnumerator WaitDuration()
+    {
+        yield return new WaitForSeconds(audioFinish.clip.length);
+
+        int levelAt = PlayerPrefsManager.instance.GetLevelAt();
+
+        if (nextSceneLoad > levelAt)
+        {
+            PlayerPrefsManager.instance.SetLevelAt(nextSceneLoad);
+        }
+
+        PlayerPrefsManager.instance.SetCurrentLevel(0);
+
+        // remove extra life boolean
+        PlayerPrefsManager.instance.RemoveExtraLifeBoolean();
+
+        PlayerPrefsManager.instance.SetNextScene("Level" + " " + nextSceneLoad);
     }
 }

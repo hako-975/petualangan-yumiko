@@ -15,8 +15,12 @@ public class CheckPointBoss : MonoBehaviour
 
     public GameObject notActiveCheckPoint;
 
+    AudioSource audioCheckPointIn;
+
     private void Start()
     {
+        audioCheckPointIn = GetComponent<AudioSource>();
+
         transform.position = new Vector3(Random.Range(ground.transform.position.x - 4f, ground.transform.position.x + 4f), ground.transform.position.y + 0.4f , Random.Range(ground.transform.position.z - 4f, ground.transform.position.z + 4f));
 
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
@@ -34,7 +38,11 @@ public class CheckPointBoss : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            spawnPoint.transform.position = this.transform.position;
+            if (activedCheckPoint.gameObject.activeSelf == false)
+            {
+                audioCheckPointIn.Play();
+                spawnPoint.transform.position = this.transform.position;
+            }
 
             activedCheckPoint.gameObject.SetActive(true);
             notActiveCheckPoint.gameObject.SetActive(false);

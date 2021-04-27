@@ -138,6 +138,9 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetKey(KeyCode.Space) || jumpButton.pressed) && isGrounded && !isClimbing && playerStats.isDied == false && Time.time > canJump)
         {
             playerSFX.audioJump.Play();
+            playerSFX.audioJump.volume = Random.Range(0.8f, 1f);
+            playerSFX.audioJump.pitch = Random.Range(0.995f, 1.05f);
+
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             canJump = Time.time + 1f;
         }
