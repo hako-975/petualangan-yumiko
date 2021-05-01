@@ -32,8 +32,6 @@ public class BossController : MonoBehaviour
     public AudioSource audioAttack;
     public AudioSource audioGetHit;
 
-    bool stayAway = true;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -72,21 +70,10 @@ public class BossController : MonoBehaviour
         {
             agent.SetDestination(target.position);
             FaceTarget();
-            stayAway = false;
         }
         else
         {
             agent.SetDestination(firstPosition);
-            stayAway = false;
-        }
-
-        if (stayAway == false)
-        {
-            audioWalk.volume = Random.Range(0.8f, 1f);
-        }
-        else
-        {
-            audioWalk.volume -= 0.01f;
         }
 
         if (playerStats.isDied)

@@ -327,8 +327,7 @@ MonoBehaviour:
   stopAttackDistance: 0
   audioWalk: {fileID: -260461698632000699}
   audioAttack: {fileID: 6171844231974559408}
-  delaySoundWalk: 0.2
-  isSpider: 1
+  delaySoundWalk: 0.15
 --- !u!82 &-260461698632000699
 AudioSource:
   m_ObjectHideFlags: 0
@@ -349,10 +348,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 107
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0
+  MaxDistance: 17
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -385,7 +384,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -445,10 +444,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 102
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0
+  MaxDistance: 15
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -481,7 +480,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

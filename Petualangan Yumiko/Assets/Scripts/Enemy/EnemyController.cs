@@ -22,13 +22,9 @@ public class EnemyController : MonoBehaviour
     public AudioSource audioWalk;
     public AudioSource audioAttack;
 
-    float delaySoundWalk = 0.15f;
-
-    bool stayAway = true;
+    public float delaySoundWalk = 0.3f;
 
     bool handledWalk = false;
-
-    public bool isSpider;
 
     // Start is called before the first frame update
     void Start()
@@ -49,47 +45,26 @@ public class EnemyController : MonoBehaviour
         animator.SetBool("IsWalk", false);
         animator.SetBool("IsAttack", false);
 
-        if (isSpider)
-        {
-            delaySoundWalk = 0.15f;
-        }
-        else
-        {
-            delaySoundWalk = 0.3f;
-        }
-
         float distance = Vector3.Distance(target.position, transform.position);
 
         if (distance <= lookRadius)
         {
             agent.SetDestination(target.position);
             FaceTarget();
-            stayAway = false;
         }
         else
         {
             agent.SetDestination(firstPosition);
-            stayAway = true;
-        }
-
-        if (stayAway == false)
-        {
-            audioWalk.volume = Random.Range(0.8f, 1f);
-        }
-        else
-        {
-            audioWalk.volume -= 0.01f;
         }
 
         if (playerStats.isDied)
         {
+            lookRadius = 0f;
             agent.SetDestination(firstPosition);
         }
 
         if (distance <= agent.stoppingDistance + stopAttackDistance)
         {
-
-
             animator.SetBool("IsAttack", true);
     
             if ((playerStats.isInvisible == false) && animator.GetBool("IsAttack") && (playerStats.isDied == false))
@@ -146,6 +121,8 @@ public class EnemyController : MonoBehaviour
         handledWalk = true;
         yield return new WaitForSeconds(delay);
         audioWalk.Play();
+        audioAttack.pitch = Random.Range(0.95f, 1f);
+        audioAttack.volume = Random.Range(0.8f, 1f);
         handledWalk = false;
     }
 }
