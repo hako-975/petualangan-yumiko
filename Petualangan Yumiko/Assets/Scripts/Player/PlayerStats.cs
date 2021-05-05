@@ -18,7 +18,7 @@ public class PlayerStats : MonoBehaviour
 
     public float delayInvisible = 3f;
 
-    public MenuManager menuManager;
+    MenuManager menuManager;
 
     public GameObject gameOverPanel;
     

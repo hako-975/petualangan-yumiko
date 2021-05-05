@@ -13,14 +13,6 @@ public class PlayerPrefsManager : MonoBehaviour
         instance = this;
     }
     #endregion
-    
-    public void RemoveExtraLifeBoolean()
-    {
-        for (int i = 1; i <= 100; i++)
-        {
-            PlayerPrefs.DeleteKey("ExtraLifeToBoolean" + i);
-        }
-    }
 
     public int GetExtraLifeToBoolean(int extraLifeTo, int level)
     {

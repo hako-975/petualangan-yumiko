@@ -26,61 +26,18 @@ public class SelectLevel : MonoBehaviour
 		{
 			levelButtons[j].interactable = true;
 		}
+
+        for (int k = 0; k < levelAt; k++)
+        {
+			int l = k;
+			levelButtons[k].onClick.AddListener(delegate { Level(l + 1); });
+		}
+
 	}
 
-	public void Level_1()
-	{
-		PlayerPrefsManager.instance.SetNextScene("Level 1");
-	}
-
-	public void Level_2()
-	{
-		PlayerPrefsManager.instance.SetNextScene("Level 2");
-	}
-
-	public void Level_3()
-	{
-		PlayerPrefsManager.instance.SetNextScene("Level 3");
-	}
-
-	public void Level_4()
-	{
-		PlayerPrefsManager.instance.SetNextScene("Level 4");
-	}
-
-	public void Level_5()
-	{
-		PlayerPrefsManager.instance.SetNextScene("Level 5");
-	}
-
-	public void Level_6()
-	{
-		PlayerPrefsManager.instance.SetNextScene("Level 6");
-	}
-
-	public void Level_7()
-	{
-		PlayerPrefsManager.instance.SetNextScene("Level 7");
-	}
-
-	public void Level_8()
-	{
-		PlayerPrefsManager.instance.SetNextScene("Level 8");
-	}
-
-	public void Level_9()
-	{
-		PlayerPrefsManager.instance.SetNextScene("Level 9");
-	}
-
-	public void Level_10()
-	{
-		PlayerPrefsManager.instance.SetNextScene("Level 10");
-	}
-	
-	public void Level_11()
-	{
-		PlayerPrefsManager.instance.SetNextScene("Level 11");
+	public void Level(int level)
+    {
+		PlayerPrefsManager.instance.SetNextScene("Level " + level);
 	}
 
 }

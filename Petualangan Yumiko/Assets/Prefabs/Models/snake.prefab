@@ -622,7 +622,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 4470953531617799639}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.6
   m_Speed: 2
   m_Acceleration: 100
   avoidancePriority: 50
@@ -632,7 +632,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.4
-  m_BaseOffset: -0.01
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &4785095711821763118
@@ -887,7 +887,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3314743250317490658}
   - component: {fileID: 799810852336612347}
-  - component: {fileID: 5508510759330055287}
   m_Layer: 0
   m_Name: anaconda_reference
   m_TagString: Untagged
@@ -988,20 +987,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.03073807, y: 0.024962254, z: 0.051233206}
     m_Extent: {x: 0.11286597, y: 0.14864251, z: 0.07409723}
   m_DirtyAABB: 0
---- !u!64 &5508510759330055287
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5508510759330055280}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &6211927066635093097
 GameObject:
   m_ObjectHideFlags: 0
