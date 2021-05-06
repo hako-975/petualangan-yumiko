@@ -130,6 +130,18 @@ public class PlayerPrefsManager : MonoBehaviour
         return GetQuality();
     }
 
+
+    public int GetLanguage()
+    {
+        return PlayerPrefs.GetInt("LanguageIndex", 0);
+    }
+
+    public int SetLanguage(int languageIndex)
+    {
+        PlayerPrefs.SetInt("LanguageIndex", languageIndex);
+        return GetLanguage();
+    }
+
     public string GetNextScene()
     {
         return PlayerPrefs.GetString("NextScene", "Main Menu");

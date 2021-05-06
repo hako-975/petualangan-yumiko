@@ -853,6 +853,7 @@ MonoBehaviour:
   sliderSensitivity: {fileID: 1379494924}
   sliderZoom: {fileID: 1379494923}
   dropdownQuality: {fileID: 1379494922}
+  dropdownLanguage: {fileID: 1379494927}
 --- !u!114 &139751885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8164,31 +8165,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4898827557045352, guid: 087f374688268d546967a6f5ad5f3890, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7933534
+      value: 0.79273146
       objectReference: {fileID: 0}
     - target: {fileID: 4898827557045352, guid: 087f374688268d546967a6f5ad5f3890, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.024101276
       objectReference: {fileID: 0}
     - target: {fileID: 4898827557045352, guid: 087f374688268d546967a6f5ad5f3890, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.60876137
+      value: 0.608284
       objectReference: {fileID: 0}
     - target: {fileID: 4898827557045352, guid: 087f374688268d546967a6f5ad5f3890, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.0314094
       objectReference: {fileID: 0}
     - target: {fileID: 4898827557045352, guid: 087f374688268d546967a6f5ad5f3890, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -4.383
       objectReference: {fileID: 0}
     - target: {fileID: 4898827557045352, guid: 087f374688268d546967a6f5ad5f3890, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 75
+      value: 74.955
       objectReference: {fileID: 0}
     - target: {fileID: 4898827557045352, guid: 087f374688268d546967a6f5ad5f3890, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 1.177
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 087f374688268d546967a6f5ad5f3890, type: 3}
@@ -11397,12 +11398,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1684571869}
     - target: {fileID: 1680599283605831519, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.973249
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680599283605831519, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000016746101
+      value: 0.000000016746093
       objectReference: {fileID: 0}
     - target: {fileID: 1680599283605831519, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000039532186
+      value: -0.0000000039532164
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
@@ -16447,6 +16452,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1379494927 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7911125285652329507, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
+  m_PrefabInstance: {fileID: 1379494920}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1379494928 stripped

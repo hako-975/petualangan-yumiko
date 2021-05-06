@@ -54,5 +54,9 @@ MonoBehaviour:
     m_Localized: Watch Ads
     m_Metadata:
       m_Items: []
+  - m_Id: 401669793759232
+    m_Localized: "\u30D0\u30FC\u30B8\u30E7\u30F3"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

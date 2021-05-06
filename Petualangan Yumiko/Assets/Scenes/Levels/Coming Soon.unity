@@ -2444,7 +2444,7 @@ MonoBehaviour:
   stopAttackDistance: 2
   audioWalk: {fileID: 0}
   audioAttack: {fileID: 0}
-  isSpider: 0
+  delaySoundWalk: 0.3
 --- !u!195 &163203645
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3974,7 +3974,7 @@ MonoBehaviour:
   stopAttackDistance: 2
   audioWalk: {fileID: 0}
   audioAttack: {fileID: 0}
-  isSpider: 0
+  delaySoundWalk: 0.3
 --- !u!195 &268555999
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6267,7 +6267,7 @@ MonoBehaviour:
   stopAttackDistance: 2
   audioWalk: {fileID: 0}
   audioAttack: {fileID: 0}
-  isSpider: 0
+  delaySoundWalk: 0.3
 --- !u!195 &393030930
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7439,7 +7439,7 @@ MonoBehaviour:
   stopAttackDistance: 2
   audioWalk: {fileID: 0}
   audioAttack: {fileID: 0}
-  isSpider: 0
+  delaySoundWalk: 0.3
 --- !u!195 &469667109
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9015,7 +9015,7 @@ MonoBehaviour:
   stopAttackDistance: 2
   audioWalk: {fileID: 0}
   audioAttack: {fileID: 0}
-  isSpider: 0
+  delaySoundWalk: 0.3
 --- !u!195 &552284116
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14091,7 +14091,7 @@ MonoBehaviour:
   stopAttackDistance: 2
   audioWalk: {fileID: 0}
   audioAttack: {fileID: 0}
-  isSpider: 0
+  delaySoundWalk: 0.3
 --- !u!195 &808777147
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15587,6 +15587,7 @@ MonoBehaviour:
   sliderSensitivity: {fileID: 1979239994}
   sliderZoom: {fileID: 1979239993}
   dropdownQuality: {fileID: 1979239992}
+  dropdownLanguage: {fileID: 1979239999}
 --- !u!114 &895579058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15624,7 +15625,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &904265252
 GameObject:
@@ -16991,8 +16992,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
-  far clip plane: 2000
+  near clip plane: 0.1
+  far clip plane: 5000
   field of view: 40
   orthographic: 0
   orthographic size: 10
@@ -17018,7 +17019,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967965088}
-  m_LocalRotation: {x: 0.104109846, y: -0.000000034225764, z: 0.0000000035827075, w: 0.99456584}
+  m_LocalRotation: {x: 0.10410992, y: 0.000000019132779, z: -0.0000000020027955, w: 0.99456584}
   m_LocalPosition: {x: 0, y: 2, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -29536,7 +29537,7 @@ MonoBehaviour:
   stopAttackDistance: 2
   audioWalk: {fileID: 0}
   audioAttack: {fileID: 0}
-  isSpider: 0
+  delaySoundWalk: 0.3
 --- !u!195 &1790250343
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -33211,6 +33212,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446e4f399fd2b4459846aae69f65bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1979239999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7911125285652329507, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
+  m_PrefabInstance: {fileID: 1979239990}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1985051995
 GameObject:
   m_ObjectHideFlags: 0
@@ -35456,7 +35468,7 @@ MonoBehaviour:
   stopAttackDistance: 2
   audioWalk: {fileID: 0}
   audioAttack: {fileID: 0}
-  isSpider: 0
+  delaySoundWalk: 0.3
 --- !u!195 &2096585570
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -37985,7 +37997,7 @@ MonoBehaviour:
   stopAttackDistance: 2
   audioWalk: {fileID: 0}
   audioAttack: {fileID: 0}
-  isSpider: 0
+  delaySoundWalk: 0.3
 --- !u!114 &4679116790304744636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38004,7 +38016,7 @@ MonoBehaviour:
   stopAttackDistance: 2
   audioWalk: {fileID: 0}
   audioAttack: {fileID: 0}
-  isSpider: 0
+  delaySoundWalk: 0.3
 --- !u!195 &4679116790304744637
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -40849,7 +40861,7 @@ MonoBehaviour:
   stopAttackDistance: 2
   audioWalk: {fileID: 0}
   audioAttack: {fileID: 0}
-  isSpider: 0
+  delaySoundWalk: 0.3
 --- !u!195 &4737955169008726983
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -40912,7 +40924,7 @@ MonoBehaviour:
   stopAttackDistance: 2
   audioWalk: {fileID: 0}
   audioAttack: {fileID: 0}
-  isSpider: 0
+  delaySoundWalk: 0.3
 --- !u!4 &5849387731155383057
 Transform:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class SettingManager : MonoBehaviour
     public Slider sliderZoom;
 
     public TMP_Dropdown dropdownQuality;
+    public TMP_Dropdown dropdownLanguage;
 
     CinemachineFreeLook cinemachineFreeLook;
 
@@ -28,7 +29,7 @@ public class SettingManager : MonoBehaviour
         cinemachineFreeLook = FindObjectOfType<CinemachineFreeLook>();
         touchSensitivity = FindObjectOfType<CinemachineCoreGetInputTouchAxis>();
     }
-
+    
     public void SetSFX(float volumeSFX)
     {
         mixerSFX.SetFloat("SFX", volumeSFX);
@@ -70,6 +71,8 @@ public class SettingManager : MonoBehaviour
         PlayerPrefsManager.instance.DeleteKey("Zoom");
 
         PlayerPrefsManager.instance.DeleteKey("QualityIndex");
+
+        PlayerPrefsManager.instance.DeleteKey("LanguageIndex");
     }
 
     private void Update()
@@ -79,5 +82,6 @@ public class SettingManager : MonoBehaviour
         sliderSensitivity.value = PlayerPrefsManager.instance.GetSensitivity();
         sliderZoom.value = PlayerPrefsManager.instance.GetZoom();
         dropdownQuality.value = PlayerPrefsManager.instance.GetQuality();
+        dropdownLanguage.value = PlayerPrefsManager.instance.GetLanguage();
     }
 }

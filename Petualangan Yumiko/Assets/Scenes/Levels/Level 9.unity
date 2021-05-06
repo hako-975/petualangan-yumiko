@@ -15209,11 +15209,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1680599281855975228, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000018870892
+      value: 0.000000018870892
       objectReference: {fileID: 0}
     - target: {fileID: 1680599281855975228, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000037368117
+      value: -0.0000000037368117
       objectReference: {fileID: 0}
     - target: {fileID: 1680599282918159783, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.y
@@ -15281,11 +15281,11 @@ PrefabInstance:
       objectReference: {fileID: 1646769995}
     - target: {fileID: 1680599283605831519, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000016667089
+      value: 0.000000016755978
       objectReference: {fileID: 0}
     - target: {fileID: 1680599283605831519, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000003934566
+      value: -0.0000000039555497
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4cbc1436ab456549b37ddbb260b4e81, type: 3}
@@ -23456,6 +23456,7 @@ MonoBehaviour:
   sliderSensitivity: {fileID: 1273670723}
   sliderZoom: {fileID: 1273670722}
   dropdownQuality: {fileID: 1273670721}
+  dropdownLanguage: {fileID: 1273670735}
 --- !u!114 &1062910158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28334,6 +28335,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3821276720996275540, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
   m_PrefabInstance: {fileID: 1273670719}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1273670735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7911125285652329507, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
+  m_PrefabInstance: {fileID: 1273670719}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1281567993
 GameObject:
   m_ObjectHideFlags: 0
