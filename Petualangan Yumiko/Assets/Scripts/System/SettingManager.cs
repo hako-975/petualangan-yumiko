@@ -29,7 +29,7 @@ public class SettingManager : MonoBehaviour
         cinemachineFreeLook = FindObjectOfType<CinemachineFreeLook>();
         touchSensitivity = FindObjectOfType<CinemachineCoreGetInputTouchAxis>();
     }
-    
+
     public void SetSFX(float volumeSFX)
     {
         mixerSFX.SetFloat("SFX", volumeSFX);

@@ -1,10 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    void Update()
+    {
+        StartCoroutine(WaitLanguage());
+    }
+
     public void Paused()
     {
         Time.timeScale = 0;
@@ -58,4 +64,11 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
         Debug.Log("Keluar dari permainan!");
     }
+
+    IEnumerator WaitLanguage()
+    {
+        yield return LocalizationSettings.InitializationOperation;
+        LocalizationDropdown.LocaleSelected(PlayerPrefsManager.instance.GetLanguage());
+    }
+
 }

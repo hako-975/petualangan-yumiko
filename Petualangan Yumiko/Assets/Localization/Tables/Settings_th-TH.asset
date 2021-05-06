@@ -38,5 +38,9 @@ MonoBehaviour:
     m_Localized: "\u0E23\u0E35\u0E40\u0E0B\u0E47\u0E15"
     m_Metadata:
       m_Items: []
+  - m_Id: 456330466803712
+    m_Localized: "\u0E20\u0E32\u0E29\u0E32"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
