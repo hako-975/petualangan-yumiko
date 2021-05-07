@@ -42,5 +42,21 @@ MonoBehaviour:
     m_Localized: Langue
     m_Metadata:
       m_Items: []
+  - m_Id: 576476598484992
+    m_Localized: Vite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576501852389376
+    m_Localized: Ralentir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576517614583808
+    m_Localized: "Pr\xE8s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576580847910912
+    m_Localized: Loin
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -44,13 +44,13 @@ MonoBehaviour:
       data:
         m_DefaultTableReference:
           m_TableCollectionName: 
-        m_UseFallback: 0
+        m_UseFallback: 1
     00000005:
       type: {class: LocalizedStringDatabase, ns: UnityEngine.Localization.Settings, asm: Unity.Localization}
       data:
         m_DefaultTableReference:
           m_TableCollectionName: 
-        m_UseFallback: 0
+        m_UseFallback: 1
         m_MissingTranslationState: 1
         m_NoTranslationFoundMessage: No translation found for '{key}' in {table.TableCollectionName}
         m_SmartFormat:

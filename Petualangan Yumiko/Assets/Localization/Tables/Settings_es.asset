@@ -42,5 +42,21 @@ MonoBehaviour:
     m_Localized: Idioma
     m_Metadata:
       m_Items: []
+  - m_Id: 576476598484992
+    m_Localized: "R\xE1pida"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576501852389376
+    m_Localized: Lenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576517614583808
+    m_Localized: Cerca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576580847910912
+    m_Localized: Lejos
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

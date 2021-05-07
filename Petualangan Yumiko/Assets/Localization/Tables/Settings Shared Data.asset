@@ -39,6 +39,22 @@ MonoBehaviour:
     m_Key: Language
     m_Metadata:
       m_Items: []
+  - m_Id: 576476598484992
+    m_Key: Fast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576501852389376
+    m_Key: Slow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576517614583808
+    m_Key: Near
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576580847910912
+    m_Key: Far
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

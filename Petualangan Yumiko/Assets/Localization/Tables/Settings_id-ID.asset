@@ -42,5 +42,21 @@ MonoBehaviour:
     m_Localized: Bahasa
     m_Metadata:
       m_Items: []
+  - m_Id: 576476598484992
+    m_Localized: Cepat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576501852389376
+    m_Localized: Lambat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576517614583808
+    m_Localized: Dekat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576580847910912
+    m_Localized: Jauh
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

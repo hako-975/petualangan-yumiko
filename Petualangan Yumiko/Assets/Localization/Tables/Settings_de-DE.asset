@@ -42,5 +42,21 @@ MonoBehaviour:
     m_Localized: Sprache
     m_Metadata:
       m_Items: []
+  - m_Id: 576476598484992
+    m_Localized: Schnell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576501852389376
+    m_Localized: Schleppend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576517614583808
+    m_Localized: "In der N\xE4he von"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576580847910912
+    m_Localized: Weit
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

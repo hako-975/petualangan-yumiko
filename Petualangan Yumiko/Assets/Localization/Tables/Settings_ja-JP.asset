@@ -42,5 +42,21 @@ MonoBehaviour:
     m_Localized: Language
     m_Metadata:
       m_Items: []
+  - m_Id: 576476598484992
+    m_Localized: "\u901F\u3044"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576501852389376
+    m_Localized: "\u30B9\u30ED\u30FC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576517614583808
+    m_Localized: "\u8FD1\u304F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576580847910912
+    m_Localized: "\u9060\u3044"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db626ad063b13545924a9839ac5fa83, type: 3}
+  m_Name: Texture 2d
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: b234836e8b32ab947887e01e17197157, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 5a62e683e569c8348b0d34a989dd1c8c, type: 2}
+  - {fileID: 11400000, guid: c7513276efeb3d948a776b882750f94e, type: 2}
+  - {fileID: 11400000, guid: 5583f0422623a09498017d7dcecb5db8, type: 2}
+  - {fileID: 11400000, guid: ceac25db2601ec14e8d5fb208d9577b5, type: 2}
+  - {fileID: 11400000, guid: bdf69a4e450f3ec4b9aa74ab2d049b8d, type: 2}
+  - {fileID: 11400000, guid: 54922a11b85f3b44eb799d1963ae2ba8, type: 2}
+  - {fileID: 11400000, guid: d02fe56acbb282744b5f1874095d2c83, type: 2}
+  - {fileID: 11400000, guid: fa82f36c11b078b48991888dc04a9c48, type: 2}
+  - {fileID: 11400000, guid: d109631ad26d65d46b361ac09145839f, type: 2}
+  - {fileID: 11400000, guid: 2bb958b0e60078249b59f0f4c98a1548, type: 2}
+  - {fileID: 11400000, guid: a6268be2c18e3c94590b6375f3e00643, type: 2}
+  m_Extensions: []
+  m_Group: Asset Table
+  references:
+    version: 1

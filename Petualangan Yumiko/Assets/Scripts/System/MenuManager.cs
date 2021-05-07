@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    void Update()
+    private void Update()
     {
-        StartCoroutine(WaitLanguage());
+        StartCoroutine(WaitLang());
     }
 
     public void Paused()
@@ -46,6 +46,7 @@ public class MenuManager : MonoBehaviour
     public void Gallery()
     {
         Time.timeScale = 1;
+        // for loading
         PlayerPrefsManager.instance.SetNextScene("Gallery");
     }    
 
@@ -54,7 +55,6 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 1;
 
         // for loading
-        // PlayerPrefsManager.instance.RemoveExtraLifeBoolean();
         PlayerPrefsManager.instance.SetNextScene("Main Menu");
     }
 
@@ -65,10 +65,10 @@ public class MenuManager : MonoBehaviour
         Debug.Log("Keluar dari permainan!");
     }
 
-    IEnumerator WaitLanguage()
+    IEnumerator WaitLang()
     {
         yield return LocalizationSettings.InitializationOperation;
-        LocalizationDropdown.LocaleSelected(PlayerPrefsManager.instance.GetLanguage());
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[PlayerPrefsManager.instance.GetLanguage()];
     }
 
 }

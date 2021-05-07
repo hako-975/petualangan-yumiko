@@ -42,5 +42,21 @@ MonoBehaviour:
     m_Localized: "Ng\xF4n ng\u1EEF"
     m_Metadata:
       m_Items: []
+  - m_Id: 576476598484992
+    m_Localized: Nhanh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576501852389376
+    m_Localized: "Ch\u1EADm"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576517614583808
+    m_Localized: "\u1EDE g\u1EA7n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576580847910912
+    m_Localized: Xa
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

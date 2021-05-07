@@ -42,5 +42,21 @@ MonoBehaviour:
     m_Localized: Language
     m_Metadata:
       m_Items: []
+  - m_Id: 576476598484992
+    m_Localized: Fast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576501852389376
+    m_Localized: Slow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576517614583808
+    m_Localized: Near
+    m_Metadata:
+      m_Items: []
+  - m_Id: 576580847910912
+    m_Localized: Far
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
