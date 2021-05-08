@@ -43,19 +43,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 576476598484992
-    m_Localized: "\u5FEB\u901F\u5730"
+    m_Localized: Fast
     m_Metadata:
       m_Items: []
   - m_Id: 576501852389376
-    m_Localized: "\u6162\u7684"
+    m_Localized: Slow
     m_Metadata:
       m_Items: []
   - m_Id: 576517614583808
-    m_Localized: "\u9760\u8FD1"
+    m_Localized: Near
     m_Metadata:
       m_Items: []
   - m_Id: 576580847910912
-    m_Localized: "\u8FDC\u7684"
+    m_Localized: Far
     m_Metadata:
       m_Items: []
   references:
