@@ -30,8 +30,18 @@ public class FinishPoint : MonoBehaviour
     IEnumerator WaitDuration()
     {
         yield return new WaitForSeconds(audioFinish.clip.length);
-
+        
         int levelAt = PlayerPrefsManager.instance.GetLevelAt();
+
+        // if retry level, not remove achievement
+        if (PlayerPrefsManager.instance.GetBoolAchievementTemp() > 0)
+        {
+            PlayerPrefsManager.instance.SetBoolAchievementObject(SceneManager.GetActiveScene().buildIndex, 1);
+        }
+
+        // remove temp achievement
+        PlayerPrefsManager.instance.RemoveBoolAchievementTemp();
+
 
         if (nextSceneLoad > levelAt)
         {

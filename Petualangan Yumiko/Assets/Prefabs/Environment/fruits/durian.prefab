@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4062474203607028057}
   - component: {fileID: 2438611010751130550}
   - component: {fileID: 1887503981674270196}
-  - component: {fileID: 5329032276727301381}
   m_Layer: 0
   m_Name: ZBrush_defualt_group
   m_TagString: Untagged
@@ -82,20 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5329032276727301381
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5863987332187542313}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6831440722055496184, guid: 37d9457ce9e1566408ea5f68a8ef606e, type: 3}
 --- !u!1 &5891799600656636772
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,8 +90,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6523517016494375390}
+  - component: {fileID: 6905088224880174369}
   m_Layer: 0
-  m_Name: durian
+  m_Name: Durian
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,3 +113,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &6905088224880174369
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5891799600656636772}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Center: {x: 0, y: 0.25, z: 0}

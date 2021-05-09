@@ -14,6 +14,33 @@ public class PlayerPrefsManager : MonoBehaviour
     }
     #endregion
 
+    public int GetBoolAchievementObject(int levelAt)
+    {
+        return PlayerPrefs.GetInt("AchievementObjectLevel" + levelAt);
+    }
+
+    public int SetBoolAchievementObject(int levelAt, int boolean)
+    {
+        PlayerPrefs.SetInt("AchievementObjectLevel" + levelAt, boolean);
+        return GetBoolAchievementObject(levelAt);
+    }
+
+    public int GetBoolAchievementTemp()
+    {
+        return PlayerPrefs.GetInt("BoolAchievementTemp", 0);
+    }
+
+    public int SetBoolAchievementTemp(int boolean)
+    {
+        PlayerPrefs.SetInt("BoolAchievementTemp", boolean);
+        return GetBoolAchievementTemp();
+    }
+
+    public void RemoveBoolAchievementTemp()
+    {
+        PlayerPrefs.DeleteKey("BoolAchievementTemp");
+    }
+
     public int GetExtraLifeToBoolean(int extraLifeTo, int level)
     {
         return PlayerPrefs.GetInt("ExtraLifeToBoolean" + extraLifeTo + "Level" + level, 0);

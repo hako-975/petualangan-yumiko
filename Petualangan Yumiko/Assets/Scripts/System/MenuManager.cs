@@ -28,6 +28,9 @@ public class MenuManager : MonoBehaviour
             // for button restart
             PlayerPrefsManager.instance.SetCurrentLevel(0);
         }
+        
+        // remove temp achievement
+        PlayerPrefsManager.instance.RemoveBoolAchievementTemp();
 
         Time.timeScale = 1;
         Scene scene = SceneManager.GetActiveScene();
@@ -53,6 +56,9 @@ public class MenuManager : MonoBehaviour
     public void MainMenu()
     {
         Time.timeScale = 1;
+        
+        // remove temp achievement
+        PlayerPrefsManager.instance.RemoveBoolAchievementTemp();
 
         // for loading
         PlayerPrefsManager.instance.SetNextScene("Main Menu");
@@ -61,6 +67,10 @@ public class MenuManager : MonoBehaviour
     public void Quit()
     {
         Time.timeScale = 1;
+        
+        // remove temp achievement
+        PlayerPrefsManager.instance.RemoveBoolAchievementTemp();
+
         Application.Quit();
         Debug.Log("Keluar dari permainan!");
     }
