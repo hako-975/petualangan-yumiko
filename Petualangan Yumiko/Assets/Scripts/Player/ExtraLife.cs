@@ -11,10 +11,17 @@ public class ExtraLife : MonoBehaviour
 
     AudioSource audioExtraLife;
 
+    bool isPicked = false;
+
     private void Start()
     {
         audioExtraLife = GetComponent<AudioSource>();
         level = SceneManager.GetActiveScene().buildIndex;
+        
+        if (PlayerPrefsManager.instance.GetExtraLifeToBoolean(extraLifeTo, level) > 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -22,30 +29,32 @@ public class ExtraLife : MonoBehaviour
     {
         // for rotate
         transform.Rotate(Vector3.up * 2f);
-    
-        if (PlayerPrefsManager.instance.GetExtraLifeToBoolean(extraLifeTo, level) > 0)
-        {
-            gameObject.SetActive(false);
-        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            audioExtraLife.Play();
-            audioExtraLife.volume = Random.Range(0.8f, 1f);
+            if (isPicked == false)
+            {
+                audioExtraLife.Play();
 
-            PlayerPrefsManager.instance.SetExtraLifeToBoolean(extraLifeTo, level);
-            // destroy game object
-            gameObject.SetActive(false);
+                audioExtraLife.volume = Random.Range(0.8f, 1f);
+                audioExtraLife.pitch = Random.Range(0.8f, 1f);
 
-            // get current life
-            int currentLife = PlayerPrefsManager.instance.GetLife();
+                PlayerPrefsManager.instance.SetExtraLifeToBoolean(extraLifeTo, level);
+                
+                // destroy game object
+                Destroy(gameObject, audioExtraLife.clip.length);
 
-            // set life = get current life + 1
-            currentLife += 1;
-            PlayerPrefsManager.instance.SetLife(currentLife);
+                // get current life
+                int currentLife = PlayerPrefsManager.instance.GetLife();
+
+                // set life = get current life + 1
+                currentLife += 1;
+                PlayerPrefsManager.instance.SetLife(currentLife);
+                isPicked = true;
+            }
         }
     }
 }

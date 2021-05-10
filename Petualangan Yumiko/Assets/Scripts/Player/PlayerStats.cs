@@ -25,9 +25,12 @@ public class PlayerStats : MonoBehaviour
     public GameObject adsPanel;
 
     PlayerSFX playerSFX;
+    AdsManager adsManager;
 
     void Start()
     {
+        adsManager = FindObjectOfType<AdsManager>();
+
         player = GetComponent<PlayerController>();
 
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
@@ -94,27 +97,33 @@ public class PlayerStats : MonoBehaviour
     IEnumerator DecreaseLife()
     {
         yield return new WaitForSeconds(5f);
-        // check current life if zero
+        Time.timeScale = 0;
+        // ads
+        adsManager.ShowInterstitialAd();
+
+
         if (PlayerPrefsManager.instance.GetLife() <= 0)
         {
             // set current health 4
             PlayerPrefsManager.instance.SetHealth(4);
+            PlayerPrefsManager.instance.SetLife(0);
 
-            // game over panel
-            gameOverPanel.SetActive(true);
             adsPanel.SetActive(true);
+            gameOverPanel.SetActive(true);
 
             // reset spawn point
             spawnPoint.transform.position = new Vector3(0f, 0.05f, 0f);
+            
+            Time.timeScale = 1;
         }
         else
         {
             PlayerPrefsManager.instance.DecreaseLife();
             PlayerPrefsManager.instance.SetHealth(4);
-            // true is restart
-            // false is die
+            // is not game over
             menuManager.Restart(false);
         }
+
     }
 
     IEnumerator DelayInvisible(float delay)

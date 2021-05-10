@@ -5,22 +5,31 @@ using UnityEngine.UI;
 
 public class AchievementObject : MonoBehaviour
 {
-    public GameObject setActiveAchievement;
+    public GameObject achievementImage;
     public Sprite ImageIcon;
+
+    AudioSource audioGetAchievement;
+    bool isPicked = false;
 
     void Start()
     {
-        setActiveAchievement.GetComponent<Image>().sprite = ImageIcon;
-        setActiveAchievement.gameObject.SetActive(false);
+        achievementImage.GetComponent<Image>().sprite = ImageIcon;
+        achievementImage.gameObject.SetActive(false);
+        audioGetAchievement = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject);
-            PlayerPrefsManager.instance.SetBoolAchievementTemp(1);
-            setActiveAchievement.gameObject.SetActive(true);
+            if (isPicked == false)
+            {
+                audioGetAchievement.Play();
+                Destroy(gameObject, audioGetAchievement.clip.length);
+                PlayerPrefsManager.instance.SetBoolAchievementTemp(1);
+                achievementImage.gameObject.SetActive(true);
+                isPicked = true;
+            }
         }
     }
 }

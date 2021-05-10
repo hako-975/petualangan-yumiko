@@ -58,5 +58,10 @@ MonoBehaviour:
     m_Localized: "Ausf\xFChrung"
     m_Metadata:
       m_Items: []
+  - m_Id: 1772879572090880
+    m_Localized: "Wir haben keine Anzeigen. Bitte versuchen Sie es sp\xE4ter noch
+      einmal!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

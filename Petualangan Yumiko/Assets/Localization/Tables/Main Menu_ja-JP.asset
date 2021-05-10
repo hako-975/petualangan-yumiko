@@ -58,5 +58,9 @@ MonoBehaviour:
     m_Localized: "\u30D0\u30FC\u30B8\u30E7\u30F3"
     m_Metadata:
       m_Items: []
+  - m_Id: 1772879572090880
+    m_Localized: We no have Ads, Please try again later!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

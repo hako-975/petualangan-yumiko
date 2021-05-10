@@ -58,5 +58,9 @@ MonoBehaviour:
     m_Localized: Version
     m_Metadata:
       m_Items: []
+  - m_Id: 1772879572090880
+    m_Localized: We no have Ads, Please try again later!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

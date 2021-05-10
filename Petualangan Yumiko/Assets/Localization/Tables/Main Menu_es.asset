@@ -58,5 +58,10 @@ MonoBehaviour:
     m_Localized: "Versi\xF3n"
     m_Metadata:
       m_Items: []
+  - m_Id: 1772879572090880
+    m_Localized: "Nosotras no tenemos anuncios, por favor intente de nuevo m\xE1s
+      tarde!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

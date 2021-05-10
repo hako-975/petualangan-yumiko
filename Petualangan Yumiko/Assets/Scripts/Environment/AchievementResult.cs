@@ -24,7 +24,7 @@ public class AchievementResult : MonoBehaviour
                 Instantiate(table, new Vector3(2.5f, 0.68f, posZ), Quaternion.identity);
                 if (PlayerPrefsManager.instance.GetBoolAchievementObject(i + 1) > 0)
                 {
-                    Instantiate(achievementObject[i], new Vector3(2.5f, 1f, posZ), Quaternion.identity);
+                    Instantiate(achievementObject[i], new Vector3(2.5f, 0.915f, posZ), Quaternion.identity);
                 }
                 posZ -= 1.85f;
             }
@@ -39,7 +39,7 @@ public class AchievementResult : MonoBehaviour
                 Instantiate(table, new Vector3(4f, 0.68f, posZ), Quaternion.identity);
                 if (PlayerPrefsManager.instance.GetBoolAchievementObject(i + 1) > 0)
                 {
-                    Instantiate(achievementObject[i], new Vector3(4f, 1f, posZ), Quaternion.identity);
+                    Instantiate(achievementObject[i], new Vector3(4f, 0.915f, posZ), Quaternion.identity);
                 }
                 posZ -= 1.85f;
             }
@@ -54,7 +54,7 @@ public class AchievementResult : MonoBehaviour
                 Instantiate(table, new Vector3(5.5f, 0.68f, posZ), Quaternion.identity);
                 if (PlayerPrefsManager.instance.GetBoolAchievementObject(i + 1) > 0)
                 {
-                    Instantiate(achievementObject[i], new Vector3(5.5f, 1f, posZ), Quaternion.identity);
+                    Instantiate(achievementObject[i], new Vector3(5.5f, 0.915f, posZ), Quaternion.identity);
                 }
 
                 posZ -= 1.85f;
@@ -70,7 +70,7 @@ public class AchievementResult : MonoBehaviour
                 Instantiate(table, new Vector3(7f, 0.68f, posZ), Quaternion.identity);
                 if (PlayerPrefsManager.instance.GetBoolAchievementObject(i + 1) > 0)
                 {
-                    Instantiate(achievementObject[i], new Vector3(7f, 1f, posZ), Quaternion.identity);
+                    Instantiate(achievementObject[i], new Vector3(7f, 0.915f, posZ), Quaternion.identity);
                 }
 
                 posZ -= 1.85f;
@@ -86,7 +86,7 @@ public class AchievementResult : MonoBehaviour
                 Instantiate(table, new Vector3(8.5f, 0.68f, posZ), Quaternion.identity);
                 if (PlayerPrefsManager.instance.GetBoolAchievementObject(i + 1) > 0)
                 {
-                    Instantiate(achievementObject[i], new Vector3(8.5f, 1f, posZ), Quaternion.identity);
+                    Instantiate(achievementObject[i], new Vector3(8.5f, 0.915f, posZ), Quaternion.identity);
                 }
 
                 posZ -= 1.85f;

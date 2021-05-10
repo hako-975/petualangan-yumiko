@@ -108,6 +108,8 @@ public class EnemyController : MonoBehaviour
         {
             audioAttack.Play();
             audioAttack.volume = Random.Range(0.8f, 1f);
+            audioAttack.pitch = Random.Range(0.8f, 1f);
+
 
             playerStats.TakeDamage(damageAttack);
             playerStats.isInvisible = true;
@@ -121,7 +123,7 @@ public class EnemyController : MonoBehaviour
         handledWalk = true;
         yield return new WaitForSeconds(delay);
         audioWalk.Play();
-        audioAttack.pitch = Random.Range(0.95f, 1f);
+        audioAttack.pitch = Random.Range(0.8f, 1f);
         audioAttack.volume = Random.Range(0.8f, 1f);
         handledWalk = false;
     }
