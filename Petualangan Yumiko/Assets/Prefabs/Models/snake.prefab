@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4893245512619504493}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Spline_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4914874977420890251}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1196977230096212554}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 518374902548665256}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Spline_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400295355574991766}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4500800377114487026}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4584016917442454144}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_13_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4917404724387298950}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tone_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8296599491895600592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5688226307067327104}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5013622265061355163}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tone_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2903500353822566836}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tone_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3589653360452026592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tone_04_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8238571346249937485}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6442364616829868924}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4502485269473538959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4912817385857500596}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: die2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,7 +535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6269348008779427776}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,7 +571,7 @@ GameObject:
   - component: {fileID: 4785095711821763118}
   - component: {fileID: 3945934801110396656}
   - component: {fileID: 3762874853342544582}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: snake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,7 +855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4563103370316122790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -887,7 +887,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3314743250317490658}
   - component: {fileID: 799810852336612347}
-  m_Layer: 0
+  - component: {fileID: 2906293172924120976}
+  m_Layer: 6
   m_Name: anaconda_reference
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -987,6 +988,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.03073807, y: 0.024962254, z: 0.051233206}
     m_Extent: {x: 0.11286597, y: 0.14864251, z: 0.07409723}
   m_DirtyAABB: 0
+--- !u!64 &2906293172924120976
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508510759330055280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8003357106933800677, guid: 38000946050e7a445b539a5db1b09a4d, type: 3}
 --- !u!1 &6211927066635093097
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +1011,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2107984465382650287}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Spline_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1027,7 +1042,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5246618264124515012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Spline_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1058,7 +1073,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4263579910270915317}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tone_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,7 +1104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3908835645445297391}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3278143269068197084}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: anaconda.qc_skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1151,7 +1166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7232376458056989095}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1182,7 +1197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6181366390285978973}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1213,7 +1228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3002994251853409306}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Tail_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1244,7 +1259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9207207234360717261}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1275,7 +1290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2297911168739259760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Spline_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1306,7 +1321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3540493250036293726}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BN_Spline_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}

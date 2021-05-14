@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 819706919694579295}
   - component: {fileID: 945614143893734323}
   m_Layer: 6
-  m_Name: Cherry
+  m_Name: cherry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -556,9 +556,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6722031011250989972}
-  m_LocalRotation: {x: 0, y: 0, z: 0.09150162, w: 0.99580497}
-  m_LocalPosition: {x: 0, y: -0.05, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 15}
+  m_LocalRotation: {x: 0.064701416, y: 0.7041404, z: 0.064701416, w: 0.7041404}
+  m_LocalPosition: {x: 0, y: -0.055, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 2915247620866327814}
   - {fileID: 930721632597261653}
@@ -567,4 +567,4 @@ Transform:
   - {fileID: 930721632689700973}
   m_Father: {fileID: 819706919694579295}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10.5}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 10.5}

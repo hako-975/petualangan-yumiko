@@ -1235,7 +1235,6 @@ MonoBehaviour:
   isInvisible: 0
   isDied: 0
   delayInvisible: 3
-  menuManager: {fileID: 0}
   gameOverPanel: {fileID: 0}
   adsPanel: {fileID: 0}
 --- !u!114 &5583107616943561792

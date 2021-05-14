@@ -16,6 +16,7 @@ public class AchievementObject : MonoBehaviour
         achievementImage.GetComponent<Image>().sprite = ImageIcon;
         achievementImage.gameObject.SetActive(false);
         audioGetAchievement = GetComponent<AudioSource>();
+        audioGetAchievement.playOnAwake = false;
     }
 
     private void OnTriggerEnter(Collider other)

@@ -5,11 +5,11 @@ using UnityEngine.Advertisements;
 
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
-    #if UNITY_IOS
+#if UNITY_IOS
         private string gameId = "4101522";
-    #elif UNITY_ANDROID
+#elif UNITY_ANDROID
         private string gameId = "4101523";
-    #endif
+#endif
 
     bool testMode = true;
     string mySurfacingId = "rewardedVideo";

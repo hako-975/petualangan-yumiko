@@ -10,6 +10,8 @@ public class FinishPoint : MonoBehaviour
     
     AudioSource audioFinish;
 
+    bool isEntered = false;
+
     void Start()
     {
         audioFinish = GetComponent<AudioSource>();
@@ -18,38 +20,62 @@ public class FinishPoint : MonoBehaviour
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
     }
 
+    private void Update()
+    {
+        if (!isEntered)
+        {
+            audioFinish.pitch -= 0.01f;
+        }
+        else
+        {
+            audioFinish.pitch = 1f;
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            isEntered = true;
             audioFinish.Play();
             StartCoroutine(WaitDuration());
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            isEntered = false;
         }
     }
 
     IEnumerator WaitDuration()
     {
         yield return new WaitForSeconds(audioFinish.clip.length);
-        
-        int levelAt = PlayerPrefsManager.instance.GetLevelAt();
 
-        // if retry level, not remove achievement
-        if (PlayerPrefsManager.instance.GetBoolAchievementTemp() > 0)
+        if (isEntered == true)
         {
-            PlayerPrefsManager.instance.SetBoolAchievementObject(SceneManager.GetActiveScene().buildIndex, 1);
+            int levelAt = PlayerPrefsManager.instance.GetLevelAt();
+
+            // if retry level, not remove achievement
+            if (PlayerPrefsManager.instance.GetBoolAchievementTemp() > 0)
+            {
+                PlayerPrefsManager.instance.SetBoolAchievementObject(SceneManager.GetActiveScene().buildIndex, 1);
+            }
+
+            // remove temp achievement
+            PlayerPrefsManager.instance.RemoveBoolAchievementTemp();
+
+
+            if (nextSceneLoad > levelAt)
+            {
+                PlayerPrefsManager.instance.SetLevelAt(nextSceneLoad);
+            }
+
+            PlayerPrefsManager.instance.SetCurrentLevel(0);
+
+            PlayerPrefsManager.instance.SetNextScene("Level" + " " + nextSceneLoad);
         }
-
-        // remove temp achievement
-        PlayerPrefsManager.instance.RemoveBoolAchievementTemp();
-
-
-        if (nextSceneLoad > levelAt)
-        {
-            PlayerPrefsManager.instance.SetLevelAt(nextSceneLoad);
-        }
-
-        PlayerPrefsManager.instance.SetCurrentLevel(0);
-
-        PlayerPrefsManager.instance.SetNextScene("Level" + " " + nextSceneLoad);
     }
 }

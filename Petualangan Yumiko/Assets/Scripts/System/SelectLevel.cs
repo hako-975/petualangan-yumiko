@@ -19,7 +19,7 @@ public class SelectLevel : MonoBehaviour
 
         if (levelAt > levelButtons.Length)
         {
-			levelAt -= 1;
+			levelAt = levelButtons.Length;
         }
 
 		for (int j = 0; j < levelAt; j++)
