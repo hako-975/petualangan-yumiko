@@ -796,7 +796,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2505155104782197635}
   - component: {fileID: 2505155104770601709}
-  - component: {fileID: 2626047630487689024}
   m_Layer: 6
   m_Name: Object02
   m_TagString: Untagged
@@ -904,20 +903,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.011821274, y: 0.005415788, z: -0.000000014901161}
     m_Extent: {x: 0.07841134, y: 0.01940385, z: 0.06694175}
   m_DirtyAABB: 0
---- !u!64 &2626047630487689024
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2505155104782106531}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 5a35c5f0a89b9654d897ccd7c8f81bd0, type: 3}
 --- !u!1 &2505155104782106533
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,7 +913,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2505155104782197637}
   - component: {fileID: 2505155104770601711}
-  - component: {fileID: 4046829331697220703}
   m_Layer: 6
   m_Name: Object01
   m_TagString: Untagged
@@ -1003,20 +987,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0014118608, y: 0.00002192147, z: 0.040557608}
     m_Extent: {x: 0.012434602, y: 0.006705285, z: 0.05640191}
   m_DirtyAABB: 0
---- !u!64 &4046829331697220703
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2505155104782106533}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 5a35c5f0a89b9654d897ccd7c8f81bd0, type: 3}
 --- !u!1 &2505155104782106535
 GameObject:
   m_ObjectHideFlags: 0

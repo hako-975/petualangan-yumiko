@@ -3559,7 +3559,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5035897824725489541}
   - component: {fileID: 1503175701181467516}
-  - component: {fileID: 802867897}
   m_Layer: 6
   m_Name: scorpion
   m_TagString: Untagged
@@ -3724,20 +3723,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0026384592, y: 0.016187787, z: -0.5792564}
     m_Extent: {x: 1.1715673, y: 2.1113324, z: 0.67731977}
   m_DirtyAABB: 0
---- !u!64 &802867897
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7775378487454437291}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4842248268434122993, guid: 166bc96ca851b7246999ec759e5e6f2b, type: 3}
 --- !u!1 &7778667893853024564
 GameObject:
   m_ObjectHideFlags: 0

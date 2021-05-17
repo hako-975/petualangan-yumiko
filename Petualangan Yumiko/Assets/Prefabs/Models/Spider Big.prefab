@@ -1050,7 +1050,6 @@ GameObject:
   m_Component:
   - component: {fileID: 502982130556840850}
   - component: {fileID: 502982130556840845}
-  - component: {fileID: 7691924152315700452}
   m_Layer: 6
   m_Name: Spider01
   m_TagString: Untagged
@@ -1159,20 +1158,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.017701447, y: 0.083572865, z: -0.25971434}
     m_Extent: {x: 1.202162, y: 1.1836692, z: 1.0153924}
   m_DirtyAABB: 0
---- !u!64 &7691924152315700452
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502982130556840851}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
 --- !u!1 &502982130596857212
 GameObject:
   m_ObjectHideFlags: 0

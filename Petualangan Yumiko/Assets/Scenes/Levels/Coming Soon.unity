@@ -35124,6 +35124,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1979239997}
     - target: {fileID: 4586622853490391542, guid: fe4502d58ff7c604b812db7daedb71b9, type: 3}
+      propertyPath: adsPanel
+      value: 
+      objectReference: {fileID: 1979240001}
+    - target: {fileID: 4586622853490391542, guid: fe4502d58ff7c604b812db7daedb71b9, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1979239998}
