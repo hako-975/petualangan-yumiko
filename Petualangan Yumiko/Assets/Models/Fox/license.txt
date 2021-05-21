@@ -1,0 +1,11 @@
+Model Information:
+* title:	Fox run animation Plus Armor
+* source:	https://sketchfab.com/3d-models/fox-run-animation-plus-armor-2ab1edaeb9134617972c79da71252505
+* author:	Eques_inferno (https://sketchfab.com/Eques_inferno)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Fox run animation Plus Armor" (https://sketchfab.com/3d-models/fox-run-animation-plus-armor-2ab1edaeb9134617972c79da71252505) by Eques_inferno (https://sketchfab.com/Eques_inferno) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

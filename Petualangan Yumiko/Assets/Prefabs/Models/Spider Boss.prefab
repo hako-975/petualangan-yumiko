@@ -504,7 +504,7 @@ GameObject:
   - component: {fileID: 2689190785539814854}
   - component: {fileID: -4463132411571195110}
   m_Layer: 6
-  m_Name: boss spider
+  m_Name: Spider Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -563,7 +563,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.65
-  m_Speed: 47
+  m_Speed: 45
   m_Acceleration: 400
   avoidancePriority: 50
   m_AngularSpeed: 300
@@ -591,6 +591,8 @@ MonoBehaviour:
   damageAttack: 2
   lookRadius: 1000
   isDied: 0
+  defaultSpeed: 45
+  defaultAcceleration: 400
   audioWalk: {fileID: 2788761576635215647}
   audioAttack: {fileID: 2689190785539814854}
   audioGetHit: {fileID: -4463132411571195110}

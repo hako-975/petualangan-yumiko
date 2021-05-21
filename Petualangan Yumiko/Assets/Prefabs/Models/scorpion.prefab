@@ -3148,7 +3148,7 @@ GameObject:
   - component: {fileID: 7912200830424725564}
   - component: {fileID: 1586072859787427257}
   m_Layer: 6
-  m_Name: scorpion
+  m_Name: Scorpion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3227,6 +3227,8 @@ MonoBehaviour:
   damageAttack: 1
   lookRadius: 10000
   isDied: 0
+  defaultSpeed: 7
+  defaultAcceleration: 235
   audioWalk: {fileID: 751894947721390451}
   audioAttack: {fileID: 7912200830424725564}
   audioGetHit: {fileID: 1586072859787427257}

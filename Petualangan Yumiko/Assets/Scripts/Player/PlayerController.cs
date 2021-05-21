@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
             fall = false;
         }
 
-        if (controller.transform.position.y < -200f)
+        if (controller.transform.position.y < -300f)
         {
             controller.enabled = false;
             controller.transform.position = spawnPoint.transform.position;

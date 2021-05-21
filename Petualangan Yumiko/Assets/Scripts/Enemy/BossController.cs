@@ -28,6 +28,9 @@ public class BossController : MonoBehaviour
 
     bool handledWalk;
 
+    public float defaultSpeed = 8f;
+    public float defaultAcceleration = 450f;
+
     public AudioSource audioWalk;
     public AudioSource audioAttack;
     public AudioSource audioGetHit;
@@ -65,7 +68,7 @@ public class BossController : MonoBehaviour
 
 
         float distance = Vector3.Distance(target.position, transform.position);
-
+        
         if (distance <= lookRadius)
         {
             agent.SetDestination(target.position);
@@ -74,6 +77,19 @@ public class BossController : MonoBehaviour
         else
         {
             agent.SetDestination(firstPosition);
+        }
+
+        if (distance >= 50f)
+        {
+            agent.speed = 75f;
+            agent.acceleration = 1000f;
+            FaceTarget();
+        }
+        else if (distance < 50f)
+        {
+            agent.speed = defaultSpeed;
+            agent.acceleration = defaultAcceleration;
+            FaceTarget();
         }
 
         if (playerStats.isDied)
