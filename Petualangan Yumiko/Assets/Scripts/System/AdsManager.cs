@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Advertisements;
 
@@ -108,6 +109,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     {
         // Log the error.
         errorAdsPanel.gameObject.SetActive(true);
+        errorAdsPanel.GetComponent<TextMeshProUGUI>().text = message;
     }
 
     public void OnUnityAdsDidStart(string surfacingId)

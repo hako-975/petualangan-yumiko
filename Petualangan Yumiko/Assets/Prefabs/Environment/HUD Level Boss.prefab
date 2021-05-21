@@ -6078,6 +6078,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: PlayButtonUIClickSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4607075784294288297
 GameObject:
   m_ObjectHideFlags: 0
@@ -8724,6 +8736,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: PlayBackButtonSFX
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11889,6 +11913,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2994245906657948783}
     m_Modifications:
+    - target: {fileID: 1814780109586390856, guid: db4a12dee5509a442915194d62c1f083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayButtonUIClickSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814780109586390856, guid: db4a12dee5509a442915194d62c1f083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814780109586390856, guid: db4a12dee5509a442915194d62c1f083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1814780109780755578, guid: db4a12dee5509a442915194d62c1f083, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -11960,6 +11996,18 @@ PrefabInstance:
     - target: {fileID: 1814780110458377736, guid: db4a12dee5509a442915194d62c1f083, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814780110614558042, guid: db4a12dee5509a442915194d62c1f083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayBackButtonSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814780110614558042, guid: db4a12dee5509a442915194d62c1f083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814780110614558042, guid: db4a12dee5509a442915194d62c1f083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1814780110871091986, guid: db4a12dee5509a442915194d62c1f083, type: 3}
       propertyPath: m_AnchorMax.y
@@ -12250,6 +12298,22 @@ PrefabInstance:
     - target: {fileID: 4669611956926495023, guid: 843dd16669934ea48923fa5249c5ad16, type: 3}
       propertyPath: m_Name
       value: Error Ads Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669611958333922755, guid: 843dd16669934ea48923fa5249c5ad16, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayBackButtonSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669611958333922755, guid: 843dd16669934ea48923fa5249c5ad16, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669611958333922755, guid: 843dd16669934ea48923fa5249c5ad16, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8754795040140228059, guid: 843dd16669934ea48923fa5249c5ad16, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 843dd16669934ea48923fa5249c5ad16, type: 3}

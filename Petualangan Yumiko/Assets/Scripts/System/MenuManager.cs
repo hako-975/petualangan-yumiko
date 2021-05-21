@@ -6,23 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    private void Update()
+    public AudioSource buttonUIClick;
+    public AudioSource backButtonUIClick;
+
+    private void Start()
     {
         StartCoroutine(WaitLang());
     }
 
     public void Paused()
     {
+        buttonUIClick.Play();
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
+        buttonUIClick.Play();
         Time.timeScale = 1;
     }
 
     public void Restart(bool restart)
     {
+        buttonUIClick.Play();
         if (restart)
         {
             // for button restart
@@ -41,6 +47,7 @@ public class MenuManager : MonoBehaviour
 
     public void SelectLevel()
     {
+        buttonUIClick.Play();
         Time.timeScale = 1;
         // for loading
         PlayerPrefsManager.instance.SetNextScene("Select Level");
@@ -48,6 +55,8 @@ public class MenuManager : MonoBehaviour
 
     public void Gallery()
     {
+        buttonUIClick.Play();
+
         Time.timeScale = 1;
         // for loading
         PlayerPrefsManager.instance.SetNextScene("Gallery");
@@ -55,6 +64,8 @@ public class MenuManager : MonoBehaviour
 
     public void MainMenu()
     {
+        buttonUIClick.Play();
+
         Time.timeScale = 1;
         
         // remove temp achievement
@@ -66,6 +77,8 @@ public class MenuManager : MonoBehaviour
 
     public void Quit()
     {
+        buttonUIClick.Play();
+
         Time.timeScale = 1;
         
         // remove temp achievement
@@ -75,10 +88,19 @@ public class MenuManager : MonoBehaviour
         Debug.Log("Keluar dari permainan!");
     }
 
+    public void PlayButtonUIClickSFX()
+    {
+        buttonUIClick.Play();
+    }
+
+    public void PlayBackButtonSFX()
+    {
+        backButtonUIClick.Play();
+    }
+
     IEnumerator WaitLang()
     {
         yield return LocalizationSettings.InitializationOperation;
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[PlayerPrefsManager.instance.GetLanguage()];
     }
-
 }
