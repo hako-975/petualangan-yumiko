@@ -5895,19 +5895,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011488240504, guid: 847ad21e052823640b649f294605afb2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000011488240504, guid: 847ad21e052823640b649f294605afb2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000011488240504, guid: 847ad21e052823640b649f294605afb2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000011488240504, guid: 847ad21e052823640b649f294605afb2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 131
+      value: 131.58
       objectReference: {fileID: 0}
     - target: {fileID: 4000011488240504, guid: 847ad21e052823640b649f294605afb2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5915,7 +5915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011488240504, guid: 847ad21e052823640b649f294605afb2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 45
+      value: 44.44
       objectReference: {fileID: 0}
     - target: {fileID: 4000011488240504, guid: 847ad21e052823640b649f294605afb2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10674,8 +10674,8 @@ MonoBehaviour:
     m_Radius: 2
   - m_Height: 2
     m_Radius: 4
-  - m_Height: 0.25
-    m_Radius: 2
+  - m_Height: 2
+    m_Radius: 4
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
   - {fileID: 5671636097959880101}
@@ -11766,7 +11766,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7707077323305604262}
-  m_LocalRotation: {x: 0.19424808, y: -0.000000018870892, z: 0.0000000037368117, w: 0.98095244}
+  m_LocalRotation: {x: 0.19424808, y: 0.000000018870892, z: -0.0000000037368117, w: 0.98095244}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

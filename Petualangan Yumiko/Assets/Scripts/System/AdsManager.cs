@@ -19,9 +19,15 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     
     public GameObject errorAdsPanel;
 
+    PlayerStats playerStats;
+    MenuManager menuManager;
+    bool isFinishedAds = false;
 
     void Start()
     {
+        playerStats = FindObjectOfType<PlayerStats>();
+        menuManager = FindObjectOfType<MenuManager>();
+
         // true is restart false is die
         Advertisement.AddListener(this);
         // Initialize the Ads service:
@@ -33,7 +39,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         // Check if UnityAds ready before calling Show method:
         if (Advertisement.IsReady())
         {
-            Advertisement.Show();
+            Advertisement.Show("video");
         }
         else
         {
@@ -79,19 +85,47 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
                 errorAdsPanel.gameObject.SetActive(true);
             }
         }
+        // interstitial ads is for die
         else
         {
             if (showResult == ShowResult.Finished)
             {
-                
+                isFinishedAds = true;
             }
             else if (showResult == ShowResult.Skipped)
             {
+                isFinishedAds = true;
                 // Do not reward the user for skipping the ad.
             }
             else if (showResult == ShowResult.Failed)
             {
+                isFinishedAds = true;
                 errorAdsPanel.gameObject.SetActive(true);
+            }
+
+            if (isFinishedAds)
+            {
+                if (PlayerPrefsManager.instance.GetLife() <= 0)
+                {
+                    // set current health 4
+                    PlayerPrefsManager.instance.SetHealth(4);
+                    PlayerPrefsManager.instance.SetLife(0);
+
+                    adsPanel.SetActive(true);
+                    playerStats.gameOverPanel.SetActive(true);
+
+                    // reset spawn point
+                    playerStats.spawnPoint.transform.position = new Vector3(0f, 0.05f, 0f);
+
+                    Time.timeScale = 1;
+                }
+                else
+                {
+                    PlayerPrefsManager.instance.DecreaseLife();
+                    PlayerPrefsManager.instance.SetHealth(4);
+                    // is not game over
+                    menuManager.Restart(false);
+                }
             }
         }
     }

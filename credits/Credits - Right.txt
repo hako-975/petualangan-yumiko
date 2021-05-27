@@ -6,6 +6,8 @@ Andri Firman Saputra
 
 Andri Firman Saputra
 
+Andre Farhan Saputra
+
 
 
 
@@ -13,21 +15,53 @@ The Fallout Nerd
 
 Dai Yong Xiang
 
+bariacg
+
+bariacg
+
+cglib.team
+
 Sagital3D
 
+Thunk3D
+
+buttr_toes
+
 Teamjoker
+
+businessyuen
+
+Eques_inferno
 
 Kalamona
 
 ProAssets
 
+blenderbirb
+
+Taiga Yonemoto
+
+IronEqual
+
 T I A N
 
 Fenerax Studios
 
+Franco Pizzani
+
+Yu
+
 Hasan3DModels
 
+Meerschaum Digital
+
+Multipainkiller Studio
+
 anthonyvanoo
+
+NiklasG
+
+NiklasG
 
 
 
@@ -47,12 +81,16 @@ Audio Library
 
 freesound.org
 
-Nagaty Studio
-
-taira-komori.jpn.org
-
-www.storyblocks.com
+www.zapsplat.com
 
 www.videvo.net
 
-www.zapsplat.com
+mixkit.co
+
+www.storyblocks.com
+
+www.soundsnap.com
+
+taira-komori.jpn.org
+
+Nagaty Studio

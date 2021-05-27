@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
     public AudioSource buttonUIClick;
     public AudioSource backButtonUIClick;
 
-    private void Start()
+    private void Awake()
     {
         StartCoroutine(WaitLang());
     }
@@ -33,10 +33,10 @@ public class MenuManager : MonoBehaviour
         {
             // for button restart
             PlayerPrefsManager.instance.SetCurrentLevel(0);
+
+            // remove temp achievement
+            PlayerPrefsManager.instance.RemoveBoolAchievementTemp();
         }
-        
-        // remove temp achievement
-        PlayerPrefsManager.instance.RemoveBoolAchievementTemp();
 
         Time.timeScale = 1;
         Scene scene = SceneManager.GetActiveScene();

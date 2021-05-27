@@ -18,7 +18,7 @@ public class PlayerStats : MonoBehaviour
 
     public float delayInvisible = 3f;
 
-    MenuManager menuManager;
+    // MenuManager menuManager;
 
     public GameObject gameOverPanel;
     
@@ -35,7 +35,7 @@ public class PlayerStats : MonoBehaviour
 
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
 
-        menuManager = FindObjectOfType<MenuManager>();
+        // menuManager = FindObjectOfType<MenuManager>();
 
         playerSFX = GetComponent<PlayerSFX>();
 
@@ -98,32 +98,9 @@ public class PlayerStats : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         Time.timeScale = 0;
+
         // ads
         adsManager.ShowInterstitialAd();
-
-
-        if (PlayerPrefsManager.instance.GetLife() <= 0)
-        {
-            // set current health 4
-            PlayerPrefsManager.instance.SetHealth(4);
-            PlayerPrefsManager.instance.SetLife(0);
-
-            adsPanel.SetActive(true);
-            gameOverPanel.SetActive(true);
-
-            // reset spawn point
-            spawnPoint.transform.position = new Vector3(0f, 0.05f, 0f);
-            
-            Time.timeScale = 1;
-        }
-        else
-        {
-            PlayerPrefsManager.instance.DecreaseLife();
-            PlayerPrefsManager.instance.SetHealth(4);
-            // is not game over
-            menuManager.Restart(false);
-        }
-
     }
 
     IEnumerator DelayInvisible(float delay)

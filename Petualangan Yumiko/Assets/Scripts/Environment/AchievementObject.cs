@@ -19,6 +19,16 @@ public class AchievementObject : MonoBehaviour
         audioGetAchievement.playOnAwake = false;
     }
 
+    private void Update()
+    {
+        if (PlayerPrefsManager.instance.GetBoolAchievementTemp() > 0)
+        {
+            Destroy(gameObject);
+            achievementImage.gameObject.SetActive(true);
+            isPicked = true;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))

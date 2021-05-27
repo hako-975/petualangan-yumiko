@@ -58,7 +58,7 @@ public class BossController : MonoBehaviour
         if (playerStats.isDied)
         {
             lookRadius = 0f;
-            playerStats.spawnPoint.transform.position = new Vector3(0f, 0.05f, 0f);
+            agent.SetDestination(firstPosition);
         }
         
         healthBarBoss.SetHealth(healthPoint);
