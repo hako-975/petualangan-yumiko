@@ -62,5 +62,17 @@ MonoBehaviour:
     m_Localized: We no have Ads, Please try again later!
     m_Metadata:
       m_Items: []
+  - m_Id: 8097814603087872
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8099873297514496
+    m_Localized: Are you sure you want to quit game?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8102156374622208
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

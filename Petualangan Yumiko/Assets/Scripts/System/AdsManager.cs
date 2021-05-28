@@ -102,6 +102,10 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
                 isFinishedAds = true;
                 errorAdsPanel.gameObject.SetActive(true);
             }
+            else
+            {
+                isFinishedAds = true;
+            }
 
             if (isFinishedAds)
             {

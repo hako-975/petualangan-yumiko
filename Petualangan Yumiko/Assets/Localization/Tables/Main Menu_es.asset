@@ -63,5 +63,17 @@ MonoBehaviour:
       tarde!"
     m_Metadata:
       m_Items: []
+  - m_Id: 8097814603087872
+    m_Localized: Dejar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8099873297514496
+    m_Localized: "\xBFEst\xE1s seguro de que quieres salir del juego?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8102156374622208
+    m_Localized: Cancelar
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

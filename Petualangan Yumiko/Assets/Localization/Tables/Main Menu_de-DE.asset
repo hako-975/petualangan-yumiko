@@ -63,5 +63,17 @@ MonoBehaviour:
       einmal!"
     m_Metadata:
       m_Items: []
+  - m_Id: 8097814603087872
+    m_Localized: Verlassen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8099873297514496
+    m_Localized: Bist du sicher, dass du das Spiel beenden willst?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8102156374622208
+    m_Localized: Stornieren
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

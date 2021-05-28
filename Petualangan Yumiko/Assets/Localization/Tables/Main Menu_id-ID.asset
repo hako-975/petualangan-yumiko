@@ -62,5 +62,17 @@ MonoBehaviour:
     m_Localized: Kami tidak memiliki Iklan, Silakan coba lagi nanti!
     m_Metadata:
       m_Items: []
+  - m_Id: 8097814603087872
+    m_Localized: Keluar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8099873297514496
+    m_Localized: Kamu yakin ingin keluar dari permainan?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8102156374622208
+    m_Localized: Batal
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

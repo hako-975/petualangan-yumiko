@@ -62,5 +62,17 @@ MonoBehaviour:
     m_Localized: "Non abbiamo annunci, riprova pi\xF9 tardi!"
     m_Metadata:
       m_Items: []
+  - m_Id: 8097814603087872
+    m_Localized: Smettere
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8099873297514496
+    m_Localized: Sei sicuro di voler uscire dal gioco?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8102156374622208
+    m_Localized: Annulla
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

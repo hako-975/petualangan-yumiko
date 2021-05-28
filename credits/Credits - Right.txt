@@ -81,16 +81,17 @@ Audio Library
 
 freesound.org
 
-www.zapsplat.com
-
-www.videvo.net
-
 mixkit.co
 
-www.storyblocks.com
-
-www.soundsnap.com
+Nagaty Studio
 
 taira-komori.jpn.org
 
-Nagaty Studio
+www.soundsnap.com
+
+www.storyblocks.com
+
+www.videvo.net
+
+www.zapsplat.com
+
