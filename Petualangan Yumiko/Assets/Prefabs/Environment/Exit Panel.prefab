@@ -580,6 +580,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: BackAction, Assembly-CSharp
+        m_MethodName: BackButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4765147300209771730
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,8 +625,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -37.5, y: 0}
-  m_SizeDelta: {x: -75, y: 0}
+  m_AnchoredPosition: {x: 338.1676, y: -98.87686}
+  m_SizeDelta: {x: 676.3352, y: 197.75372}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4765147300224110553
 GameObject:
@@ -629,7 +641,7 @@ GameObject:
   - component: {fileID: 4765147300224110558}
   - component: {fileID: 4765147300224110559}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -740,6 +752,18 @@ MonoBehaviour:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: PlayButtonUIClickSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1012,7 +1036,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 63
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1272,7 +1296,7 @@ GameObject:
   - component: {fileID: 4765147300700516659}
   - component: {fileID: 4765147300700516652}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Cancel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1392,6 +1416,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: PlayButtonUIClickSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: BackAction, Assembly-CSharp
+        m_MethodName: BackButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4765147301293980570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,8 +1473,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 37.5, y: 0}
-  m_SizeDelta: {x: -75, y: 0}
+  m_AnchoredPosition: {x: 1164.5028, y: -98.87686}
+  m_SizeDelta: {x: 676.3352, y: 197.75372}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4765147301706977081
 GameObject:
@@ -1487,7 +1535,7 @@ MonoBehaviour:
   fitType: 3
   rows: 2
   columns: 1
-  cellSize: {x: 1554.95, y: 187.31448}
+  cellSize: {x: 1502.6704, y: 197.75372}
   spacing: {x: 0, y: 0}
   fitX: 1
   fitY: 1
@@ -1526,8 +1574,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 777.475, y: -280.97174}
-  m_SizeDelta: {x: 1554.95, y: 187.31448}
+  m_AnchoredPosition: {x: 751.3352, y: -296.63058}
+  m_SizeDelta: {x: 1502.6704, y: 197.75372}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4765147301731083718
 MonoBehaviour:
@@ -1550,7 +1598,7 @@ MonoBehaviour:
   fitType: 0
   rows: 1
   columns: 2
-  cellSize: {x: -75, y: 0}
+  cellSize: {x: 676.3352, y: 197.75372}
   spacing: {x: 150, y: 0}
   fitX: 1
   fitY: 1
@@ -1587,6 +1635,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 777.475, y: -93.65724}
-  m_SizeDelta: {x: 1554.95, y: 187.31448}
+  m_AnchoredPosition: {x: 751.3352, y: -98.87686}
+  m_SizeDelta: {x: 1502.6704, y: 197.75372}
   m_Pivot: {x: 0.5, y: 0.5}

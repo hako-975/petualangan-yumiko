@@ -1633,6 +1633,7 @@ GameObject:
   - component: {fileID: 308286977}
   - component: {fileID: 308286978}
   - component: {fileID: 308286979}
+  - component: {fileID: 308286980}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1946,6 +1947,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae85bad6a810544c800e183ef677255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &308286980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308286969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59b694849b193f24ea4d9a286a601b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitPanel: {fileID: 6151157181551407540}
 --- !u!1 &331659755
 GameObject:
   m_ObjectHideFlags: 0
@@ -8770,6 +8784,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 308286970}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: PlayButtonUIClickSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 308286980}
+        m_TargetAssemblyTypeName: BackAction, Assembly-CSharp
+        m_MethodName: QuitButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1257967093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14116,10 +14154,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 308286970}
+    - target: {fileID: 1692360484841668027, guid: f66eb4f122df44f47b195a6900b229ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 308286980}
     - target: {fileID: 4765147300224110559, guid: f66eb4f122df44f47b195a6900b229ed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 308286970}
+    - target: {fileID: 4765147300224110559, guid: f66eb4f122df44f47b195a6900b229ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 308286970}
+    - target: {fileID: 4765147300700516652, guid: f66eb4f122df44f47b195a6900b229ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 308286970}
+    - target: {fileID: 4765147300700516652, guid: f66eb4f122df44f47b195a6900b229ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 308286980}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f66eb4f122df44f47b195a6900b229ed, type: 3}
 --- !u!1 &6151157181551407540 stripped
