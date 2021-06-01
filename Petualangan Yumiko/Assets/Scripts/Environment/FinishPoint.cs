@@ -12,9 +12,12 @@ public class FinishPoint : MonoBehaviour
 
     bool isEntered = false;
 
+    TimerManager timerManager;
+
     void Start()
     {
         audioFinish = GetComponent<AudioSource>();
+        timerManager = FindObjectOfType<TimerManager>();
 
         // + 1 sesuai urutan pada build index, level saat ini 1 dan build index nya 1 dan next level adalah level 2
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
@@ -36,6 +39,8 @@ public class FinishPoint : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            timerManager.Finish();
+
             isEntered = true;
             audioFinish.Play();
             StartCoroutine(WaitDuration());
@@ -58,7 +63,7 @@ public class FinishPoint : MonoBehaviour
         {
             int levelAt = PlayerPrefsManager.instance.GetLevelAt();
 
-            // if retry level, not remove achievement
+            // if get achievement
             if (PlayerPrefsManager.instance.GetBoolAchievementTemp() > 0)
             {
                 PlayerPrefsManager.instance.SetBoolAchievementObject(SceneManager.GetActiveScene().buildIndex, 1);
@@ -67,6 +72,8 @@ public class FinishPoint : MonoBehaviour
             // remove temp achievement
             PlayerPrefsManager.instance.RemoveBoolAchievementTemp();
 
+            // reset timer
+            PlayerPrefsManager.instance.DeleteKey("Timer");
 
             if (nextSceneLoad > levelAt)
             {

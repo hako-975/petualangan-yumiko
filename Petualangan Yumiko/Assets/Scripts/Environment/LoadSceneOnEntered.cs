@@ -51,6 +51,8 @@ public class LoadSceneOnEntered : MonoBehaviour
 
         if (isEntered == true)
         {
+            // reset timer
+            PlayerPrefsManager.instance.DeleteKey("Timer");
 
             PlayerPrefsManager.instance.SetCurrentLevel(0);
 

@@ -24,8 +24,8 @@
 
 public static class GPGSIds
 {
+        public const string leaderboard_timer = "CgkI1MSeptocEAIQBA"; // <GPGSID>
         public const string achievement_mango = "CgkI1MSeptocEAIQDg"; // <GPGSID>
-        public const string leaderboard_time = "CgkI1MSeptocEAIQBA"; // <GPGSID>
         public const string achievement_durian = "CgkI1MSeptocEAIQBQ"; // <GPGSID>
         public const string achievement_lemon = "CgkI1MSeptocEAIQDQ"; // <GPGSID>
         public const string achievement_honeydew = "CgkI1MSeptocEAIQCQ"; // <GPGSID>

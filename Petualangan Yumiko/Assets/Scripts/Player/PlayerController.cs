@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
     PlayerSFX playerSFX;
 
     PlayerStats playerStats;
-
+    
     bool fall = false;
 
     // Start is called before the first frame update
@@ -59,7 +59,6 @@ public class PlayerController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         playerStats = GetComponent<PlayerStats>();
         playerSFX = GetComponent<PlayerSFX>();
-
         groundCheck = GameObject.FindGameObjectWithTag("GroundCheck");
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
@@ -171,6 +170,9 @@ public class PlayerController : MonoBehaviour
             {
                 spawnPoint.transform.position = new Vector3(0f, 0.05f, 0f);
                 PlayerPrefsManager.instance.SetCurrentLevel(currentLevel);
+                
+                // reset timer
+                PlayerPrefsManager.instance.DeleteKey("Timer");
             }
         }
 

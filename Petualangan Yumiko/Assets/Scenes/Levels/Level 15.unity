@@ -8455,7 +8455,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516174925}
-  m_LocalRotation: {x: -0.35047993, y: 0.000000016114983, z: 0.0000000060304903, w: 0.9365703}
+  m_LocalRotation: {x: -0.35047993, y: -0.000000016114987, z: -0.0000000060304917, w: 0.9365703}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -18603,6 +18603,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1989569139}
+    - target: {fileID: 1933491933828937399, guid: 8f3a1acaf2e020a4a8ab63ef5f9ceba6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2804614080310924021, guid: 8f3a1acaf2e020a4a8ab63ef5f9ceba6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -18990,6 +18994,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7511887794444171677, guid: 8f3a1acaf2e020a4a8ab63ef5f9ceba6, type: 3}
   m_PrefabInstance: {fileID: 973954250}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &973954264 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7380731330579752525, guid: 8f3a1acaf2e020a4a8ab63ef5f9ceba6, type: 3}
+  m_PrefabInstance: {fileID: 973954250}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &985788206
 GameObject:
   m_ObjectHideFlags: 0
@@ -37090,6 +37105,7 @@ GameObject:
   - component: {fileID: 1989569144}
   - component: {fileID: 1989569143}
   - component: {fileID: 1989569145}
+  - component: {fileID: 1989569146}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -37389,6 +37405,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitPanel: {fileID: 973954263}
+--- !u!114 &1989569146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989569136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2ce9b07e3988b46a91ec9f778350d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 973954264}
+  t: 0
+  finished: 0
 --- !u!1001 &1991206794
 PrefabInstance:
   m_ObjectHideFlags: 0

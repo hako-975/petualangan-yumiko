@@ -10802,6 +10802,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 521698634}
+    - target: {fileID: 3181936123486110396, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3181936123601705738, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -11139,6 +11143,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8093368997018317023, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
   m_PrefabInstance: {fileID: 393610226}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &393610238 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4864584330086623976, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
+  m_PrefabInstance: {fileID: 393610226}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &393610239 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3821276720996275540, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
@@ -13554,6 +13569,7 @@ GameObject:
   - component: {fileID: 521698639}
   - component: {fileID: 521698638}
   - component: {fileID: 521698640}
+  - component: {fileID: 521698641}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13853,6 +13869,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitPanel: {fileID: 393610237}
+--- !u!114 &521698641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521698631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2ce9b07e3988b46a91ec9f778350d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 393610238}
+  t: 0
+  finished: 0
 --- !u!1 &525701624
 GameObject:
   m_ObjectHideFlags: 0

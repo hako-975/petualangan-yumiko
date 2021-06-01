@@ -14,6 +14,28 @@ public class PlayerPrefsManager : MonoBehaviour
     }
     #endregion
 
+    public int GetCurrentLifeForCheckIsDiedOrNot()
+    {
+        return PlayerPrefs.GetInt("CurrentLifeForCheckIsDiedOrNot", 0);
+    }
+
+    public int SetCurrentLifeForCheckIsDiedOrNot(int life)
+    {
+        PlayerPrefs.SetInt("CurrentLifeForCheckIsDiedOrNot", life);
+        return GetCurrentLifeForCheckIsDiedOrNot();
+    }
+
+    public float GetTimer()
+    {
+        return PlayerPrefs.GetFloat("Timer", 0);
+    }
+
+    public float SetTimer(float timer)
+    {
+        PlayerPrefs.SetFloat("Timer", timer);
+        return GetTimer();
+    }    
+
     public int GetBoolAchievementObject(int levelAt)
     {
         return PlayerPrefs.GetInt("AchievementObjectLevel" + levelAt);

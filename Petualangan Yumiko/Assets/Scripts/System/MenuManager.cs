@@ -8,10 +8,18 @@ public class MenuManager : MonoBehaviour
 {
     public AudioSource buttonUIClick;
     public AudioSource backButtonUIClick;
+    AdsManager adsManager;
+    TimerManager timerManager;
 
     private void Awake()
     {
         StartCoroutine(WaitLang());
+    }
+
+    private void Start()
+    {
+        adsManager = FindObjectOfType<AdsManager>();
+        timerManager = FindObjectOfType<TimerManager>();
     }
 
     public void Paused()
@@ -29,20 +37,33 @@ public class MenuManager : MonoBehaviour
     public void Restart(bool restart)
     {
         buttonUIClick.Play();
+
         if (restart)
         {
+            Time.timeScale = 0;
+
+            // reset timer
+            timerManager.finished = true;
+            PlayerPrefsManager.instance.SetTimer(0);
+            PlayerPrefsManager.instance.DeleteKey("Timer");
+
             // for button restart
             PlayerPrefsManager.instance.SetCurrentLevel(0);
 
             // remove temp achievement
             PlayerPrefsManager.instance.RemoveBoolAchievementTemp();
+            
+            // ads
+            adsManager.ShowInterstitialAd();
         }
+        else
+        {
+            Time.timeScale = 1;
+            Scene scene = SceneManager.GetActiveScene();
 
-        Time.timeScale = 1;
-        Scene scene = SceneManager.GetActiveScene();
-
-        // for loading
-        PlayerPrefsManager.instance.SetNextScene(scene.name);
+            // for loading
+            PlayerPrefsManager.instance.SetNextScene(scene.name);
+        }
     }
 
     public void SelectLevel()

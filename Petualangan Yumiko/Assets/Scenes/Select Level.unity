@@ -272,6 +272,7 @@ GameObject:
   - component: {fileID: 76030153}
   - component: {fileID: 76030150}
   - component: {fileID: 76030154}
+  - component: {fileID: 76030155}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -552,6 +553,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitPanel: {fileID: 1095633907}
+--- !u!114 &76030155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76030147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22a3a0019edea549b2fc83ea5376853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &98519070
 GameObject:
   m_ObjectHideFlags: 0
@@ -3559,7 +3572,7 @@ MonoBehaviour:
   fitType: 4
   rows: 3
   columns: 5
-  cellSize: {x: 378.81528, y: 145}
+  cellSize: {x: 356.35712, y: 145}
   spacing: {x: 25, y: 25}
   fitX: 1
   fitY: 1

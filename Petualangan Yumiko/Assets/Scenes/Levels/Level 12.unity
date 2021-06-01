@@ -10313,6 +10313,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1951847319}
+    - target: {fileID: 3181936123486110396, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3181936123601705738, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10688,6 +10692,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8093368997018317023, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
   m_PrefabInstance: {fileID: 632308484}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &632308502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4864584330086623976, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
+  m_PrefabInstance: {fileID: 632308484}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &634576451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33254,6 +33269,7 @@ GameObject:
   - component: {fileID: 1951847325}
   - component: {fileID: 1951847324}
   - component: {fileID: 1951847326}
+  - component: {fileID: 1951847327}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -33553,6 +33569,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitPanel: {fileID: 632308501}
+--- !u!114 &1951847327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951847317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2ce9b07e3988b46a91ec9f778350d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 632308502}
+  t: 0
+  finished: 0
 --- !u!1001 &1960051092
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -565,6 +565,7 @@ GameObject:
   - component: {fileID: 157995366}
   - component: {fileID: 157995365}
   - component: {fileID: 157995367}
+  - component: {fileID: 157995368}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -864,6 +865,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitPanel: {fileID: 1803003658}
+--- !u!114 &157995368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157995358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2ce9b07e3988b46a91ec9f778350d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 1803003659}
+  t: 0
+  finished: 0
 --- !u!1 &177774756
 GameObject:
   m_ObjectHideFlags: 0
@@ -5263,6 +5279,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 157995360}
+    - target: {fileID: 3181936123486110396, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3181936123601705738, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5605,6 +5625,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8093368997018317023, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
   m_PrefabInstance: {fileID: 1803003642}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1803003659 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4864584330086623976, guid: 1810b29c514eabd47b519eb080bfb272, type: 3}
+  m_PrefabInstance: {fileID: 1803003642}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1861418165
 GameObject:
   m_ObjectHideFlags: 0
@@ -6873,7 +6904,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7707077322932166887}
-  m_LocalRotation: {x: -0.32593024, y: 0.0000000162668, z: 0.0000000056080776, w: 0.94539386}
+  m_LocalRotation: {x: -0.32593024, y: -0.000000016266817, z: -0.0000000056080824, w: 0.94539386}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

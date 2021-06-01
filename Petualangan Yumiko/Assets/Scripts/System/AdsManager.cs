@@ -85,7 +85,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
                 errorAdsPanel.gameObject.SetActive(true);
             }
         }
-        // interstitial ads is for die
+        // interstitial ads
+        // interstitial ads
         else
         {
             if (showResult == ShowResult.Finished)
@@ -109,7 +110,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
 
             if (isFinishedAds)
             {
-                if (PlayerPrefsManager.instance.GetLife() <= 0)
+                if (PlayerPrefsManager.instance.GetLife() < 0)
                 {
                     // set current health 4
                     PlayerPrefsManager.instance.SetHealth(4);
@@ -125,9 +126,6 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
                 }
                 else
                 {
-                    PlayerPrefsManager.instance.DecreaseLife();
-                    PlayerPrefsManager.instance.SetHealth(4);
-                    // is not game over
                     menuManager.Restart(false);
                 }
             }

@@ -26,12 +26,16 @@ public class PlayerStats : MonoBehaviour
 
     PlayerSFX playerSFX;
     AdsManager adsManager;
+    TimerManager timerManager;
 
     void Start()
     {
         adsManager = FindObjectOfType<AdsManager>();
 
+        timerManager = FindObjectOfType<TimerManager>();
+        
         player = GetComponent<PlayerController>();
+
 
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
 
@@ -96,8 +100,12 @@ public class PlayerStats : MonoBehaviour
 
     IEnumerator DecreaseLife()
     {
+        timerManager.finished = true;
         yield return new WaitForSeconds(5f);
         Time.timeScale = 0;
+        
+        PlayerPrefsManager.instance.DecreaseLife();
+        PlayerPrefsManager.instance.SetHealth(4);
 
         // ads
         adsManager.ShowInterstitialAd();

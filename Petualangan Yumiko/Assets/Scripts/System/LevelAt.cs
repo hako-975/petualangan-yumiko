@@ -11,6 +11,8 @@ public class LevelAt : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefsManager.instance.DeleteKey("Timer");
+
         if (PlayerPrefsManager.instance.GetLevelAt() == 0)
         {
             startGame.gameObject.SetActive(true);
