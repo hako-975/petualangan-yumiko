@@ -13,6 +13,7 @@ public class AchievementResult : MonoBehaviour
     bool newPosZ_2 = false;
     bool newPosZ_3 = false;
     bool newPosZ_4 = false;
+
     // Update is called once per frame
     void Update()
     {

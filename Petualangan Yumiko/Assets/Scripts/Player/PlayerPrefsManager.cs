@@ -14,15 +14,16 @@ public class PlayerPrefsManager : MonoBehaviour
     }
     #endregion
 
-    public int GetCurrentLifeForCheckIsDiedOrNot()
+
+    public float GetTimerScore(int levelAt)
     {
-        return PlayerPrefs.GetInt("CurrentLifeForCheckIsDiedOrNot", 0);
+        return PlayerPrefs.GetFloat("TimerLevel" + levelAt, 999999999999f);
     }
 
-    public int SetCurrentLifeForCheckIsDiedOrNot(int life)
+    public float SetTimerScore(int levelAt, float timerScore)
     {
-        PlayerPrefs.SetInt("CurrentLifeForCheckIsDiedOrNot", life);
-        return GetCurrentLifeForCheckIsDiedOrNot();
+        PlayerPrefs.SetFloat("TimerLevel" + levelAt, timerScore);
+        return GetTimerScore(levelAt);
     }
 
     public float GetTimer()
@@ -159,7 +160,7 @@ public class PlayerPrefsManager : MonoBehaviour
 
     public float GetSensitivity()
     {
-        return PlayerPrefs.GetFloat("Sensitivity", 20f);
+        return PlayerPrefs.GetFloat("Sensitivity", 50f);
     }
 
     public float SetSensitivity(float sensitivity)

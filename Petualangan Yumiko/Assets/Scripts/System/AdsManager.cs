@@ -122,7 +122,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
                     // reset spawn point
                     playerStats.spawnPoint.transform.position = new Vector3(0f, 0.05f, 0f);
 
-                    Time.timeScale = 1;
+                    // Time.timeScale = 1;
                 }
                 else
                 {

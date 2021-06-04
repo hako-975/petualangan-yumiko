@@ -58,7 +58,6 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 1;
             Scene scene = SceneManager.GetActiveScene();
 
             // for loading

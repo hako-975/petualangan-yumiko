@@ -76,11 +76,16 @@ public class FlexibleGridLayout : LayoutGroup
 
     public override void SetLayoutHorizontal()
     {
-
     }
 
     public override void SetLayoutVertical()
     {
+    }
 
+    private void Update()
+    {
+        CalculateLayoutInputVertical();
+        SetLayoutHorizontal();
+        SetLayoutVertical();
     }
 }
