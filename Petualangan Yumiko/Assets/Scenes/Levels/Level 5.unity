@@ -1587,13 +1587,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &89844437 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1003664356201282123, guid: 8f3a1acaf2e020a4a8ab63ef5f9ceba6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4327411510881957652, guid: 8f3a1acaf2e020a4a8ab63ef5f9ceba6, type: 3}
   m_PrefabInstance: {fileID: 89844422}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &89844438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5472883066793298368, guid: 8f3a1acaf2e020a4a8ab63ef5f9ceba6, type: 3}
+  m_PrefabInstance: {fileID: 89844422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &89844439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5819099803888417660, guid: 8f3a1acaf2e020a4a8ab63ef5f9ceba6, type: 3}
+  m_PrefabInstance: {fileID: 89844422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &89844440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89844438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98b892db052434438f0c1861fe7182b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &89844441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89844439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98b892db052434438f0c1861fe7182b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &93891403
@@ -14647,7 +14681,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7707077322684844908}
-  m_LocalRotation: {x: -0.35047993, y: 0.000000016114987, z: 0.0000000060304917, w: 0.9365703}
+  m_LocalRotation: {x: -0.35047993, y: -0.000000016114983, z: -0.0000000060304903, w: 0.9365703}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

@@ -10,6 +10,7 @@ public class RandomTrack : MonoBehaviour
     public GameObject finishTrack;
     public GameObject achievementObject;
     public float maxLengthTrack;
+    public float buildDistance = 5f;
 
     BossController bossController;
 
@@ -44,11 +45,11 @@ public class RandomTrack : MonoBehaviour
 
         if (lengthArea == 0)
         {
-            lengthArea = 5f;
+            lengthArea = buildDistance;
         }
         else
         {
-            lengthArea -= 5f;
+            lengthArea -= buildDistance;
         }
 
         for (; i < lengthArea; i++)

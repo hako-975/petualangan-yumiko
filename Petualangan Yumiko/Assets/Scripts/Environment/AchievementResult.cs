@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class AchievementResult : MonoBehaviour
 {
@@ -22,11 +23,14 @@ public class AchievementResult : MonoBehaviour
         {
             if (i < 5)
             {
-                Instantiate(table, new Vector3(3f, 0.68f, posZ), Quaternion.identity);
+                table = Instantiate(table, new Vector3(3f, 0.68f, posZ), Quaternion.identity);
+                /*table.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefsManager.instance.GetTimerScore(i + 1).ToString();*/
+                
                 if (PlayerPrefsManager.instance.GetBoolAchievementObject(i + 1) > 0)
                 {
                     Instantiate(achievementObject[i], new Vector3(3f, 0.915f, posZ), Quaternion.identity);
                 }
+
                 posZ -= 1.85f;
             }
             else if (i < 10)
@@ -37,7 +41,9 @@ public class AchievementResult : MonoBehaviour
                     newPosZ = true;
                 }
 
-                Instantiate(table, new Vector3(5f, 0.68f, posZ), Quaternion.identity);
+                table = Instantiate(table, new Vector3(5f, 0.68f, posZ), Quaternion.identity);
+                /*table.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefsManager.instance.GetTimerScore(i + 1).ToString();*/
+
                 if (PlayerPrefsManager.instance.GetBoolAchievementObject(i + 1) > 0)
                 {
                     Instantiate(achievementObject[i], new Vector3(5f, 0.915f, posZ), Quaternion.identity);
@@ -52,7 +58,9 @@ public class AchievementResult : MonoBehaviour
                     newPosZ_2 = true;
                 }
 
-                Instantiate(table, new Vector3(7f, 0.68f, posZ), Quaternion.identity);
+                table = Instantiate(table, new Vector3(7f, 0.68f, posZ), Quaternion.identity);
+                /*table.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefsManager.instance.GetTimerScore(i + 1).ToString();*/
+
                 if (PlayerPrefsManager.instance.GetBoolAchievementObject(i + 1) > 0)
                 {
                     Instantiate(achievementObject[i], new Vector3(7f, 0.915f, posZ), Quaternion.identity);
@@ -68,7 +76,9 @@ public class AchievementResult : MonoBehaviour
                     newPosZ_3 = true;
                 }
 
-                Instantiate(table, new Vector3(9f, 0.68f, posZ), Quaternion.identity);
+                table = Instantiate(table, new Vector3(9f, 0.68f, posZ), Quaternion.identity);
+                /*table.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefsManager.instance.GetTimerScore(i + 1).ToString();*/
+
                 if (PlayerPrefsManager.instance.GetBoolAchievementObject(i + 1) > 0)
                 {
                     Instantiate(achievementObject[i], new Vector3(9f, 0.915f, posZ), Quaternion.identity);
@@ -84,7 +94,9 @@ public class AchievementResult : MonoBehaviour
                     newPosZ_4 = true;
                 }
 
-                Instantiate(table, new Vector3(11f, 0.68f, posZ), Quaternion.identity);
+                table = Instantiate(table, new Vector3(11f, 0.68f, posZ), Quaternion.identity);
+                /*table.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefsManager.instance.GetTimerScore(i + 1).ToString();*/
+
                 if (PlayerPrefsManager.instance.GetBoolAchievementObject(i + 1) > 0)
                 {
                     Instantiate(achievementObject[i], new Vector3(11f, 0.915f, posZ), Quaternion.identity);
