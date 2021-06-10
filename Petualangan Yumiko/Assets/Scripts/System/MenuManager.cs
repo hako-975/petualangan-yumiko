@@ -91,6 +91,12 @@ public class MenuManager : MonoBehaviour
         // remove temp achievement
         PlayerPrefsManager.instance.RemoveBoolAchievementTemp();
 
+        // reset level
+        PlayerPrefsManager.instance.SetCurrentLevel(0);
+
+        // reset timer
+        PlayerPrefsManager.instance.DeleteKey("Timer");
+
         // for loading
         PlayerPrefsManager.instance.SetNextScene("Main Menu");
     }

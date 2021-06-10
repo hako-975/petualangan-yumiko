@@ -84,66 +84,78 @@ public class FinishPoint : MonoBehaviour
                 {
                     case 1:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel1((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel1((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("1: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 2:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel2((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel2((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("2: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 3:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel3((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel3((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("3: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 4:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel4((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel4((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("4: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 5:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel5((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel5((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("5: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 6:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel6((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel6((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("6: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 7:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel7((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel7((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("7: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 8:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel8((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel8((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("8: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 9:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel9((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel9((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("9: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 10:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel10((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel10((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("10: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 11:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel11((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel11((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("11: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 12:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel12((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel12((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("12: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 13:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel13((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel13((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("13: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 14:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel14((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel14((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("14: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                     case 15:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
-                        yumikoLeaderboards.UpdateLeaderboardScoreLevel15((int) (PlayerPrefsManager.instance.GetTimer() * 1000f));
-                        break;
-                    default:
-                        PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
+                        yumikoLeaderboards.UpdateLeaderboardScoreLevel15((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+                        Debug.Log("15: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
                 }
             }

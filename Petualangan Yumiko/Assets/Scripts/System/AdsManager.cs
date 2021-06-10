@@ -21,6 +21,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
 
     PlayerStats playerStats;
     MenuManager menuManager;
+
     bool isFinishedAds = false;
 
     void Start()
@@ -45,6 +46,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         {
             Debug.Log("Interstitial ad not ready at the moment! Please try again later!");
             errorAdsPanel.gameObject.SetActive(true);
+            menuManager.Restart(false);
         }
     }
 
@@ -59,6 +61,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         {
             Debug.Log("Rewarded video is not ready at the moment! Please try again later!");
             errorAdsPanel.gameObject.SetActive(true);
+            menuManager.Restart(false);
         }
     }
 
@@ -85,7 +88,6 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
                 errorAdsPanel.gameObject.SetActive(true);
             }
         }
-        // interstitial ads
         // interstitial ads
         else
         {
@@ -129,6 +131,10 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
                     menuManager.Restart(false);
                 }
             }
+            else
+            {
+                menuManager.Restart(false);
+            }
         }
     }
 
@@ -146,6 +152,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         // Log the error.
         errorAdsPanel.gameObject.SetActive(true);
         errorAdsPanel.GetComponent<TextMeshProUGUI>().text = message;
+        menuManager.Restart(false);
     }
 
     public void OnUnityAdsDidStart(string surfacingId)

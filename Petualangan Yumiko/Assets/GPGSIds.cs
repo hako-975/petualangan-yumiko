@@ -43,17 +43,17 @@ public static class GPGSIds
         public const string leaderboard_timer_level_12 = "CgkI1MSeptocEAIQGw"; // <GPGSID>
         public const string achievement_fig = "CgkI1MSeptocEAIQBw"; // <GPGSID>
         public const string achievement_lemon = "CgkI1MSeptocEAIQDQ"; // <GPGSID>
-        public const string leaderboard_timer_level_8 = "CgkI1MSeptocEAIQFw"; // <GPGSID>
+        public const string leaderboard_timer_level_8 = "CgkI1MSeptocEAIQJg"; // <GPGSID>
         public const string achievement_kiwi = "CgkI1MSeptocEAIQDA"; // <GPGSID>
-        public const string leaderboard_timer_level_9 = "CgkI1MSeptocEAIQGA"; // <GPGSID>
-        public const string leaderboard_timer_level_6 = "CgkI1MSeptocEAIQFQ"; // <GPGSID>
-        public const string leaderboard_timer_level_1 = "CgkI1MSeptocEAIQBA"; // <GPGSID>
-        public const string leaderboard_timer_level_2 = "CgkI1MSeptocEAIQEQ"; // <GPGSID>
-        public const string leaderboard_timer_level_3 = "CgkI1MSeptocEAIQEg"; // <GPGSID>
-        public const string leaderboard_timer_level_4 = "CgkI1MSeptocEAIQEw"; // <GPGSID>
-        public const string leaderboard_timer_level_5 = "CgkI1MSeptocEAIQFA"; // <GPGSID>
+        public const string leaderboard_timer_level_9 = "CgkI1MSeptocEAIQJw"; // <GPGSID>
+        public const string leaderboard_timer_level_6 = "CgkI1MSeptocEAIQJA"; // <GPGSID>
+        public const string leaderboard_timer_level_1 = "CgkI1MSeptocEAIQHw"; // <GPGSID>
+        public const string leaderboard_timer_level_2 = "CgkI1MSeptocEAIQIA"; // <GPGSID>
+        public const string leaderboard_timer_level_3 = "CgkI1MSeptocEAIQIQ"; // <GPGSID>
+        public const string leaderboard_timer_level_4 = "CgkI1MSeptocEAIQIg"; // <GPGSID>
+        public const string leaderboard_timer_level_5 = "CgkI1MSeptocEAIQIw"; // <GPGSID>
         public const string achievement_nectarine = "CgkI1MSeptocEAIQDw"; // <GPGSID>
-        public const string leaderboard_timer_level_7 = "CgkI1MSeptocEAIQFg"; // <GPGSID>
+        public const string leaderboard_timer_level_7 = "CgkI1MSeptocEAIQJQ"; // <GPGSID>
 
 }
 

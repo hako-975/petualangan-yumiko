@@ -2588,8 +2588,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1603.0574, y: -280.43506}
-  m_SizeDelta: {x: 1002.0382, y: 560.8701}
+  m_AnchoredPosition: {x: 1608.3821, y: -279.0036}
+  m_SizeDelta: {x: 1005.588, y: 558.0072}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &426258492
 MonoBehaviour:
@@ -2613,204 +2613,205 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Andri Firman Saputra
 
-
+    
 
     www.mixamo.com
 
+    
 
+    Andri Firman
+    Saputra
+
+    
 
     Andri Firman Saputra
 
-
-
-    Andri
-    Firman Saputra
-
-
+    
 
     Andre Farhan Saputra
 
+    
 
+    
 
+    
 
+    
 
+    The
+    Fallout Nerd
 
+    
 
+    Dai Yong Xiang
 
-
-    The Fallout Nerd
-
-
-
-    Dai
-    Yong Xiang
-
-
-
-    bariacg
-
-
+    
 
     bariacg
 
+    
 
+    bariacg
+
+    
 
     cglib.team
 
-
+    
 
     Sagital3D
 
-
+    
 
     Thunk3D
 
-
+    
 
     buttr_toes
 
-
+    
 
     Teamjoker
 
-
+    
 
     businessyuen
 
-
+    
 
     Eques_inferno
 
-
+    
 
     Kalamona
 
-
+    
 
     ProAssets
 
-
+    
 
     blenderbirb
 
-
+    
 
     Taiga
     Yonemoto
 
-
+    
 
     IronEqual
 
-
+    
 
     T I A N
 
-
+    
 
     Fenerax Studios
 
-
+    
 
     Franco
     Pizzani
 
-
+    
 
     Yu
 
-
+    
 
     Hasan3DModels
 
-
+    
 
     Meerschaum Digital
 
-
+    
 
     Multipainkiller
     Studio
 
-
+    
 
     anthonyvanoo
 
-
-
-    NiklasG
-
-
+    
 
     NiklasG
 
+    
 
+    NiklasG
 
+    
 
+    
 
+    
 
-
-
+    
 
     www.bensound.com
 
-
+    
 
     Audio
     Library
 
-
+    
 
     Darren Curtis
 
-
+    
 
     MusicForVideosCreators
 
+    
 
+    Audio
+    Library
 
-    Audio Library
+    
 
+    
 
+    
 
-
-
-
-
-
+    
 
     freesound.org
 
-
+    
 
     mixkit.co
 
-
+    
 
     Nagaty
     Studio
 
-
+    
 
     taira-komori.jpn.org
 
-
+    
 
     www.soundsnap.com
 
-
+    
 
     www.storyblocks.com
 
-
+    
 
     www.videvo.net
 
-
+    
 
     www.zapsplat.com
 
-
+    
 
 '
   m_isRightToLeft: 0
@@ -7115,8 +7116,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 501.0191, y: -280.43506}
-  m_SizeDelta: {x: 1002.0382, y: 560.8701}
+  m_AnchoredPosition: {x: 502.794, y: -279.0036}
+  m_SizeDelta: {x: 1005.588, y: 558.0072}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1067939834
 MonoBehaviour:
@@ -11666,7 +11667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -530}
+  m_AnchoredPosition: {x: 0, y: -513}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &1630629346
@@ -11706,7 +11707,7 @@ MonoBehaviour:
   fitType: 0
   rows: 1
   columns: 2
-  cellSize: {x: 1002.0382, y: 560.8701}
+  cellSize: {x: 1005.588, y: 558.0072}
   spacing: {x: 100, y: 0}
   fitX: 1
   fitY: 1

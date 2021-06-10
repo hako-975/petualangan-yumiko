@@ -7,16 +7,14 @@ public class AchievementObject : MonoBehaviour
 {
     public GameObject achievementImage;
     public Sprite ImageIcon;
-
-    AudioSource audioGetAchievement;
-    bool isPicked = false;
+    
+    [HideInInspector]
+    public bool isPicked = false;
 
     void Start()
     {
         achievementImage.GetComponent<Image>().sprite = ImageIcon;
         achievementImage.gameObject.SetActive(false);
-        audioGetAchievement = GetComponent<AudioSource>();
-        audioGetAchievement.playOnAwake = false;
     }
 
     private void Update()
@@ -35,8 +33,7 @@ public class AchievementObject : MonoBehaviour
         {
             if (isPicked == false)
             {
-                audioGetAchievement.Play();
-                Destroy(gameObject, audioGetAchievement.clip.length);
+                Destroy(gameObject);
                 PlayerPrefsManager.instance.SetBoolAchievementTemp(1);
                 achievementImage.gameObject.SetActive(true);
                 isPicked = true;

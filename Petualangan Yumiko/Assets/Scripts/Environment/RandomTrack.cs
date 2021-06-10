@@ -10,7 +10,7 @@ public class RandomTrack : MonoBehaviour
     public GameObject finishTrack;
     public GameObject achievementObject;
     public float maxLengthTrack;
-    public float buildDistance = 5f;
+    public float percentBuildDiscount = 90f;
 
     BossController bossController;
 
@@ -22,10 +22,13 @@ public class RandomTrack : MonoBehaviour
 
     float lastPositionZ = 15f;
     float lastPositionZDecoration = 15f;
+    float lengthArea;
 
     int random = 0;
     int i = 0;
     int j = 0;
+
+    int p = 0;
 
     bool isFinish = false;
 
@@ -35,48 +38,57 @@ public class RandomTrack : MonoBehaviour
         bossController = FindObjectOfType<BossController>();
         player = FindObjectOfType<PlayerController>();
         exitBoss.gameObject.SetActive(false);
+        
     }
     
     // Update is called once per frame
     void FixedUpdate()
     {
-        float lengthArea = player.transform.position.z;
+        lengthArea = player.transform.position.z;
+        
+        if (lengthArea == 0f)
+        {
+            lengthArea = 5f;
+        }
+
         dangerZone.transform.position = new Vector3(dangerZone.transform.position.x, dangerZone.transform.position.y, lengthArea);
 
-        if (lengthArea == 0)
+        for (; p < (lengthArea - (lengthArea * percentBuildDiscount / 100f)) / 6f; p++)
         {
-            lengthArea = buildDistance;
-        }
-        else
-        {
-            lengthArea -= buildDistance;
-        }
-
-        for (; i < lengthArea; i++)
-        {
-            int randomObj = Random.Range(0, prefabs.Length);
-            int randomObjDecoration = Random.Range(0, prefabsDecoration.Length);
-            float randomPosX = Random.Range(-5f, 5f);
-            float randomPosXDecoration = Random.Range(0, 10);
-            float randomPosY = Random.Range(-6f, -5f);
             float randomPosZ = Random.Range(10f, 13f);
-            
+
+            int randomObjDecoration = Random.Range(0, prefabsDecoration.Length);
+            float randomPosXDecoration = Random.Range(0, 10);
+
             if (randomPosXDecoration >= 0 && randomPosXDecoration <= 5)
             {
                 randomPosXDecoration = -20f;
-            } 
+            }
             else if (randomPosXDecoration >= 6 && randomPosXDecoration <= 10)
             {
                 randomPosXDecoration = 20f;
             }
 
+            Instantiate(prefabsDecoration[randomObjDecoration], new Vector3(randomPosXDecoration, -5.5f, lastPositionZDecoration), Quaternion.identity);
+
+
+            lastPositionZDecoration += randomPosZ + 60f;
+        }
+
+        for (; i < lengthArea - (lengthArea * percentBuildDiscount / 100f); i++)
+        {
+            int randomObj = Random.Range(0, prefabs.Length);
+            float randomPosX = Random.Range(-5f, 5f);
+            float randomPosY = Random.Range(-6f, -5f);
+            float randomPosZ = Random.Range(10f, 13f);
+            
+            
             if (lengthArea > 5f)
             {
                 random = Random.Range(0, 5);
             }
 
             Instantiate(prefabs[randomObj], new Vector3(randomPosX, randomPosY, lastPositionZ), Quaternion.identity);
-            Instantiate(prefabsDecoration[randomObjDecoration], new Vector3(randomPosXDecoration, -5.5f, lastPositionZDecoration), Quaternion.identity);
 
             if (j <= 0)
             {
@@ -90,9 +102,8 @@ public class RandomTrack : MonoBehaviour
             j--;
 
             lastPositionZ += randomPosZ;
-            lastPositionZDecoration += randomPosZ + 60f;
         }
-        
+
         if (lengthArea > maxLengthTrack)
         {
             if (isFinish == false)
