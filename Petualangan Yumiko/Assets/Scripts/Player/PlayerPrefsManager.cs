@@ -14,16 +14,26 @@ public class PlayerPrefsManager : MonoBehaviour
     }
     #endregion
 
-
-    public float GetTimerScore(int levelAt)
+    public float GetTimerLevel(int levelAt)
     {
         return PlayerPrefs.GetFloat("TimerLevel" + levelAt, 999999999999f);
     }
 
-    public float SetTimerScore(int levelAt, float timerScore)
+    public float SetTimerLevel(int levelAt, float timerLevel)
     {
-        PlayerPrefs.SetFloat("TimerLevel" + levelAt, timerScore);
-        return GetTimerScore(levelAt);
+        PlayerPrefs.SetFloat("TimerLevel" + levelAt, timerLevel);
+        return GetTimerLevel(levelAt);
+    }
+
+    public int GetTimerFinish()
+    {
+        return PlayerPrefs.GetInt("TimerFinish", -1);
+    }
+
+    public int SetTimerFinish(int millisecondTimer)
+    {
+        PlayerPrefs.SetInt("TimerFinish", millisecondTimer);
+        return GetTimerFinish();
     }
 
     public float GetTimer()

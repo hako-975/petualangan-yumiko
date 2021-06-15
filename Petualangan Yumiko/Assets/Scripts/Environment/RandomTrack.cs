@@ -104,6 +104,7 @@ public class RandomTrack : MonoBehaviour
             lastPositionZ += randomPosZ;
         }
 
+
         if (lengthArea > maxLengthTrack)
         {
             if (isFinish == false)

@@ -42,6 +42,13 @@ public class TimerManager : MonoBehaviour
             
             PlayerPrefsManager.instance.SetTimer(t);
         }
+        else
+        {
+            if (PlayerPrefsManager.instance.GetTimer() > 1)
+            {
+                PlayerPrefsManager.instance.SetTimerFinish((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
+            }
+        }
     }
     
     public void Finish()

@@ -1,12 +1,34 @@
+using GooglePlayGames;
+using GooglePlayGames.BasicApi;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class YumikoLeaderboards : MonoBehaviour
 {
+
+    public static PlayGamesPlatform platform;
+
+    YumikoAuthentication yumikoAuthentication;
+
+    private void Start()
+    {
+        yumikoAuthentication = FindObjectOfType<YumikoAuthentication>();
+    }
+
     public void OpenLeaderboard()
     {
-        Social.ShowLeaderboardUI();
+
+        if (platform != null)
+        {
+            Social.ShowLeaderboardUI();
+        }
+        else
+        {
+            yumikoAuthentication.Authentication();
+            
+            Social.ShowLeaderboardUI();
+        }
     }
 
     public void UpdateLeaderboardScoreLevel1(int score)

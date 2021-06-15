@@ -5,9 +5,26 @@ using GooglePlayGames;
 
 public class YumikoAchievements : MonoBehaviour
 {
+    public static PlayGamesPlatform platform;
+
+    YumikoAuthentication yumikoAuthentication;
+
+    private void Start()
+    {
+        yumikoAuthentication = FindObjectOfType<YumikoAuthentication>();
+    }
+
     public void OpenAchievementPanel()
     {
-        Social.ShowAchievementsUI();
+        if (platform != null)
+        {
+            Social.ShowAchievementsUI();
+        }
+        else
+        {
+            yumikoAuthentication.Authentication();
+            Social.ShowAchievementsUI();
+        }
     }
 
     public void UnlockedAchievement(int level)

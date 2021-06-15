@@ -9,13 +9,14 @@ public class YumikoAuthentication : MonoBehaviour
 {
     public static PlayGamesPlatform platform;
 
-    // Start is called before the first frame update
-    void Start()
+    public GameObject googlePanelSuccess;
+    public GameObject googlePanelFailed;
+
+    private void Start()
     {
         if (platform == null)
         {
-            // PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().EnableSavedGames().Build();
-            PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
+            PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().EnableSavedGames().Build();
             PlayGamesPlatform.InitializeInstance(config);
             PlayGamesPlatform.DebugLogEnabled = true;
 
@@ -26,11 +27,32 @@ public class YumikoAuthentication : MonoBehaviour
         {
             if (success)
             {
-                Debug.Log("Logged in Successfully!");
+                googlePanelSuccess.gameObject.SetActive(true);
             }
             else
             {
-                Debug.Log("Failed to login!");
+                googlePanelFailed.gameObject.SetActive(true);
+            }
+        });
+    }
+
+    public void Authentication()
+    {
+        PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().EnableSavedGames().Build();
+        PlayGamesPlatform.InitializeInstance(config);
+        PlayGamesPlatform.DebugLogEnabled = true;
+
+        platform = PlayGamesPlatform.Activate();
+
+        Social.Active.localUser.Authenticate(success =>
+        {
+            if (success)
+            {
+                googlePanelSuccess.gameObject.SetActive(true);
+            }
+            else
+            {
+                googlePanelFailed.gameObject.SetActive(true);
             }
         });
     }

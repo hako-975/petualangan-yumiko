@@ -71,6 +71,14 @@ MonoBehaviour:
     m_Key: Cancel
     m_Metadata:
       m_Items: []
+  - m_Id: 14987031471964160
+    m_Key: Credits Right
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14987216117809152
+    m_Key: Credits Left
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

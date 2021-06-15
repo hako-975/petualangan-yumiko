@@ -7,7 +7,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Default_OBJ
+    second: {fileID: 2100000, guid: 962e5bb7fa89be14395ff6ff4cbc94d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: ZBrush_defualt_groupMat
+    second: {fileID: 2100000, guid: 962e5bb7fa89be14395ff6ff4cbc94d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultMat
     second: {fileID: 2100000, guid: 962e5bb7fa89be14395ff6ff4cbc94d4, type: 2}
   materials:
     materialImportMode: 2
