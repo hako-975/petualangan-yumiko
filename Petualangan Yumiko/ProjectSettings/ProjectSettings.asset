@@ -243,8 +243,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Unity Project/petualangan-yumiko/yumiko-adventure.keystore
-  AndroidKeyaliasName: yumiko
+  AndroidKeystoreName: D:/Unity Project/petualangan-yumiko/yumikoadventure.keystore
+  AndroidKeyaliasName: yumikoadventure
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1

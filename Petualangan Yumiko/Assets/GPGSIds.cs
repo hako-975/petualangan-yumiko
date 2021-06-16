@@ -24,36 +24,36 @@
 
 public static class GPGSIds
 {
-        public const string achievement_illawarra_plum = "CgkI1MSeptocEAIQCg"; // <GPGSID>
-        public const string achievement_durian = "CgkI1MSeptocEAIQBQ"; // <GPGSID>
-        public const string achievement_jalapeno = "CgkI1MSeptocEAIQCw"; // <GPGSID>
-        public const string leaderboard_timer_level_10 = "CgkI1MSeptocEAIQGQ"; // <GPGSID>
-        public const string achievement_grape = "CgkI1MSeptocEAIQCA"; // <GPGSID>
-        public const string achievement_cherry = "CgkI1MSeptocEAIQAw"; // <GPGSID>
-        public const string achievement_banana = "CgkI1MSeptocEAIQAg"; // <GPGSID>
-        public const string leaderboard_timer_level_13 = "CgkI1MSeptocEAIQHA"; // <GPGSID>
-        public const string achievement_mango = "CgkI1MSeptocEAIQDg"; // <GPGSID>
-        public const string achievement_orange = "CgkI1MSeptocEAIQEA"; // <GPGSID>
-        public const string leaderboard_timer_level_11 = "CgkI1MSeptocEAIQGg"; // <GPGSID>
-        public const string achievement_apple = "CgkI1MSeptocEAIQAQ"; // <GPGSID>
-        public const string achievement_honeydew = "CgkI1MSeptocEAIQCQ"; // <GPGSID>
-        public const string achievement_eggplant = "CgkI1MSeptocEAIQBg"; // <GPGSID>
-        public const string leaderboard_timer_level_15 = "CgkI1MSeptocEAIQHg"; // <GPGSID>
-        public const string leaderboard_timer_level_14 = "CgkI1MSeptocEAIQHQ"; // <GPGSID>
-        public const string leaderboard_timer_level_12 = "CgkI1MSeptocEAIQGw"; // <GPGSID>
-        public const string achievement_fig = "CgkI1MSeptocEAIQBw"; // <GPGSID>
-        public const string achievement_lemon = "CgkI1MSeptocEAIQDQ"; // <GPGSID>
-        public const string leaderboard_timer_level_8 = "CgkI1MSeptocEAIQJg"; // <GPGSID>
-        public const string achievement_kiwi = "CgkI1MSeptocEAIQDA"; // <GPGSID>
-        public const string leaderboard_timer_level_9 = "CgkI1MSeptocEAIQJw"; // <GPGSID>
-        public const string leaderboard_timer_level_6 = "CgkI1MSeptocEAIQJA"; // <GPGSID>
-        public const string leaderboard_timer_level_1 = "CgkI1MSeptocEAIQHw"; // <GPGSID>
-        public const string leaderboard_timer_level_2 = "CgkI1MSeptocEAIQIA"; // <GPGSID>
-        public const string leaderboard_timer_level_3 = "CgkI1MSeptocEAIQIQ"; // <GPGSID>
-        public const string leaderboard_timer_level_4 = "CgkI1MSeptocEAIQIg"; // <GPGSID>
-        public const string leaderboard_timer_level_5 = "CgkI1MSeptocEAIQIw"; // <GPGSID>
-        public const string achievement_nectarine = "CgkI1MSeptocEAIQDw"; // <GPGSID>
-        public const string leaderboard_timer_level_7 = "CgkI1MSeptocEAIQJQ"; // <GPGSID>
+        public const string achievement_illawarra_plum = "CgkI8suSv-wKEAIQCQ"; // <GPGSID>
+        public const string achievement_durian = "CgkI8suSv-wKEAIQBA"; // <GPGSID>
+        public const string achievement_jalapeno = "CgkI8suSv-wKEAIQCg"; // <GPGSID>
+        public const string leaderboard_timer_level_10 = "CgkI8suSv-wKEAIQGQ"; // <GPGSID>
+        public const string achievement_grape = "CgkI8suSv-wKEAIQBw"; // <GPGSID>
+        public const string achievement_cherry = "CgkI8suSv-wKEAIQAw"; // <GPGSID>
+        public const string achievement_banana = "CgkI8suSv-wKEAIQAg"; // <GPGSID>
+        public const string leaderboard_timer_level_13 = "CgkI8suSv-wKEAIQHA"; // <GPGSID>
+        public const string achievement_mango = "CgkI8suSv-wKEAIQDQ"; // <GPGSID>
+        public const string achievement_orange = "CgkI8suSv-wKEAIQDw"; // <GPGSID>
+        public const string leaderboard_timer_level_11 = "CgkI8suSv-wKEAIQGg"; // <GPGSID>
+        public const string achievement_apple = "CgkI8suSv-wKEAIQAQ"; // <GPGSID>
+        public const string achievement_honeydew = "CgkI8suSv-wKEAIQCA"; // <GPGSID>
+        public const string achievement_eggplant = "CgkI8suSv-wKEAIQBQ"; // <GPGSID>
+        public const string leaderboard_timer_level_15 = "CgkI8suSv-wKEAIQHg"; // <GPGSID>
+        public const string leaderboard_timer_level_14 = "CgkI8suSv-wKEAIQHQ"; // <GPGSID>
+        public const string leaderboard_timer_level_12 = "CgkI8suSv-wKEAIQGw"; // <GPGSID>
+        public const string achievement_fig = "CgkI8suSv-wKEAIQBg"; // <GPGSID>
+        public const string achievement_lemon = "CgkI8suSv-wKEAIQDA"; // <GPGSID>
+        public const string leaderboard_timer_level_8 = "CgkI8suSv-wKEAIQFw"; // <GPGSID>
+        public const string achievement_kiwi = "CgkI8suSv-wKEAIQCw"; // <GPGSID>
+        public const string leaderboard_timer_level_9 = "CgkI8suSv-wKEAIQGA"; // <GPGSID>
+        public const string leaderboard_timer_level_6 = "CgkI8suSv-wKEAIQFQ"; // <GPGSID>
+        public const string leaderboard_timer_level_1 = "CgkI8suSv-wKEAIQEA"; // <GPGSID>
+        public const string leaderboard_timer_level_2 = "CgkI8suSv-wKEAIQEQ"; // <GPGSID>
+        public const string leaderboard_timer_level_3 = "CgkI8suSv-wKEAIQEg"; // <GPGSID>
+        public const string leaderboard_timer_level_4 = "CgkI8suSv-wKEAIQEw"; // <GPGSID>
+        public const string leaderboard_timer_level_5 = "CgkI8suSv-wKEAIQFA"; // <GPGSID>
+        public const string achievement_nectarine = "CgkI8suSv-wKEAIQDg"; // <GPGSID>
+        public const string leaderboard_timer_level_7 = "CgkI8suSv-wKEAIQFg"; // <GPGSID>
 
 }
 
