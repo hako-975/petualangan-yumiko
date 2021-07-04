@@ -14,13 +14,13 @@ public class FinishPoint : MonoBehaviour
 
     TimerManager timerManager;
 
-    /*YumikoLeaderboards leaderboard;
-    YumikoAchievements achievement;*/
+    YumikoLeaderboards leaderboard;
+    YumikoAchievements achievement;
 
     void Start()
     {
-        /*leaderboard = FindObjectOfType<YumikoLeaderboards>();
-        achievement = FindObjectOfType<YumikoAchievements>();*/
+        leaderboard = FindObjectOfType<YumikoLeaderboards>();
+        achievement = FindObjectOfType<YumikoAchievements>();
         audioFinish = GetComponent<AudioSource>();
         timerManager = FindObjectOfType<TimerManager>();
 
@@ -72,7 +72,7 @@ public class FinishPoint : MonoBehaviour
             // if get achievement
             if (PlayerPrefsManager.instance.GetBoolAchievementTemp() > 0)
             {
-                //achievement.UnlockedAchievement(SceneManager.GetActiveScene().buildIndex);
+                achievement.UnlockedAchievement(SceneManager.GetActiveScene().buildIndex);
                 PlayerPrefsManager.instance.SetBoolAchievementObject(SceneManager.GetActiveScene().buildIndex, 1);
             }
 
@@ -81,14 +81,14 @@ public class FinishPoint : MonoBehaviour
             // get and set timer score
             if (PlayerPrefsManager.instance.GetTimer() < PlayerPrefsManager.instance.GetTimerScore(SceneManager.GetActiveScene().buildIndex))
             {
-                /*switch (SceneManager.GetActiveScene().buildIndex)
+                switch (SceneManager.GetActiveScene().buildIndex)
                 {
                     case 1:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
                         leaderboard.UpdateLeaderboardScoreLevel1((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         Debug.Log("1: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         break;
-                    *//*case 2:
+                    /*case 2:
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
                         leaderboard.UpdateLeaderboardScoreLevel2((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         Debug.Log("2: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
@@ -157,8 +157,8 @@ public class FinishPoint : MonoBehaviour
                         PlayerPrefsManager.instance.SetTimerScore(SceneManager.GetActiveScene().buildIndex, PlayerPrefsManager.instance.GetTimer());
                         leaderboard.UpdateLeaderboardScoreLevel15((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
                         Debug.Log("15: " + (int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
-                        break;*//*
-                }*/
+                        break;*/
+                }
             }
 
             // remove temp achievement

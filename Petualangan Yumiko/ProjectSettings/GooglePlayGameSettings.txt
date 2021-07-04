@@ -1,5 +1,5 @@
-lastUpgrade=01012
-proj.pluginVersion=0.10.12
+lastUpgrade=01009
+proj.pluginVersion=0.10.09
 proj.AppId=184381216746
 and.BundleId=com.HakoLab.YumikoAdventure3D
 proj.classDir=Assets
