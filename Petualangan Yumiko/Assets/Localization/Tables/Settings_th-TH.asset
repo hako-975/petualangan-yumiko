@@ -43,19 +43,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 576476598484992
-    m_Localized: "\u0E40\u0E23\u0E47\u0E27"
+    m_Localized: FAST
     m_Metadata:
       m_Items: []
   - m_Id: 576501852389376
-    m_Localized: "\u0E0A\u0E49\u0E32"
+    m_Localized: SLOW
     m_Metadata:
       m_Items: []
   - m_Id: 576517614583808
-    m_Localized: "\u0E43\u0E01\u0E25\u0E49"
+    m_Localized: NEAR
     m_Metadata:
       m_Items: []
   - m_Id: 576580847910912
-    m_Localized: "\u0E44\u0E01\u0E25"
+    m_Localized: FAR
     m_Metadata:
       m_Items: []
   references:

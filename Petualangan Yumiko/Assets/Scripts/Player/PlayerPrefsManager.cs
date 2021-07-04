@@ -14,26 +14,25 @@ public class PlayerPrefsManager : MonoBehaviour
     }
     #endregion
 
-    public float GetTimerLevel(int levelAt)
+    public string GetTimerText(int levelAt)
+    {
+        return PlayerPrefs.GetString("TimerText" + levelAt, "00:00:00");
+    }
+
+    public string SetTimerText(int levelAt, string timerText)
+    {
+        PlayerPrefs.SetString("TimerText" + levelAt, timerText);
+        return GetTimerText(levelAt);
+    }
+
+    public float GetTimerScore(int levelAt)
     {
         return PlayerPrefs.GetFloat("TimerLevel" + levelAt, 999999999999f);
     }
-
-    public float SetTimerLevel(int levelAt, float timerLevel)
+    public float SetTimerScore(int levelAt, float timerScore)
     {
-        PlayerPrefs.SetFloat("TimerLevel" + levelAt, timerLevel);
-        return GetTimerLevel(levelAt);
-    }
-
-    public int GetTimerFinish()
-    {
-        return PlayerPrefs.GetInt("TimerFinish", -1);
-    }
-
-    public int SetTimerFinish(int millisecondTimer)
-    {
-        PlayerPrefs.SetInt("TimerFinish", millisecondTimer);
-        return GetTimerFinish();
+        PlayerPrefs.SetFloat("TimerLevel" + levelAt, timerScore);
+        return GetTimerScore(levelAt);
     }
 
     public float GetTimer()
@@ -45,7 +44,7 @@ public class PlayerPrefsManager : MonoBehaviour
     {
         PlayerPrefs.SetFloat("Timer", timer);
         return GetTimer();
-    }    
+    }
 
     public int GetBoolAchievementObject(int levelAt)
     {

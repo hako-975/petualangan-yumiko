@@ -66,8 +66,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Gallery.unity
     guid: eed4e931a62b6ca4593ba52334b1dc44
   m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: d77d2e3a1b032e14c9c07896562bb847, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 964a639cbd39b8547bcf8712678df1b1, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: bcdc2c3bcedf45c4384d6f306e91f9ad, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 8a8207547a6364541b06aa80975a4378, type: 2}
     com.unity.addressableassets: {fileID: 11400000, guid: 9554e21b2078ddf41afaa55545f54246, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: cac516900df67f44ab08284c5f0f54ce, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 137316e29142d7440a5b33ac5f7139f5, type: 2}

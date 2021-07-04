@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimerManager : MonoBehaviour
 {
@@ -15,8 +16,13 @@ public class TimerManager : MonoBehaviour
     [HideInInspector]
     public bool finished = false;
 
+    protected string minutes;
+    protected string seconds;
+    protected string milliseconds;
+
     private void Start()
     {
+
         if (PlayerPrefsManager.instance.GetTimer() > 0)
         {
             startTime = Time.time - PlayerPrefsManager.instance.GetTimer();
@@ -31,28 +37,24 @@ public class TimerManager : MonoBehaviour
     {
         if (finished == false)
         {
+
             t = Time.time - startTime;
-            string minutes = ((int) t / 60).ToString("00");
-            string seconds = (t % 60).ToString("00");
-            string milliseconds = (t % 60).ToString();
-            
+            minutes = ((int)t / 60).ToString("00");
+            seconds = (t % 60).ToString("00");
+            milliseconds = (t % 60).ToString();
+
             milliseconds = milliseconds.Substring(3, 2);
 
             timer.text = minutes + ":" + seconds + ":" + milliseconds;
-            
             PlayerPrefsManager.instance.SetTimer(t);
         }
-        else
-        {
-            if (PlayerPrefsManager.instance.GetTimer() > 1)
-            {
-                PlayerPrefsManager.instance.SetTimerFinish((int)(PlayerPrefsManager.instance.GetTimer() * 1000f));
-            }
-        }
     }
-    
+
     public void Finish()
     {
+        int levelAt = SceneManager.GetActiveScene().buildIndex;
+
+        PlayerPrefsManager.instance.SetTimerText(levelAt, minutes + ":" + seconds + ":" + milliseconds);
         finished = true;
         timer.color = Color.yellow;
     }
