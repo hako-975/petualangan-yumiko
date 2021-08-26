@@ -22,11 +22,9 @@ public class PlayerStats : MonoBehaviour
 
     public GameObject gameOverPanel;
     
-    public GameObject adsPanel;
-
     PlayerSFX playerSFX;
-    AdsManager adsManager;
     TimerManager timerManager;
+    AdsManager adsManager;
 
     void Start()
     {

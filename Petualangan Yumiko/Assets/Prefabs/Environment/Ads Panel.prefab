@@ -154,6 +154,7 @@ MonoBehaviour:
       m_KeyId: 17312285442048
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 1
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -182,6 +183,7 @@ GameObject:
   - component: {fileID: 1814780109586390858}
   - component: {fileID: 1814780109586390857}
   - component: {fileID: 1814780109586390856}
+  - component: {fileID: 1762734866789522456}
   m_Layer: 5
   m_Name: Btn Watch Ads
   m_TagString: Untagged
@@ -291,9 +293,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
-        m_MethodName: ShowRewardedVideo
+      - m_Target: {fileID: 1762734866789522456}
+        m_TargetAssemblyTypeName: RewardedAdsButton, Assembly-CSharp
+        m_MethodName: LoadAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -303,18 +305,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &1762734866789522456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814780109586390854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10455c5b8f589f41be9908f0188df94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showAdButton: {fileID: 1814780109586390856}
+  _androidAdUnitId: rewardedVideo
+  _iOsAdUnitId: rewardedVideo
 --- !u!1 &1814780109780755576
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +475,7 @@ MonoBehaviour:
       m_KeyId: 16675128721408
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 1
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -505,6 +511,7 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 1
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -632,8 +639,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 354.12695, y: -212.76758}
-  m_SizeDelta: {x: 708.2539, y: 425.53516}
+  m_AnchoredPosition: {x: 357.5357, y: -209.81558}
+  m_SizeDelta: {x: 715.0714, y: 419.63116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1814780110409284969
 GameObject:
@@ -938,12 +945,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: PlayBackButtonSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1058,8 +1065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1062.3809, y: -212.76758}
-  m_SizeDelta: {x: 708.2539, y: 425.53516}
+  m_AnchoredPosition: {x: 1072.6072, y: -209.81558}
+  m_SizeDelta: {x: 715.0714, y: 419.63116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1814780110914339945
 GameObject:
@@ -1215,6 +1222,7 @@ MonoBehaviour:
       m_KeyId: 17780382351360
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 1
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -1290,7 +1298,7 @@ MonoBehaviour:
   fitType: 0
   rows: 1
   columns: 2
-  cellSize: {x: 708.2539, y: 425.53516}
+  cellSize: {x: 703.0757, y: 430.06927}
   spacing: {x: 0, y: 0}
   fitX: 1
   fitY: 1
@@ -1496,6 +1504,7 @@ GameObject:
   - component: {fileID: 1814780111349748151}
   - component: {fileID: 1814780111349748153}
   - component: {fileID: 1814780111349748152}
+  - component: {fileID: 7666004846766385790}
   m_Layer: 5
   m_Name: Ads Panel
   m_TagString: AdsPanel
@@ -1561,6 +1570,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7666004846766385790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814780111349748150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc67a70840cf78d4ca9ed6158ae8c7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidGameId: 4101523
+  _iOsGameId: 4101522
+  _testMode: 1
+  _enablePerPlacementMode: 1
 --- !u!1 &1814780111453511838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,6 +1740,7 @@ MonoBehaviour:
       m_KeyId: 21023728582656
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 1
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:

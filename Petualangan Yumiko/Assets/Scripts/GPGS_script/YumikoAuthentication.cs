@@ -9,10 +9,12 @@ public class YumikoAuthentication : MonoBehaviour
 {
     public static PlayGamesPlatform platform;
 
+    // Start is called before the first frame update
     void Start()
     {
         if (platform == null)
         {
+            // PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().EnableSavedGames().Build();
             PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
             PlayGamesPlatform.InitializeInstance(config);
             PlayGamesPlatform.DebugLogEnabled = true;
@@ -24,11 +26,11 @@ public class YumikoAuthentication : MonoBehaviour
         {
             if (success)
             {
-                Debug.Log("Successfully login");
+                Debug.Log("Logged in Successfully!");
             }
             else
             {
-                Debug.Log("Failed to Login");
+                Debug.Log("Failed to login!");
             }
         });
     }

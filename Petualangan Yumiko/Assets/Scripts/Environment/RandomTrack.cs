@@ -11,6 +11,8 @@ public class RandomTrack : MonoBehaviour
     public GameObject achievementObject;
     public float maxLengthTrack;
     public float percentBuildDiscount = 90f;
+    
+    GameObject spawnPoint;
 
     BossController bossController;
 
@@ -35,6 +37,7 @@ public class RandomTrack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
         bossController = FindObjectOfType<BossController>();
         player = FindObjectOfType<PlayerController>();
         exitBoss.gameObject.SetActive(false);
@@ -44,6 +47,12 @@ public class RandomTrack : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        // jika player died
+        if (player.GetComponent<PlayerStats>().isDied == true)
+        {
+            spawnPoint.transform.position = new Vector3(0f, 0.5f, 0f);
+        }
+
         lengthArea = player.transform.position.z;
         
         if (lengthArea == 0f)

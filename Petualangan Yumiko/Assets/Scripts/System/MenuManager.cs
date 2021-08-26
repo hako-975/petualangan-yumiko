@@ -8,8 +8,9 @@ public class MenuManager : MonoBehaviour
 {
     public AudioSource buttonUIClick;
     public AudioSource backButtonUIClick;
-    AdsManager adsManager;
+
     TimerManager timerManager;
+    AdsManager adsManager;
 
     private void Awake()
     {
@@ -52,7 +53,7 @@ public class MenuManager : MonoBehaviour
 
             // remove temp achievement
             PlayerPrefsManager.instance.RemoveBoolAchievementTemp();
-            
+
             // ads
             adsManager.ShowInterstitialAd();
         }
@@ -73,13 +74,13 @@ public class MenuManager : MonoBehaviour
         PlayerPrefsManager.instance.SetNextScene("Select Level");
     }
 
-    public void Gallery()
+    public void Classroom()
     {
         buttonUIClick.Play();
 
         Time.timeScale = 1;
         // for loading
-        PlayerPrefsManager.instance.SetNextScene("Gallery");
+        PlayerPrefsManager.instance.SetNextScene("Classroom");
     }    
 
     public void MainMenu()
