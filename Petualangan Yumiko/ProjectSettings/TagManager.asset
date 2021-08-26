@@ -8,6 +8,7 @@ TagManager:
   - SpawnPoint
   - GameMusic
   - AdsPanel
+  - SFX
   layers:
   - Default
   - TransparentFX

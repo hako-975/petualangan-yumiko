@@ -7,15 +7,18 @@ public class ExtraLife : MonoBehaviour
 {
     public int extraLifeTo;
 
-    int level;
+    public AudioClip audioClip;
 
-    AudioSource audioExtraLife;
+    int level;
 
     bool isPicked = false;
 
+    GameObject sfx;
+
     private void Start()
     {
-        audioExtraLife = GetComponent<AudioSource>();
+        sfx = GameObject.FindGameObjectWithTag("SFX");
+
         level = SceneManager.GetActiveScene().buildIndex;
         
         if (PlayerPrefsManager.instance.GetExtraLifeToBoolean(extraLifeTo, level) > 0)
@@ -37,16 +40,17 @@ public class ExtraLife : MonoBehaviour
         {
             if (isPicked == false)
             {
-                audioExtraLife.Play();
+                // destroy game object
+                Destroy(gameObject);
 
-                audioExtraLife.volume = Random.Range(0.8f, 1f);
-                audioExtraLife.pitch = Random.Range(0.8f, 1f);
+                sfx.GetComponent<AudioSource>().clip = audioClip;
+                sfx.GetComponent<AudioSource>().Play();
+                sfx.GetComponent<AudioSource>().volume = Random.Range(0.8f, 1f);
+                sfx.GetComponent<AudioSource>().pitch = Random.Range(0.8f, 1f);
 
                 PlayerPrefsManager.instance.SetExtraLifeToBoolean(extraLifeTo, level);
                 
-                // destroy game object
-                Destroy(gameObject, audioExtraLife.clip.length);
-
+                
                 // get current life
                 int currentLife = PlayerPrefsManager.instance.GetLife();
 

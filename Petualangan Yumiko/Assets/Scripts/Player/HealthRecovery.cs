@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class HealthRecovery : MonoBehaviour
 {
-    AudioSource audioHealth;
-    
     protected int currentHealth;
 
     bool isPicked = false;
+    
+    GameObject sfx;
+
+    public AudioClip audioClip;
 
     private void Start()
     {
-        audioHealth = GetComponent<AudioSource>();
+        sfx = GameObject.FindGameObjectWithTag("SFX");
     }
 
     // Update is called once per frame
@@ -33,12 +35,15 @@ public class HealthRecovery : MonoBehaviour
             {
                 if (isPicked == false)
                 {
-                    audioHealth.Play();
-                    audioHealth.volume = Random.Range(0.8f, 1f);
-                    audioHealth.pitch = Random.Range(0.8f, 1f);
-
                     // destroy game object
-                    Destroy(gameObject, audioHealth.clip.length);
+                    Destroy(gameObject);
+
+                    sfx.GetComponent<AudioSource>().clip = audioClip; 
+                    sfx.GetComponent<AudioSource>().Play();
+                    sfx.GetComponent<AudioSource>().volume = Random.Range(0.8f, 1f);
+                    sfx.GetComponent<AudioSource>().pitch = Random.Range(0.8f, 1f);
+
+                    
 
                     // set life = get current life + 1
                     currentHealth += 1;
