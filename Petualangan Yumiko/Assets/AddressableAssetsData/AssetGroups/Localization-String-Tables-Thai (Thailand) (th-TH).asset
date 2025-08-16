@@ -22,22 +22,19 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-th-TH
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b3a1bb3c79b64c5478cd78306665e79a
     m_Address: Settings_th-TH
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-th-TH
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c33f7646dfc617446a9c60adedc33c19
     m_Address: Main Menu_th-TH
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-th-TH
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: cbb9bb98acefbaa4899e70858e9db357, type: 2}
   m_SchemaSet:

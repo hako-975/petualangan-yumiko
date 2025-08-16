@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Advertisements;
 
-public class AdsManager : MonoBehaviour, IUnityAdsListener
+public class AdsManager : MonoBehaviour
 {
 #if UNITY_IOS
         private string gameId = "4101522";
@@ -28,7 +28,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         menuManager = FindObjectOfType<MenuManager>();
 
         // true is restart false is die
-        Advertisement.AddListener(this);
+        //Advertisement.AddListener(this);
         // Initialize the Ads service:
         Advertisement.Initialize(gameId, testMode);
     }
@@ -41,31 +41,31 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     public void ShowInterstitialAd()
     {
         // Check if UnityAds ready before calling Show method:
-        if (Advertisement.IsReady())
-        {
-            Advertisement.Show("video");
-        }
-        else
-        {
-            Debug.Log("Interstitial ad not ready at the moment! Please try again later!");
-            errorAdsPanel.SetActive(true);
-        }
+        //if (Advertisement.IsReady())
+        //{
+        //    Advertisement.Show("video");
+        //}
+        //else
+        //{
+        //    Debug.Log("Interstitial ad not ready at the moment! Please try again later!");
+        //    errorAdsPanel.SetActive(true);
+        //}
     }
 
     public void ShowRewardedVideo()
     {
         // Check if UnityAds ready before calling Show method:
-        if (Advertisement.IsReady(mySurfacingId))
-        {
-            PlayerPrefsManager.instance.SetLife(PlayerPrefsManager.instance.GetLife() + 1);
-            PlayerPrefsManager.instance.SetHealth(4);
-            Advertisement.Show(mySurfacingId);
-        }
-        else
-        {
-            Debug.Log("Rewarded video is not ready at the moment! Please try again later!");
-            errorAdsPanel.SetActive(true);
-        }
+        //if (Advertisement.IsReady(mySurfacingId))
+        //{
+        //    PlayerPrefsManager.instance.SetLife(PlayerPrefsManager.instance.GetLife() + 1);
+        //    PlayerPrefsManager.instance.SetHealth(4);
+        //    Advertisement.Show(mySurfacingId);
+        //}
+        //else
+        //{
+        //    Debug.Log("Rewarded video is not ready at the moment! Please try again later!");
+        //    errorAdsPanel.SetActive(true);
+        //}
     }
 
     // Implement IUnityAdsListener interface methods:
@@ -159,6 +159,6 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     // When the object that subscribes to ad events is destroyed, remove the listener:
     public void OnDestroy()
     {
-        Advertisement.RemoveListener(this);
+        //Advertisement.RemoveListener(this);
     }
 }

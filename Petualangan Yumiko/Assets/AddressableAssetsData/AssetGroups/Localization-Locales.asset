@@ -17,83 +17,72 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 04628cf1578541c47b3c541426a45411
   m_SerializeEntries:
-  - m_GUID: 758fae714f6f22844a6ddd732de72e35
-    m_Address: Vietnamese (Vietnam) (vi-VN)
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 106a639f66d7de741b7afb38f0716a6b
     m_Address: English (en)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: bfc80d70a464e16449094044cb15a56c
-    m_Address: Italian (Italy) (it-IT)
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 74a3c2c2d5b424142a5380ff1e7d3e55
     m_Address: Japanese (Japan) (ja-JP)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 758fae714f6f22844a6ddd732de72e35
+    m_Address: Vietnamese (Vietnam) (vi-VN)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8227a47a1d896f449996767bcfc45b27
     m_Address: Thai (Thailand) (th-TH)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: d5f0280254c50fe4bb197309cb19831d
-    m_Address: Russian (Russia) (ru-RU)
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bfc80d70a464e16449094044cb15a56c
+    m_Address: Italian (Italy) (it-IT)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c6c6f4237ce115f4e8e70d896c77986d
     m_Address: Chinese (Simplified) (zh-CN)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5f0280254c50fe4bb197309cb19831d
+    m_Address: Russian (Russia) (ru-RU)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e263ff41cefbcdc4883e76e8095b973a
     m_Address: German (Germany) (de-DE)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f55a218eb87b4b54b92a5329352964f4
     m_Address: Indonesian (Indonesia) (id-ID)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fad96e7f420332c4a81d286737c3ba14
     m_Address: French (France) (fr-FR)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fbf52ae7e9d5f2c40ab6e632f3269a8b
     m_Address: Spanish (es)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: cbb9bb98acefbaa4899e70858e9db357, type: 2}
   m_SchemaSet:

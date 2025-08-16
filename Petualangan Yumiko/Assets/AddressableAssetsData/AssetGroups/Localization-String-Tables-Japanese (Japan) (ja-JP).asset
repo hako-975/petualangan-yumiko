@@ -17,27 +17,24 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 05d3b8fdee1763d4c998977e40dde21c
   m_SerializeEntries:
-  - m_GUID: 8679c32268eca9b4abcdf5fbf29e9cdb
-    m_Address: Menu Panel_ja-JP
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ja-JP
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 9dcc73226894a284485629fb4db652b1
-    m_Address: Settings_ja-JP
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ja-JP
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 84997f405ac008c44982293d7e24c29a
     m_Address: Main Menu_ja-JP
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ja-JP
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8679c32268eca9b4abcdf5fbf29e9cdb
+    m_Address: Menu Panel_ja-JP
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja-JP
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9dcc73226894a284485629fb4db652b1
+    m_Address: Settings_ja-JP
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja-JP
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: cbb9bb98acefbaa4899e70858e9db357, type: 2}
   m_SchemaSet:
